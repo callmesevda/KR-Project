@@ -1,0 +1,984 @@
+@prefix : <http://example.org/proto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+:Equiv_PRV-001_PRV-002 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Bear)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-001 ;
+    :linksProverbB :PRV-002 .
+
+:Equiv_PRV-001_PRV-015 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Sea)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-001 ;
+    :linksProverbB :PRV-015 .
+
+:Equiv_PRV-001_PRV-027 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Deed, Cloud, Rain)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-001 ;
+    :linksProverbB :PRV-027 .
+
+:Equiv_PRV-001_PRV-028 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Friend, Enemy)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-001 ;
+    :linksProverbB :PRV-028 .
+
+:Equiv_PRV-002_PRV-015 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Bear vs Sea)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-002 ;
+    :linksProverbB :PRV-015 .
+
+:Equiv_PRV-002_PRV-027 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Bear vs Deed, Cloud, Rain)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-002 ;
+    :linksProverbB :PRV-027 .
+
+:Equiv_PRV-002_PRV-028 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Bear vs Friend, Enemy)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-002 ;
+    :linksProverbB :PRV-028 .
+
+:Equiv_PRV-003_PRV-004 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs White, Night)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-003 ;
+    :linksProverbB :PRV-004 .
+
+:Equiv_PRV-003_PRV-005 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Hope, Despair)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-003 ;
+    :linksProverbB :PRV-005 .
+
+:Equiv_PRV-003_PRV-016 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Sun, Storm)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-003 ;
+    :linksProverbB :PRV-016 .
+
+:Equiv_PRV-003_PRV-035 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Sun, Rain)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-003 ;
+    :linksProverbB :PRV-035 .
+
+:Equiv_PRV-004_PRV-016 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (White, Night vs Sun, Storm)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-004 ;
+    :linksProverbB :PRV-016 .
+
+:Equiv_PRV-004_PRV-035 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (White, Night vs Sun, Rain)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-004 ;
+    :linksProverbB :PRV-035 .
+
+:Equiv_PRV-005_PRV-016 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Hope, Despair vs Sun, Storm)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-005 ;
+    :linksProverbB :PRV-016 .
+
+:Equiv_PRV-005_PRV-035 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Hope, Despair vs Sun, Rain)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-005 ;
+    :linksProverbB :PRV-035 .
+
+:Equiv_PRV-006_PRV-007 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Finder, Seeker)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-006 ;
+    :linksProverbB :PRV-007 .
+
+:Equiv_PRV-006_PRV-020 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Finder, Seeker)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-006 ;
+    :linksProverbB :PRV-020 .
+
+:Equiv_PRV-006_PRV-029 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Finder, Seeker)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-006 ;
+    :linksProverbB :PRV-029 .
+
+:Equiv_PRV-006_PRV-030 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Stones, Wall)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-006 ;
+    :linksProverbB :PRV-030 .
+
+:Equiv_PRV-007_PRV-020 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker) -- needs manual review / possible new EquivalenceType." ;
+    :linksProverbA :PRV-007 ;
+    :linksProverbB :PRV-020 .
+
+:Equiv_PRV-007_PRV-029 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker) -- needs manual review / possible new EquivalenceType." ;
+    :linksProverbA :PRV-007 ;
+    :linksProverbB :PRV-029 .
+
+:Equiv_PRV-007_PRV-030 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Finder, Seeker vs Stones, Wall)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-007 ;
+    :linksProverbB :PRV-030 .
+
+:Equiv_PRV-008_PRV-009 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances'; source domains differ (Depth, Water vs Noise, Posture)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-008 ;
+    :linksProverbB :PRV-009 .
+
+:Equiv_PRV-008_PRV-021 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances'; source domains differ (Depth, Water vs Bridge, Water)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-008 ;
+    :linksProverbB :PRV-021 .
+
+:Equiv_PRV-008_PRV-032 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances' AND identical source domain (Depth, Water) -- needs manual review / possible new EquivalenceType." ;
+    :linksProverbA :PRV-008 ;
+    :linksProverbB :PRV-032 .
+
+:Equiv_PRV-009_PRV-021 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances'; source domains differ (Noise, Posture vs Bridge, Water)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-009 ;
+    :linksProverbB :PRV-021 .
+
+:Equiv_PRV-009_PRV-032 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances'; source domains differ (Noise, Posture vs Depth, Water)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-009 ;
+    :linksProverbB :PRV-032 .
+
+:Equiv_PRV-010_PRV-011 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Hand)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-010 ;
+    :linksProverbB :PRV-011 .
+
+:Equiv_PRV-010_PRV-023 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Wind, Storm)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-010 ;
+    :linksProverbB :PRV-023 .
+
+:Equiv_PRV-010_PRV-033 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Sowing, Harvest)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-010 ;
+    :linksProverbB :PRV-033 .
+
+:Equiv_PRV-010_PRV-034 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Pit, Trap)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-010 ;
+    :linksProverbB :PRV-034 .
+
+:Equiv_PRV-011_PRV-023 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Hand vs Wind, Storm)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-011 ;
+    :linksProverbB :PRV-023 .
+
+:Equiv_PRV-011_PRV-033 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Hand vs Sowing, Harvest)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-011 ;
+    :linksProverbB :PRV-033 .
+
+:Equiv_PRV-011_PRV-034 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Hand vs Pit, Trap)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-011 ;
+    :linksProverbB :PRV-034 .
+
+:Equiv_PRV-012_PRV-013 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Crack, Wall)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-012 ;
+    :linksProverbB :PRV-013 .
+
+:Equiv_PRV-012_PRV-025 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability' AND identical source domain (Chain, Link) -- needs manual review / possible new EquivalenceType." ;
+    :linksProverbA :PRV-012 ;
+    :linksProverbB :PRV-025 .
+
+:Equiv_PRV-012_PRV-031 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Flock, Sheep)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-012 ;
+    :linksProverbB :PRV-031 .
+
+:Equiv_PRV-013_PRV-025 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Crack, Wall vs Chain, Link)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-013 ;
+    :linksProverbB :PRV-025 .
+
+:Equiv_PRV-013_PRV-031 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Crack, Wall vs Flock, Sheep)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-013 ;
+    :linksProverbB :PRV-031 .
+
+:Equiv_PRV-015_PRV-027 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Sea vs Deed, Cloud, Rain)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-015 ;
+    :linksProverbB :PRV-027 .
+
+:Equiv_PRV-015_PRV-028 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Sea vs Friend, Enemy)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-015 ;
+    :linksProverbB :PRV-028 .
+
+:Equiv_PRV-016_PRV-035 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Sun, Storm vs Sun, Rain)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-016 ;
+    :linksProverbB :PRV-035 .
+
+:Equiv_PRV-020_PRV-029 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker) -- needs manual review / possible new EquivalenceType." ;
+    :linksProverbA :PRV-020 ;
+    :linksProverbB :PRV-029 .
+
+:Equiv_PRV-020_PRV-030 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Finder, Seeker vs Stones, Wall)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-020 ;
+    :linksProverbB :PRV-030 .
+
+:Equiv_PRV-021_PRV-032 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances'; source domains differ (Bridge, Water vs Depth, Water)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-021 ;
+    :linksProverbB :PRV-032 .
+
+:Equiv_PRV-023_PRV-033 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Wind, Storm vs Sowing, Harvest)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-023 ;
+    :linksProverbB :PRV-033 .
+
+:Equiv_PRV-023_PRV-034 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Wind, Storm vs Pit, Trap)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-023 ;
+    :linksProverbB :PRV-034 .
+
+:Equiv_PRV-025_PRV-031 a :CrossCulturalEquivalence,
+        owl:NamedIndividual ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Flock, Sheep)." ;
+    :hasEquivalenceType :SameLessonDifferentImage ;
+    :linksProverbA :PRV-025 ;
+    :linksProverbB :PRV-031 .
+
+:Bear a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Bear" ;
+    :groundedIn wd:Q30090244 .
+
+:Bridge a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Bridge" ;
+    :groundedIn wd:Q12280 .
+
+:Circle a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Circle" ;
+    :groundedIn wd:Q17278 .
+
+:Crack a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Crack" ;
+    :groundedIn wd:Q65862755 .
+
+:Deed a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Deed" ;
+    :groundedIn wd:Q705914 .
+
+:Despair a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Despair" ;
+    :groundedIn wd:Q1747066 .
+
+:Enemy a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Enemy" ;
+    :groundedIn wd:Q289891 .
+
+:Flock a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Flock" ;
+    :groundedIn wd:Q209542 .
+
+:Friend a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Friend" ;
+    :groundedIn wd:Q17297777 .
+
+:Hand a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Hand" ;
+    :groundedIn wd:Q33767 .
+
+:Harvest a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Harvest" ;
+    :groundedIn wd:Q213753 .
+
+:Hell a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Hell" ;
+    :groundedIn wd:Q564 .
+
+:Hope a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Hope" ;
+    :groundedIn wd:Q190507 .
+
+:MotionAbstract a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Motion (Abstract)" ;
+    :groundedIn wd:Q79782 .
+
+:Night a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Night" ;
+    :groundedIn wd:Q575 .
+
+:Noise a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Noise" ;
+    :groundedIn wd:Q179448 .
+
+:Pit a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Pit" ;
+    :groundedIn wd:Q23090513 .
+
+:Posture a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Posture" ;
+    :groundedIn wd:Q8514257 .
+
+:Road a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Road" ;
+    :groundedIn wd:Q34442 .
+
+:Sea a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Sea" ;
+    :groundedIn wd:Q165 .
+
+:Sheep a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Sheep" ;
+    :groundedIn wd:Q7368 .
+
+:Silver a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Silver" ;
+    :groundedIn wd:Q317802 .
+
+:Situation_PRV-001 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Used to warn that having good intentions is not enough if the resulting actions end up causing harm or negative consequences." .
+
+:Situation_PRV-002 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "When someone does something out of good intentions that ultimately ends up harming you." .
+
+:Situation_PRV-003 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "It's used to make someone who is in tough situation to feel better and give them a more positive perspective." .
+
+:Situation_PRV-004 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Used to comfort someone in a difficult situation, giving them hope that things will get better." .
+
+:Situation_PRV-005 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Used as a reminder that solutions can be found in the darkest moments when someone has completely given up." .
+
+:Situation_PRV-006 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "when someone wants to do something objectively difficult, this is used to encourage them to not give up." .
+
+:Situation_PRV-007 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Used to encourage someone who has been working toward a goal for a long time so they don't give up." .
+
+:Situation_PRV-008 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Used to highlight how those who are quiet and reserved are actually quite knowledgeable." .
+
+:Situation_PRV-009 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "A warning about quiet people who hide their plans and can be more dangerous than loud, aggressive ones." .
+
+:Situation_PRV-010 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "To warn people for how they treat others, because should they treat someone poorly, the same thing might happen to them." .
+
+:Situation_PRV-011 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "When someone suffers the exact same bad thing they did to another person, or to encourage good deeds." .
+
+:Situation_PRV-012 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Used to show how the strength of a group depends on every individual's ability" .
+
+:Situation_PRV-013 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "When a project fails because of a small, ignored weakness or a vulnerable member." .
+
+:Situation_PRV-015 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Used to highlight that sometimes people don't act on what they preach." .
+
+:Situation_PRV-016 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "After challenging events, good events await." .
+
+:Situation_PRV-020 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "When someone looks for something, through persevering, they will find it." .
+
+:Situation_PRV-021 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "What is hidden ruins seemingly strong fundations." .
+
+:Situation_PRV-023 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Who acts wrongly/chaoticly will end up getting in exchange the same behavior." .
+
+:Situation_PRV-025 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Things crumble in the steps of a process that are weaker." .
+
+:Situation_PRV-027 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "When someone keeps declaring good intentions but never acts on them." .
+
+:Situation_PRV-028 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "When a well-meaning but foolish friend causes harm through clumsy help." .
+
+:Situation_PRV-029 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Encouraging someone that effort will eventually pay off." .
+
+:Situation_PRV-030 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Reassuring someone that small, steady efforts build a big result." .
+
+:Situation_PRV-031 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Warning that one weak or bad member can damage the whole group." .
+
+:Situation_PRV-032 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Warning to be wary of calm, quiet people who may be the most dangerous." .
+
+:Situation_PRV-033 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Telling someone their actions, good or bad, will come back to them." .
+
+:Situation_PRV-034 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Warning that harm planned for others rebounds on the one who plans it." .
+
+:Situation_PRV-035 a :SituationOfUse,
+        owl:NamedIndividual ;
+    rdfs:label "Comforting someone in a hard moment that better days will follow." .
+
+:Sowing a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Sowing" ;
+    :groundedIn wd:Q777671 .
+
+:Stones a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Stones" ;
+    :groundedIn wd:Q22731 .
+
+:Trap a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Trap" ;
+    :groundedIn wd:Q1067958 .
+
+:WayAbstract a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Way (Abstract)" ;
+    :groundedIn wd:Q1799072 .
+
+:White a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "White" ;
+    :groundedIn wd:Q23444 .
+
+:Will a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Will" ;
+    :groundedIn wd:Q364340 .
+
+:Wind a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Wind" ;
+    :groundedIn wd:Q8094 .
+
+:Chain a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Chain" ;
+    :groundedIn wd:Q2397485 .
+
+:Cloud a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Cloud" ;
+    :groundedIn wd:Q8074 .
+
+:Depth a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Depth" ;
+    :groundedIn wd:Q930412 .
+
+:Link a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Link" ;
+    :groundedIn wd:Q930933 .
+
+:Rain a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Rain" ;
+    :groundedIn wd:Q7925 .
+
+:Storm a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Storm" ;
+    :groundedIn wd:Q81054 .
+
+:Sun a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Sun" ;
+    :groundedIn wd:Q525 .
+
+:Wall a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Wall" ;
+    :groundedIn wd:Q42948 .
+
+:Finder a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Finder" ;
+    :groundedIn wd:Q21096945 .
+
+:PRV-004 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "fa" ;
+    :hasLesson :OptimismInAdversity ;
+    :hasProverbID "PRV-004" ;
+    :hasSourceDomain :Night,
+        :White ;
+    :hasText "پایان شب سیه سپید است" ;
+    :hasTranslation "The end of the black night is white" ;
+    :usedIn :Situation_PRV-004 .
+
+:PRV-005 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "fa" ;
+    :hasLesson :OptimismInAdversity ;
+    :hasProverbID "PRV-005" ;
+    :hasSourceDomain :Despair,
+        :Hope ;
+    :hasText "در ناامیدی بسی امید است" ;
+    :hasTranslation "In despair there is much hope" ;
+    :usedIn :Situation_PRV-005 .
+
+:PRV-008 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "en" ;
+    :hasLesson :HiddenDepthsDeceptiveAppearances ;
+    :hasProverbID "PRV-008" ;
+    :hasSourceDomain :Depth,
+        :Water ;
+    :hasText "Still waters run deep." ;
+    :hasTranslation "Still waters run deep." ;
+    :usedIn :Situation_PRV-008 .
+
+:PRV-009 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "fa" ;
+    :hasLesson :HiddenDepthsDeceptiveAppearances ;
+    :hasProverbID "PRV-009" ;
+    :hasSourceDomain :Noise,
+        :Posture ;
+    :hasText "از آن نترس که های و هو دارد، از آن بترس که سر به تو دارد" ;
+    :hasTranslation "Don't fear the one who makes noise, fear the one who keeps their head down." ;
+    :usedIn :Situation_PRV-009 .
+
+:PRV-012 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "en" ;
+    :hasLesson :GroupVulnerability ;
+    :hasProverbID "PRV-012" ;
+    :hasSourceDomain :Chain,
+        :Link ;
+    :hasText "A chain is only as strong as its weakest link." ;
+    :hasTranslation "A chain is only as strong as its weakest link." ;
+    :usedIn :Situation_PRV-012 .
+
+:PRV-013 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "fa" ;
+    :hasLesson :GroupVulnerability ;
+    :hasProverbID "PRV-013" ;
+    :hasSourceDomain :Crack,
+        :Wall ;
+    :hasText "دیوار از جای شکسته می‌ریزد" ;
+    :hasTranslation "A wall collapses from its broken part" ;
+    :usedIn :Situation_PRV-013 .
+
+:PRV-021 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "ita" ;
+    :hasLesson :HiddenDepthsDeceptiveAppearances ;
+    :hasProverbID "PRV-021" ;
+    :hasSourceDomain :Bridge,
+        :Water ;
+    :hasText "L'acqua cheta rovina i ponti." ;
+    :hasTranslation "Still waters ruins bridges." ;
+    :usedIn :Situation_PRV-021 .
+
+:PRV-025 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "ita" ;
+    :hasLesson :GroupVulnerability ;
+    :hasProverbID "PRV-025" ;
+    :hasSourceDomain :Chain,
+        :Link ;
+    :hasText "La catena si spezza sempre nel punto più debole" ;
+    :hasTranslation "A chain breaks always in its weakest spot." ;
+    :usedIn :Situation_PRV-025 .
+
+:PRV-027 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :ActionsOverIntentions ;
+    :hasProverbID "PRV-027" ;
+    :hasSourceDomain :Cloud,
+        :Deed,
+        :Rain ;
+    :hasText "Fjala pa vepër, si reja pa shi." ;
+    :hasTranslation "A word without a deed is like a cloud without rain." ;
+    :usedIn :Situation_PRV-027 .
+
+:PRV-028 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :ActionsOverIntentions ;
+    :hasProverbID "PRV-028" ;
+    :hasSourceDomain :Enemy,
+        :Friend ;
+    :hasText "Më mirë armik i mençur se mik budalla." ;
+    :hasTranslation "Better a wise enemy than a foolish friend." ;
+    :usedIn :Situation_PRV-028 .
+
+:PRV-029 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :DeterminationPerseverance ;
+    :hasProverbID "PRV-029" ;
+    :hasSourceDomain :Finder,
+        :Seeker ;
+    :hasText "Kush kërkon, gjen." ;
+    :hasTranslation "Who seeks, finds." ;
+    :usedIn :Situation_PRV-029 .
+
+:PRV-030 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :DeterminationPerseverance ;
+    :hasProverbID "PRV-030" ;
+    :hasSourceDomain :Stones,
+        :Wall ;
+    :hasText "Gur mbi gur bëhet mur." ;
+    :hasTranslation "Stone upon stone, a wall is made." ;
+    :usedIn :Situation_PRV-030 .
+
+:PRV-031 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :GroupVulnerability ;
+    :hasProverbID "PRV-031" ;
+    :hasSourceDomain :Flock,
+        :Sheep ;
+    :hasText "Një dele e zgjebosur prish gjithë tufën." ;
+    :hasTranslation "One mangy sheep spoils the whole flock." ;
+    :usedIn :Situation_PRV-031 .
+
+:PRV-032 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :HiddenDepthsDeceptiveAppearances ;
+    :hasProverbID "PRV-032" ;
+    :hasSourceDomain :Depth,
+        :Water ;
+    :hasText "Uji i qetë të mbyt." ;
+    :hasTranslation "Quiet water drowns you." ;
+    :usedIn :Situation_PRV-032 .
+
+:PRV-033 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :Karma ;
+    :hasProverbID "PRV-033" ;
+    :hasSourceDomain :Harvest,
+        :Sowing ;
+    :hasText "Ç'të mbjellësh, do të korrësh." ;
+    :hasTranslation "What you sow, you shall reap." ;
+    :usedIn :Situation_PRV-033 .
+
+:PRV-034 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :Karma ;
+    :hasProverbID "PRV-034" ;
+    :hasSourceDomain :Pit,
+        :Trap ;
+    :hasText "Gropën që i hap tjetrit, bie vetë." ;
+    :hasTranslation "The pit you dig for another, you fall into yourself." ;
+    :usedIn :Situation_PRV-034 .
+
+:Seeker a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Seeker" ;
+    :groundedIn wd:Q618536 .
+
+:Water a :SourceDomain,
+        owl:NamedIndividual ;
+    rdfs:label "Water" ;
+    :groundedIn wd:Q283 .
+
+:GroupVulnerability a :TacitLesson,
+        owl:NamedIndividual ;
+    :groundedIn wd:Q1178984 ;
+    :hasLabel "Group vulnerability" .
+
+:HiddenDepthsDeceptiveAppearances a :TacitLesson,
+        owl:NamedIndividual ;
+    :groundedIn wd:Q170028 ;
+    :hasLabel "Hidden depths / Deceptive appearances" .
+
+:PRV-001 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "en" ;
+    :hasLesson :ActionsOverIntentions ;
+    :hasProverbID "PRV-001" ;
+    :hasSourceDomain :Hell,
+        :Road ;
+    :hasText "The road to hell is paved with good intentions." ;
+    :hasTranslation "The road to hell is paved with good intentions." ;
+    :usedIn :Situation_PRV-001 .
+
+:PRV-002 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "fa" ;
+    :hasLesson :ActionsOverIntentions ;
+    :hasProverbID "PRV-002" ;
+    :hasSourceDomain :Bear ;
+    :hasText "دوستی خاله خرسه" ;
+    :hasTranslation "Aunt bear's friendship" ;
+    :usedIn :Situation_PRV-002 .
+
+:PRV-003 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "en" ;
+    :hasLesson :OptimismInAdversity ;
+    :hasProverbID "PRV-003" ;
+    :hasSourceDomain :Cloud,
+        :Silver ;
+    :hasText "Every cloud has a silver lining." ;
+    :hasTranslation "Every cloud has a silver lining." ;
+    :usedIn :Situation_PRV-003 .
+
+:PRV-006 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "en" ;
+    :hasLesson :DeterminationPerseverance ;
+    :hasProverbID "PRV-006" ;
+    :hasSourceDomain :WayAbstract,
+        :Will ;
+    :hasText "When there is a will, there's a way." ;
+    :hasTranslation "When there is a will, there's a way." ;
+    :usedIn :Situation_PRV-006 .
+
+:PRV-007 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "fa" ;
+    :hasLesson :DeterminationPerseverance ;
+    :hasProverbID "PRV-007" ;
+    :hasSourceDomain :Finder,
+        :Seeker ;
+    :hasText "عاقبت جوینده، یابنده بود." ;
+    :hasTranslation "The seeker will eventually be the finder" ;
+    :usedIn :Situation_PRV-007 .
+
+:PRV-010 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "en" ;
+    :hasLesson :Karma ;
+    :hasProverbID "PRV-010" ;
+    :hasSourceDomain :Circle,
+        :MotionAbstract ;
+    :hasText "What goes around comes around." ;
+    :hasTranslation "What goes around comes around." ;
+    :usedIn :Situation_PRV-010 .
+
+:PRV-011 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "fa" ;
+    :hasLesson :Karma ;
+    :hasProverbID "PRV-011" ;
+    :hasSourceDomain :Hand ;
+    :hasText "از هر دست بدهی، از همان دست می‌گیری" ;
+    :hasTranslation "From whichever hand you give, from that same hand you receive" ;
+    :usedIn :Situation_PRV-011 .
+
+:PRV-015 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "ita" ;
+    :hasLesson :ActionsOverIntentions ;
+    :hasProverbID "PRV-015" ;
+    :hasSourceDomain :Sea ;
+    :hasText "Tra il dire e il fare, c'è di mezzo il mare." ;
+    :hasTranslation "Between saying and doing, there is a sea." ;
+    :usedIn :Situation_PRV-015 .
+
+:PRV-016 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "ita" ;
+    :hasLesson :OptimismInAdversity ;
+    :hasProverbID "PRV-016" ;
+    :hasSourceDomain :Storm,
+        :Sun ;
+    :hasText "Dopo il temporale, torna sempre il sereno." ;
+    :hasTranslation "After the rain comes the sun." ;
+    :usedIn :Situation_PRV-016 .
+
+:PRV-020 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "ita" ;
+    :hasLesson :DeterminationPerseverance ;
+    :hasProverbID "PRV-020" ;
+    :hasSourceDomain :Finder,
+        :Seeker ;
+    :hasText "Chi cerca, trova." ;
+    :hasTranslation "Those who search, find." ;
+    :usedIn :Situation_PRV-020 .
+
+:PRV-023 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "ita" ;
+    :hasLesson :Karma ;
+    :hasProverbID "PRV-023" ;
+    :hasSourceDomain :Storm,
+        :Wind ;
+    :hasText "Chi semina vento, raccoglie tempesta." ;
+    :hasTranslation "Those who sow wind, will reap storm." ;
+    :usedIn :Situation_PRV-023 .
+
+:PRV-035 a :Proverb,
+        owl:NamedIndividual ;
+    :hasLanguage "alb" ;
+    :hasLesson :OptimismInAdversity ;
+    :hasProverbID "PRV-035" ;
+    :hasSourceDomain :Rain,
+        :Sun ;
+    :hasText "Pas shiut vjen dielli." ;
+    :hasTranslation "After the rain comes the sun." ;
+    :usedIn :Situation_PRV-035 .
+
+:ActionsOverIntentions a :TacitLesson,
+        owl:NamedIndividual ;
+    :groundedIn wd:Q4026292 ;
+    :hasLabel "Actions over intentions" .
+
+:DeterminationPerseverance a :TacitLesson,
+        owl:NamedIndividual ;
+    :groundedIn wd:Q368671 ;
+    :hasLabel "Determination / Perseverance" .
+
+:Karma a :TacitLesson,
+        owl:NamedIndividual ;
+    :groundedIn wd:Q132196 ;
+    :hasLabel "Karma" .
+
+:OptimismInAdversity a :TacitLesson,
+        owl:NamedIndividual ;
+    :groundedIn wd:Q485446 ;
+    :hasLabel "Optimism in adversity" .
+

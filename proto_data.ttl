@@ -5,28 +5,28 @@
 
 :Equiv_PRV-001_PRV-002 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Bear)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Bear)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-001 ;
     :linksProverbB :PRV-002 .
 
 :Equiv_PRV-001_PRV-015 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Sea)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Sea)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-001 ;
     :linksProverbB :PRV-015 .
 
 :Equiv_PRV-001_PRV-027 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Deed, Cloud, Rain)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Deed, Cloud, Rain)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-001 ;
     :linksProverbB :PRV-027 .
 
 :Equiv_PRV-001_PRV-028 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Road, Hell vs Friend, Enemy)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Enemy, Friend)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-001 ;
     :linksProverbB :PRV-028 .
@@ -47,14 +47,14 @@
 
 :Equiv_PRV-002_PRV-028 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Bear vs Friend, Enemy)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Bear vs Enemy, Friend)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-002 ;
     :linksProverbB :PRV-028 .
 
 :Equiv_PRV-003_PRV-004 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs White, Night)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Night, White)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-003 ;
     :linksProverbB :PRV-004 .
@@ -82,14 +82,14 @@
 
 :Equiv_PRV-004_PRV-016 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (White, Night vs Sun, Storm)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Night, White vs Sun, Storm)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-004 ;
     :linksProverbB :PRV-016 .
 
 :Equiv_PRV-004_PRV-035 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (White, Night vs Sun, Rain)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Night, White vs Sun, Rain)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-004 ;
     :linksProverbB :PRV-035 .
@@ -110,47 +110,49 @@
 
 :Equiv_PRV-006_PRV-007 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Finder, Seeker)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Seeker, Finder)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-006 ;
     :linksProverbB :PRV-007 .
 
 :Equiv_PRV-006_PRV-020 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Finder, Seeker)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Seeker, Finder)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-006 ;
     :linksProverbB :PRV-020 .
 
 :Equiv_PRV-006_PRV-029 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Finder, Seeker)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Seeker, Finder)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-006 ;
     :linksProverbB :PRV-029 .
 
 :Equiv_PRV-006_PRV-030 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Will, Way (Abstract) vs Stones, Wall)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Stones, Wall)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-006 ;
     :linksProverbB :PRV-030 .
 
 :Equiv_PRV-007_PRV-020 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker) -- needs manual review / possible new EquivalenceType." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Seeker, Finder)." ;
+    :hasEquivalenceType :DirectMatch ;
     :linksProverbA :PRV-007 ;
     :linksProverbB :PRV-020 .
 
 :Equiv_PRV-007_PRV-029 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker) -- needs manual review / possible new EquivalenceType." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Seeker, Finder)." ;
+    :hasEquivalenceType :DirectMatch ;
     :linksProverbA :PRV-007 ;
     :linksProverbB :PRV-029 .
 
 :Equiv_PRV-007_PRV-030 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Finder, Seeker vs Stones, Wall)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Seeker, Finder vs Stones, Wall)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-007 ;
     :linksProverbB :PRV-030 .
@@ -171,7 +173,8 @@
 
 :Equiv_PRV-008_PRV-032 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances' AND identical source domain (Depth, Water) -- needs manual review / possible new EquivalenceType." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Hidden depths / Deceptive appearances' AND identical source domain (Depth, Water)." ;
+    :hasEquivalenceType :DirectMatch ;
     :linksProverbA :PRV-008 ;
     :linksProverbB :PRV-032 .
 
@@ -247,13 +250,14 @@
 
 :Equiv_PRV-012_PRV-025 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability' AND identical source domain (Chain, Link) -- needs manual review / possible new EquivalenceType." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability' AND identical source domain (Chain, Link)." ;
+    :hasEquivalenceType :DirectMatch ;
     :linksProverbA :PRV-012 ;
     :linksProverbB :PRV-025 .
 
 :Equiv_PRV-012_PRV-031 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Flock, Sheep)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Sheep, Flock)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-012 ;
     :linksProverbB :PRV-031 .
@@ -267,7 +271,7 @@
 
 :Equiv_PRV-013_PRV-031 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Crack, Wall vs Flock, Sheep)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Crack, Wall vs Sheep, Flock)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-013 ;
     :linksProverbB :PRV-031 .
@@ -281,7 +285,7 @@
 
 :Equiv_PRV-015_PRV-028 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Sea vs Friend, Enemy)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Sea vs Enemy, Friend)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-015 ;
     :linksProverbB :PRV-028 .
@@ -295,13 +299,14 @@
 
 :Equiv_PRV-020_PRV-029 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker) -- needs manual review / possible new EquivalenceType." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Seeker, Finder)." ;
+    :hasEquivalenceType :DirectMatch ;
     :linksProverbA :PRV-020 ;
     :linksProverbB :PRV-029 .
 
 :Equiv_PRV-020_PRV-030 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Finder, Seeker vs Stones, Wall)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Seeker, Finder vs Stones, Wall)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-020 ;
     :linksProverbB :PRV-030 .
@@ -329,7 +334,7 @@
 
 :Equiv_PRV-025_PRV-031 a :CrossCulturalEquivalence,
         owl:NamedIndividual ;
-    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Flock, Sheep)." ;
+    :hasDivergenceNote "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Sheep, Flock)." ;
     :hasEquivalenceType :SameLessonDifferentImage ;
     :linksProverbA :PRV-025 ;
     :linksProverbB :PRV-031 .

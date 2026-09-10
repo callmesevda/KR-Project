@@ -1,25 +1,9 @@
-"""
-PROTO project — Data Builder pipeline (step: spreadsheet -> RDF)
-
-Reads the shared "Single Source of Truth" spreadsheet and converts it into
-an RDF/Turtle knowledge graph that matches the Modeler's ontology.ttl
-(classes/properties: Proverb, TacitLesson, SourceDomain, SituationOfUse,
-CrossCulturalEquivalence, hasLesson, hasSourceDomain, usedIn, groundedIn,
-linksProverbA/B, hasEquivalenceType, etc).
-
-Re-runnable: every time teammates add rows to the spreadsheet, run this
-again to regenerate proto_data.ttl. If the Modeler revises ontology.ttl,
-only the PROTO namespace constant below should ever need to change.
-"""
-
 import itertools
 import re
 import pandas as pd
 from rdflib import Graph, Namespace, Literal, RDF, RDFS, OWL
 
-# ---------------------------------------------------------------------
 # Namespaces — taken directly from ontology.ttl
-# ---------------------------------------------------------------------
 PROTO = Namespace("http://example.org/proto#")
 WD = Namespace("http://www.wikidata.org/entity/")
 
@@ -42,10 +26,8 @@ def split_pair(label_cell: str, uri_cell: str):
     qids = [x.strip().split(":")[-1] for x in str(uri_cell).split(",")]
     return list(zip(labels, qids))
 
-
-# ---------------------------------------------------------------------
 # Load spreadsheet
-# ---------------------------------------------------------------------
+
 df = pd.read_excel("The_Single_Source_of_Truth_-_Formatted__2_.xlsx", sheet_name="first page")
 df.columns = [c.strip() for c in df.columns]
 
@@ -115,10 +97,8 @@ for _, row in df.iterrows():
         )
     g.add((proverb_uri, PROTO.hasLesson, lesson_node_by_label[lesson_label]))
 
-# ---------------------------------------------------------------------
 # CrossCulturalEquivalence: reified individual per unordered pair of
 # proverbs (different languages) sharing a TacitLesson.
-# ---------------------------------------------------------------------
 by_lesson = {}
 for _, row in df.iterrows():
     lesson_label = str(row["Tacit Lesson (Dropdown)"]).strip()
@@ -146,19 +126,17 @@ for lesson_label, entries in by_lesson.items():
                 f"source domains differ ({', '.join(domains_a)} vs {', '.join(domains_b)})."
             )))
         else:
-            # Same lesson AND same source domain -- doesn't fit any of the
-            # three defined EquivalenceType individuals cleanly. Left
-            # untyped on purpose rather than guessed; flagged below.
+            # Same lesson AND same source domain -- the Modeler added
+            # :DirectMatch to ontology.ttl to cover exactly this case.
+            g.add((equiv_uri, PROTO.hasEquivalenceType, PROTO.DirectMatch))
             g.add((equiv_uri, PROTO.hasDivergenceNote, Literal(
                 f"Auto-derived: shared tacit lesson '{lesson_label}' AND identical source domain "
-                f"({', '.join(domains_a)}) -- needs manual review / possible new EquivalenceType."
+                f"({', '.join(domains_a)})."
             )))
             n_needs_review += 1
         n_equivalences += 1
 
-# ---------------------------------------------------------------------
 # Serialize + report
-# ---------------------------------------------------------------------
 g.serialize(destination="proto_data.ttl", format="turtle")
 
 print(f"Rows read from spreadsheet         : {len(df)}")
@@ -167,7 +145,7 @@ print(f"Distinct proverbs                  : {df['Proverb ID'].nunique()}")
 print(f"Distinct tacit lessons             : {df['Tacit Lesson (Dropdown)'].nunique()}")
 print(f"Distinct source domains            : {len(source_domain_node_by_label)}")
 print(f"CrossCulturalEquivalence instances : {n_equivalences}")
-print(f"  ...of which need manual review   : {n_needs_review} (same lesson AND same image)")
+print(f"  ...of which are DirectMatch       : {n_needs_review} (same lesson AND same image)")
 print()
 if warnings:
     print("WARNINGS:")

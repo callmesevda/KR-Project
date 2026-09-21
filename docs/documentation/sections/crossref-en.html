@@ -1,0 +1,496 @@
+<h2 id="crossreference" class="list">Cross-reference for null classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by null.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#CrossCulturalEquivalence" title="http://example.org/proto#CrossCulturalEquivalence">Cross-Cultural Equivalence</a></li>
+  <li><a href="#EquivalenceType" title="http://example.org/proto#EquivalenceType">Equivalence Type</a></li>
+  <li><a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a></li>
+  <li><a href="#SituationOfUse" title="http://example.org/proto#SituationOfUse">Situation of Use</a></li>
+  <li><a href="#SourceDomain" title="http://example.org/proto#SourceDomain">Source Domain</a></li>
+  <li><a href="#TacitLesson" title="http://example.org/proto#TacitLesson">Tacit Lesson</a></li>
+ </ul>
+ <div class="entity" id="CrossCulturalEquivalence">
+  <h3>Cross-Cultural Equivalence<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#CrossCulturalEquivalence</p>
+  <div class="comment">
+   <span class="markdown">A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#annotatedBy" title="http://example.org/proto#annotatedBy">annotated by</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDivergenceNote" title="http://example.org/proto#hasDivergenceNote">has divergence note</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEquivalenceType" title="http://example.org/proto#hasEquivalenceType">has equivalence type</a> <sup class="type-op" title="object property">op</sup>, <a href="#linksProverbA" title="http://example.org/proto#linksProverbA">links proverb A</a> <sup class="type-op" title="object property">op</sup>, <a href="#linksProverbB" title="http://example.org/proto#linksProverbB">links proverb B</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EquivalenceType">
+  <h3>Equivalence Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#EquivalenceType</p>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasEquivalenceType" title="http://example.org/proto#hasEquivalenceType">has equivalence type</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#DirectMatch" title="http://example.org/proto#DirectMatch">Direct match (same lesson AND same source domain)</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#FalseFriend" title="http://example.org/proto#FalseFriend">False friend (same image, different lesson)</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#PartialOverlap" title="http://example.org/proto#PartialOverlap">Partial overlap</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#SameLessonDifferentImage" title="http://example.org/proto#SameLessonDifferentImage">Same lesson, different image</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Proverb">
+  <h3>Proverb<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#Proverb</p>
+  <div class="comment">
+   <span class="markdown">The surface expression of a proverb: its literal text, language, and image/source domain.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasLanguage" title="http://example.org/proto#hasLanguage">has language</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasLesson" title="http://example.org/proto#hasLesson">has lesson</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTranslation" title="http://example.org/proto#hasTranslation">has literal English translation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasProverbID" title="http://example.org/proto#hasProverbID">has proverb ID</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasSourceDomain" title="http://example.org/proto#hasSourceDomain">has source domain</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasText" title="http://example.org/proto#hasText">has text</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usedIn" title="http://example.org/proto#usedIn">used in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#linksProverbA" title="http://example.org/proto#linksProverbA">links proverb A</a> <sup class="type-op" title="object property">op</sup>, <a href="#linksProverbB" title="http://example.org/proto#linksProverbB">links proverb B</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SituationOfUse">
+  <h3>Situation of Use<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#SituationOfUse</p>
+  <div class="comment">
+   <span class="markdown">The pragmatic context in which a proverb would be deployed.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#usedIn" title="http://example.org/proto#usedIn">used in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SourceDomain">
+  <h3>Source Domain<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#SourceDomain</p>
+  <div class="comment">
+   <span class="markdown">The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#groundedIn" title="http://example.org/proto#groundedIn">grounded in (Wikidata)</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasSourceDomain" title="http://example.org/proto#hasSourceDomain">has source domain</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TacitLesson">
+  <h3>Tacit Lesson<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#TacitLesson</p>
+  <div class="comment">
+   <span class="markdown">The unspoken, language-independent moral a proverb conveys.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#groundedIn" title="http://example.org/proto#groundedIn">grounded in (Wikidata)</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLabel" title="http://example.org/proto#hasLabel">has label</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasLesson" title="http://example.org/proto#hasLesson">has lesson</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#groundedIn" title="http://example.org/proto#groundedIn">grounded in (Wikidata)</a></li>
+  <li><a href="#hasEquivalenceType" title="http://example.org/proto#hasEquivalenceType">has equivalence type</a></li>
+  <li><a href="#hasLesson" title="http://example.org/proto#hasLesson">has lesson</a></li>
+  <li><a href="#hasSourceDomain" title="http://example.org/proto#hasSourceDomain">has source domain</a></li>
+  <li><a href="#linksProverbA" title="http://example.org/proto#linksProverbA">links proverb A</a></li>
+  <li><a href="#linksProverbB" title="http://example.org/proto#linksProverbB">links proverb B</a></li>
+  <li><a href="#usedIn" title="http://example.org/proto#usedIn">used in</a></li>
+ </ul>
+ <div class="entity" id="groundedIn">
+  <h3>grounded in (Wikidata)<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#groundedIn</p>
+  <div class="comment">
+   <span class="markdown">Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#SourceDomain" title="http://example.org/proto#SourceDomain">Source Domain</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#TacitLesson" title="http://example.org/proto#TacitLesson">Tacit Lesson</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasEquivalenceType">
+  <h3>has equivalence type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasEquivalenceType</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CrossCulturalEquivalence" title="http://example.org/proto#CrossCulturalEquivalence">Cross-Cultural Equivalence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EquivalenceType" title="http://example.org/proto#EquivalenceType">Equivalence Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLesson">
+  <h3>has lesson<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasLesson</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TacitLesson" title="http://example.org/proto#TacitLesson">Tacit Lesson</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasSourceDomain">
+  <h3>has source domain<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasSourceDomain</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SourceDomain" title="http://example.org/proto#SourceDomain">Source Domain</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="linksProverbA">
+  <h3>links proverb A<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#linksProverbA</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CrossCulturalEquivalence" title="http://example.org/proto#CrossCulturalEquivalence">Cross-Cultural Equivalence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="linksProverbB">
+  <h3>links proverb B<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#linksProverbB</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CrossCulturalEquivalence" title="http://example.org/proto#CrossCulturalEquivalence">Cross-Cultural Equivalence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="usedIn">
+  <h3>used in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#usedIn</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#SituationOfUse" title="http://example.org/proto#SituationOfUse">Situation of Use</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#annotatedBy" title="http://example.org/proto#annotatedBy">annotated by</a></li>
+  <li><a href="#hasDivergenceNote" title="http://example.org/proto#hasDivergenceNote">has divergence note</a></li>
+  <li><a href="#hasLabel" title="http://example.org/proto#hasLabel">has label</a></li>
+  <li><a href="#hasLanguage" title="http://example.org/proto#hasLanguage">has language</a></li>
+  <li><a href="#hasTranslation" title="http://example.org/proto#hasTranslation">has literal English translation</a></li>
+  <li><a href="#hasProverbID" title="http://example.org/proto#hasProverbID">has proverb ID</a></li>
+  <li><a href="#hasText" title="http://example.org/proto#hasText">has text</a></li>
+ </ul>
+ <div class="entity" id="annotatedBy">
+  <h3>annotated by<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#annotatedBy</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CrossCulturalEquivalence" title="http://example.org/proto#CrossCulturalEquivalence">Cross-Cultural Equivalence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasDivergenceNote">
+  <h3>has divergence note<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasDivergenceNote</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CrossCulturalEquivalence" title="http://example.org/proto#CrossCulturalEquivalence">Cross-Cultural Equivalence</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLabel">
+  <h3>has label<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasLabel</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TacitLesson" title="http://example.org/proto#TacitLesson">Tacit Lesson</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasLanguage">
+  <h3>has language<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasLanguage</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTranslation">
+  <h3>has literal English translation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasTranslation</p>
+  <div class="comment">
+   <span class="markdown">Word-for-word English gloss, distinct from hasText (the proverb in its original language).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasProverbID">
+  <h3>has proverb ID<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasProverbID</p>
+  <div class="comment">
+   <span class="markdown">Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasText">
+  <h3>has text<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#hasText</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Proverb" title="http://example.org/proto#Proverb">Proverb</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#DirectMatch" title="http://example.org/proto#DirectMatch">Direct match (same lesson AND same source domain)</a></li>
+  <li><a href="#FalseFriend" title="http://example.org/proto#FalseFriend">False friend (same image, different lesson)</a></li>
+  <li><a href="#PartialOverlap" title="http://example.org/proto#PartialOverlap">Partial overlap</a></li>
+  <li><a href="#SameLessonDifferentImage" title="http://example.org/proto#SameLessonDifferentImage">Same lesson, different image</a></li>
+ </ul>
+ <div class="entity" id="DirectMatch">
+  <h3>Direct match (same lesson AND same source domain)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#DirectMatch</p>
+  <div class="comment">
+   <span class="markdown">For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EquivalenceType" title="http://example.org/proto#EquivalenceType">Equivalence Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FalseFriend">
+  <h3>False friend (same image, different lesson)<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#FalseFriend</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EquivalenceType" title="http://example.org/proto#EquivalenceType">Equivalence Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PartialOverlap">
+  <h3>Partial overlap<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#PartialOverlap</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EquivalenceType" title="http://example.org/proto#EquivalenceType">Equivalence Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="SameLessonDifferentImage">
+  <h3>Same lesson, different image<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://example.org/proto#SameLessonDifferentImage</p>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="#EquivalenceType" title="http://example.org/proto#EquivalenceType">Equivalence Type</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>

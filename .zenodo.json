@@ -1,0 +1,31 @@
+{
+  "title": "PROTO — Proverbs & Tacit-knowledge Ontology",
+  "description": "<p>An OWL ontology and accompanying dataset modeling proverbs, the tacit (unspoken) lessons they carry, the situations in which they are used, and the cross-cultural equivalences that link a proverb in one language to a proverb in another when they teach the same lesson but diverge (or don't) in imagery.</p><p>Includes the TBox (proto-ontology-structure.ttl), the ABox generated from a 28-proverb, 4-language dataset (proto_data.ttl), the source spreadsheet, and the conversion script.</p>",
+  "creators": [
+    { "name": "Rezaei Melal, Sevda" },
+    { "name": "Hasanaj, Polikseni" },
+    { "name": "Afsharzadehtorghab, Saba" },
+    { "name": "Briccolani, Claudia" }
+  ],
+  "license": "CC-BY-4.0",
+  "upload_type": "dataset",
+  "keywords": [
+    "ontology",
+    "OWL",
+    "RDF",
+    "proverbs",
+    "tacit knowledge",
+    "cross-cultural equivalence",
+    "knowledge representation",
+    "Wikidata"
+  ],
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://triplydb.com/SevdaRezaeiMelal/proverbs-kr",
+      "relation": "isSupplementTo",
+      "resource_type": "dataset",
+      "scheme": "url"
+    }
+  ]
+}

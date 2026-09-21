@@ -1,0 +1,431 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://example.org/proto" ],
+    "iri" : "http://example.org/proto",
+    "labels" : {
+      "undefined" : "PROTO — Proverbs & Tacit-knowledge Ontology"
+    },
+    "comments" : {
+      "undefined" : "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://example.org/proto#TacitLesson",
+    "baseIri" : "http://example.org/proto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TacitLesson",
+      "undefined" : "Tacit Lesson"
+    },
+    "comment" : {
+      "undefined" : "The unspoken, language-independent moral a proverb conveys."
+    },
+    "id" : "6"
+  }, {
+    "iri" : "http://example.org/proto#SituationOfUse",
+    "baseIri" : "http://example.org/proto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SituationOfUse",
+      "undefined" : "Situation of Use"
+    },
+    "comment" : {
+      "undefined" : "The pragmatic context in which a proverb would be deployed."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "13",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://example.org/proto#SourceDomain",
+    "baseIri" : "http://example.org/proto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SourceDomain",
+      "undefined" : "Source Domain"
+    },
+    "comment" : {
+      "undefined" : "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)."
+    },
+    "id" : "14"
+  }, {
+    "instances" : 0,
+    "union" : [ "6", "14" ],
+    "attributes" : [ "anonymous", "union" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://example.org/proto#Proverb",
+    "baseIri" : "http://example.org/proto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Proverb",
+      "undefined" : "Proverb"
+    },
+    "comment" : {
+      "undefined" : "The surface expression of a proverb: its literal text, language, and image/source domain."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "http://example.org/proto#EquivalenceType",
+    "baseIri" : "http://example.org/proto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EquivalenceType",
+      "undefined" : "Equivalence Type"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/proto#FalseFriend",
+      "baseIri" : "http://example.org/proto",
+      "labels" : {
+        "IRI-based" : "FalseFriend",
+        "undefined" : "False friend (same image, different lesson)"
+      }
+    }, {
+      "iri" : "http://example.org/proto#DirectMatch",
+      "baseIri" : "http://example.org/proto",
+      "comment" : {
+        "undefined" : "For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types."
+      },
+      "labels" : {
+        "IRI-based" : "DirectMatch",
+        "undefined" : "Direct match (same lesson AND same source domain)"
+      }
+    }, {
+      "iri" : "http://example.org/proto#PartialOverlap",
+      "baseIri" : "http://example.org/proto",
+      "labels" : {
+        "IRI-based" : "PartialOverlap",
+        "undefined" : "Partial overlap"
+      }
+    }, {
+      "iri" : "http://example.org/proto#SameLessonDifferentImage",
+      "baseIri" : "http://example.org/proto",
+      "labels" : {
+        "IRI-based" : "SameLessonDifferentImage",
+        "undefined" : "Same lesson, different image"
+      }
+    } ],
+    "id" : "24"
+  }, {
+    "iri" : "http://example.org/proto#CrossCulturalEquivalence",
+    "baseIri" : "http://example.org/proto",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrossCulturalEquivalence",
+      "undefined" : "Cross-Cultural Equivalence"
+    },
+    "comment" : {
+      "undefined" : "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)."
+    },
+    "id" : "1"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "18",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "22",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://example.org/proto#hasDivergenceNote",
+    "baseIri" : "http://example.org/proto",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasDivergenceNote",
+      "undefined" : "has divergence note"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://example.org/proto#hasProverbID",
+    "baseIri" : "http://example.org/proto",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasProverbID",
+      "undefined" : "has proverb ID"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://example.org/proto#hasTranslation",
+    "baseIri" : "http://example.org/proto",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "hasTranslation",
+      "undefined" : "has literal English translation"
+    },
+    "domain" : "4",
+    "comment" : {
+      "undefined" : "Word-for-word English gloss, distinct from hasText (the proverb in its original language)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://example.org/proto#hasLesson",
+    "baseIri" : "http://example.org/proto",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "hasLesson",
+      "undefined" : "has lesson"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://example.org/proto#linksProverbA",
+    "baseIri" : "http://example.org/proto",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "linksProverbA",
+      "undefined" : "links proverb A"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://example.org/proto#linksProverbB",
+    "baseIri" : "http://example.org/proto",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "linksProverbB",
+      "undefined" : "links proverb B"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "iri" : "http://example.org/proto#usedIn",
+    "baseIri" : "http://example.org/proto",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "usedIn",
+      "undefined" : "used in"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "20"
+  }, {
+    "iri" : "http://example.org/proto#hasText",
+    "baseIri" : "http://example.org/proto",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasText",
+      "undefined" : "has text"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://example.org/proto#groundedIn",
+    "baseIri" : "http://example.org/proto",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "groundedIn",
+      "undefined" : "grounded in (Wikidata)"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns."
+    },
+    "attributes" : [ "object" ],
+    "id" : "22"
+  }, {
+    "iri" : "http://example.org/proto#hasSourceDomain",
+    "baseIri" : "http://example.org/proto",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasSourceDomain",
+      "undefined" : "has source domain"
+    },
+    "domain" : "4",
+    "attributes" : [ "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://example.org/proto#hasLanguage",
+    "baseIri" : "http://example.org/proto",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasLanguage",
+      "undefined" : "has language"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://example.org/proto#annotatedBy",
+    "baseIri" : "http://example.org/proto",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "annotatedBy",
+      "undefined" : "annotated by"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://example.org/proto#hasEquivalenceType",
+    "baseIri" : "http://example.org/proto",
+    "range" : "24",
+    "label" : {
+      "IRI-based" : "hasEquivalenceType",
+      "undefined" : "has equivalence type"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://example.org/proto#hasLabel",
+    "baseIri" : "http://example.org/proto",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "hasLabel",
+      "undefined" : "has label"
+    },
+    "domain" : "6",
+    "attributes" : [ "datatype" ],
+    "id" : "28"
+  } ]
+}

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>PROTO — Proverbs &amp; Tacit-knowledge Ontology</title>
+  <meta name="description" content="PROTO models proverbs across languages, the unspoken lessons they carry, the situations they're used in, and cross-cultural equivalences between them.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="mark">PROTO</span>
+        <span class="tagline">Proverbs &amp; Tacit-knowledge Ontology</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="proverbs.html">Proverbs</a></li>
+          <li><a href="database.html">Database</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="questions.html">Questions</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <h1>PROTO</h1>
+        <p class="lede">
+          An OWL ontology that models proverbs, the tacit lessons they carry, the situations
+          in which they are used, and the cross-cultural equivalences that link a proverb in
+          one language to a proverb in another when they teach the same unspoken lesson —
+          whether or not they share the same imagery.
+        </p>
+        <div class="cta-row">
+          <a class="btn solid" href="proverbs.html">Explore the proverbs</a>
+          <a class="btn" href="documentation.html">Read the documentation</a>
+          <a class="btn" href="https://github.com/callmesevda/KR-Project" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview">
+      <div class="wrap">
+        <p class="section-kicker">Overview</p>
+        <h2 class="section-title">Why PROTO?</h2>
+        <p class="section-intro">
+          Proverbs are one of the clearest cases of tacit knowledge in language: the literal
+          words ("a bird in the hand...") are not the point — the point is the unspoken lesson
+          the phrase is used to teach ("value what you already have over an uncertain gain").
+          Two cultures can arrive at the same lesson through completely different imagery, or
+          use the very same image to teach something else entirely. PROTO gives that structure
+          a formal, queryable shape: it separates a proverb's <em>surface form</em> from its
+          <em>tacit lesson</em>, its <em>source domain</em> (the literal imagery it draws on),
+          the <em>situation</em> in which it is deployed, and the <em>equivalence</em> relations
+          that connect proverbs across languages.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat"><span class="num">28</span><span class="label">Proverbs</span></div>
+          <div class="stat"><span class="num">4</span><span class="label">Languages</span></div>
+          <div class="stat"><span class="num">6</span><span class="label">Tacit lessons</span></div>
+          <div class="stat"><span class="num">40</span><span class="label">Source domains</span></div>
+          <div class="stat"><span class="num">48</span><span class="label">Cross-cultural links</span></div>
+          <div class="stat"><span class="num">834</span><span class="label">RDF triples</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="classes">
+      <div class="wrap">
+        <p class="section-kicker">Ontology</p>
+        <h2 class="section-title">Core classes</h2>
+        <p class="section-intro">
+          The TBox is deliberately small: five core classes plus a controlled vocabulary for
+          equivalence types. Full definitions and properties are in the
+          <a href="documentation.html">documentation</a>.
+        </p>
+        <div class="grid">
+          <div class="card">
+            <h3><code>:Proverb</code></h3>
+            <p>The surface expression of a proverb: its literal text, language, and image/source domain.</p>
+            <div class="meta">Class</div>
+          </div>
+          <div class="card">
+            <h3><code>:TacitLesson</code></h3>
+            <p>The unspoken, language-independent moral a proverb conveys.</p>
+            <div class="meta">Class</div>
+          </div>
+          <div class="card">
+            <h3><code>:SituationOfUse</code></h3>
+            <p>The pragmatic context in which a proverb would be deployed.</p>
+            <div class="meta">Class</div>
+          </div>
+          <div class="card">
+            <h3><code>:SourceDomain</code></h3>
+            <p>The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food).</p>
+            <div class="meta">Class</div>
+          </div>
+          <div class="card">
+            <h3><code>:CrossCulturalEquivalence</code></h3>
+            <p>A reified link between two proverbs that share a tacit lesson but diverge (or don't) in imagery — modeled as a full class so the equivalence itself can carry attributes.</p>
+            <div class="meta">Class</div>
+          </div>
+          <div class="card">
+            <h3><code>:EquivalenceType</code></h3>
+            <p>Controlled vocabulary for how two proverbs relate: same lesson/different image, false friend, partial overlap, or direct match.</p>
+            <div class="meta">Class</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pipeline">
+      <div class="wrap">
+        <p class="section-kicker">Method</p>
+        <h2 class="section-title">How it's built</h2>
+        <p class="section-intro">
+          The knowledge base starts life as a shared spreadsheet ("The Single Source of Truth")
+          where each row is one proverb, annotated with its literal image and tacit lesson and
+          grounded in Wikidata QIDs. A conversion script
+          (<a href="https://github.com/callmesevda/KR-Project/blob/main/xlsx_to_rdf.py" target="_blank" rel="noopener"><code>xlsx_to_rdf.py</code></a>)
+          reads the spreadsheet against the TBox and generates the ABox, deduplicating
+          repeated lessons and source domains into shared individuals, and deriving
+          <code>CrossCulturalEquivalence</code> instances automatically for any two proverbs in
+          different languages that share a tacit lesson.
+        </p>
+        <p class="section-intro">
+          PROTO is the project for the course <em>Knowledge Representation and Extraction</em>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <h4>Project</h4>
+          <ul>
+            <li><a href="proverbs.html">Proverbs</a></li>
+            <li><a href="database.html">Database</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="questions.html">Competency questions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/callmesevda/KR-Project" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="database.html#downloads">Download the ontology (.ttl)</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Cite &amp; archive</h4>
+          <ul>
+            <li>License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></li>
+            <li>DOI: <em>pending Zenodo deposit</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PROTO project.</span>
+        <span>Built by the PROTO team.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

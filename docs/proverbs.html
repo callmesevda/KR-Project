@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Proverbs — PROTO</title>
+  <meta name="description" content="Browse all 28 proverbs in the PROTO knowledge base, filterable by language and tacit lesson.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="mark">PROTO</span>
+        <span class="tagline">Proverbs &amp; Tacit-knowledge Ontology</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="proverbs.html" aria-current="page">Proverbs</a></li>
+          <li><a href="database.html">Database</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="questions.html">Questions</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:20px;">
+      <div class="wrap">
+        <p class="section-kicker">Data</p>
+        <h1 style="font-size:2.2rem;">The proverbs</h1>
+        <p class="lede">
+          All 28 proverbs currently in the knowledge base, drawn from the project's shared
+          spreadsheet. Each is annotated with its language, literal source domain, tacit
+          lesson, and the situation in which it is used. Filter by language or lesson, or
+          search the text.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <div class="filter-bar">
+          <input type="search" id="search" placeholder="Search text, translation, situation…" aria-label="Search proverbs">
+          <select id="lang-filter" aria-label="Filter by language">
+            <option value="">All languages</option>
+          </select>
+          <select id="lesson-filter" aria-label="Filter by tacit lesson">
+            <option value="">All tacit lessons</option>
+          </select>
+        </div>
+
+        <p id="result-count" class="section-intro" style="margin-bottom:12px;"></p>
+
+        <div class="table-scroll">
+          <table class="data-table" id="proverb-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Lang</th>
+                <th>Text</th>
+                <th>Literal translation</th>
+                <th>Source domain</th>
+                <th>Tacit lesson</th>
+                <th>Situation of use</th>
+              </tr>
+            </thead>
+            <tbody id="proverb-body">
+              <tr><td colspan="7">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <h4>Project</h4>
+          <ul>
+            <li><a href="proverbs.html">Proverbs</a></li>
+            <li><a href="database.html">Database</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="questions.html">Competency questions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/callmesevda/KR-Project" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="database.html#downloads">Download the ontology (.ttl)</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Cite &amp; archive</h4>
+          <ul>
+            <li>License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></li>
+            <li>DOI: <em>pending Zenodo deposit</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PROTO project.</span>
+        <span>Built by the PROTO team.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/proto-data.js"></script>
+  <script src="assets/js/proverbs.js"></script>
+</body>
+</html>

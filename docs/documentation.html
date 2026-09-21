@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Documentation — PROTO</title>
+  <meta name="description" content="Auto-generated WIDOCO documentation for the PROTO ontology, plus a human-readable schema summary.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="mark">PROTO</span>
+        <span class="tagline">Proverbs &amp; Tacit-knowledge Ontology</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="proverbs.html">Proverbs</a></li>
+          <li><a href="database.html">Database</a></li>
+          <li><a href="documentation.html" aria-current="page">Documentation</a></li>
+          <li><a href="questions.html">Questions</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:20px;">
+      <div class="wrap">
+        <p class="section-kicker">Reference</p>
+        <h1 style="font-size:2.2rem;">Documentation</h1>
+        <p class="lede">
+          Full class and property reference for the PROTO TBox, generated automatically from
+          <code>proto-ontology-structure.ttl</code> with
+          <a href="https://github.com/dgarijo/Widoco" target="_blank" rel="noopener">WIDOCO</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="widoco-status" style="padding-top:0;">
+      <div class="wrap">
+        <div class="grid">
+          <div class="card">
+            <h3>Full WIDOCO documentation</h3>
+            <p>Auto-generated reference for every class, property, and named individual, with
+              cross-references, namespace declarations, and a WebVOWL visual browser of the
+              schema.</p>
+            <div class="meta"><a href="documentation/index-en.html">Open the documentation →</a></div>
+          </div>
+          <div class="card">
+            <h3>Visual schema browser (WebVOWL)</h3>
+            <p>An interactive graph of the TBox — classes as nodes, properties as edges.</p>
+            <div class="meta"><a href="documentation/webvowl/index.html">Open WebVOWL →</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schema-summary">
+      <div class="wrap">
+        <h2 class="section-title">Schema summary</h2>
+
+        <h3>Classes</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Class</th><th>Label</th><th>Comment</th></tr></thead>
+            <tbody>
+              <tr><td><code>:Proverb</code></td><td>Proverb</td><td>The surface expression of a proverb: its literal text, language, and image/source domain.</td></tr>
+              <tr><td><code>:TacitLesson</code></td><td>Tacit Lesson</td><td>The unspoken, language-independent moral a proverb conveys.</td></tr>
+              <tr><td><code>:SituationOfUse</code></td><td>Situation of Use</td><td>The pragmatic context in which a proverb would be deployed.</td></tr>
+              <tr><td><code>:SourceDomain</code></td><td>Source Domain</td><td>The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food).</td></tr>
+              <tr><td><code>:CrossCulturalEquivalence</code></td><td>Cross-Cultural Equivalence</td><td>A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator).</td></tr>
+              <tr><td><code>:EquivalenceType</code></td><td>Equivalence Type</td><td>Controlled vocabulary for equivalence type, with four named individuals (below).</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Equivalence type vocabulary</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Individual</th><th>Label</th></tr></thead>
+            <tbody>
+              <tr><td><code>:SameLessonDifferentImage</code></td><td>Same lesson, different image</td></tr>
+              <tr><td><code>:FalseFriend</code></td><td>False friend (same image, different lesson)</td></tr>
+              <tr><td><code>:PartialOverlap</code></td><td>Partial overlap</td></tr>
+              <tr><td><code>:DirectMatch</code></td><td>Direct match (same lesson AND same source domain)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Object properties</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Property</th><th>Domain</th><th>Range</th></tr></thead>
+            <tbody>
+              <tr><td><code>:hasLesson</code></td><td><code>:Proverb</code></td><td><code>:TacitLesson</code></td></tr>
+              <tr><td><code>:hasSourceDomain</code></td><td><code>:Proverb</code></td><td><code>:SourceDomain</code></td></tr>
+              <tr><td><code>:usedIn</code></td><td><code>:Proverb</code></td><td><code>:SituationOfUse</code></td></tr>
+              <tr><td><code>:linksProverbA</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:Proverb</code></td></tr>
+              <tr><td><code>:linksProverbB</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:Proverb</code></td></tr>
+              <tr><td><code>:hasEquivalenceType</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:EquivalenceType</code></td></tr>
+              <tr><td><code>:groundedIn</code></td><td><code>:TacitLesson</code> or <code>:SourceDomain</code></td><td>External (Wikidata, e.g. <code>wd:Q...</code>)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>Data properties</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Comment</th></tr></thead>
+            <tbody>
+              <tr><td><code>:hasText</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
+              <tr><td><code>:hasTranslation</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>Word-for-word English gloss, distinct from <code>hasText</code>.</td></tr>
+              <tr><td><code>:hasProverbID</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>Stable human-readable ID from the spreadsheet, e.g. <code>PRV-001</code>.</td></tr>
+              <tr><td><code>:hasLanguage</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
+              <tr><td><code>:hasLabel</code></td><td><code>:TacitLesson</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
+              <tr><td><code>:hasDivergenceNote</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
+              <tr><td><code>:annotatedBy</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section-intro">
+          Full machine-readable definitions: <a href="data/proto-ontology-structure.ttl" download>download the TBox (.ttl)</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <h4>Project</h4>
+          <ul>
+            <li><a href="proverbs.html">Proverbs</a></li>
+            <li><a href="database.html">Database</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="questions.html">Competency questions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/callmesevda/KR-Project" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="database.html#downloads">Download the ontology (.ttl)</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Cite &amp; archive</h4>
+          <ul>
+            <li>License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></li>
+            <li>DOI: <em>pending Zenodo deposit</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PROTO project.</span>
+        <span>Built by the PROTO team.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

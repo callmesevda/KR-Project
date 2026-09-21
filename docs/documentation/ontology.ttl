@@ -1,0 +1,193 @@
+@prefix : <http://example.org/proto#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/proto#> .
+
+<http://example.org/proto> rdf:type owl:Ontology ;
+                            rdfs:comment "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery." ;
+                            rdfs:label "PROTO — Proverbs & Tacit-knowledge Ontology" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/proto#groundedIn
+:groundedIn rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :SourceDomain
+                                        :TacitLesson
+                                      )
+                        ] ;
+            rdfs:comment "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns." ;
+            rdfs:label "grounded in (Wikidata)" .
+
+
+###  http://example.org/proto#hasEquivalenceType
+:hasEquivalenceType rdf:type owl:ObjectProperty ;
+                    rdfs:domain :CrossCulturalEquivalence ;
+                    rdfs:range :EquivalenceType ;
+                    rdfs:label "has equivalence type" .
+
+
+###  http://example.org/proto#hasLesson
+:hasLesson rdf:type owl:ObjectProperty ;
+           rdfs:domain :Proverb ;
+           rdfs:range :TacitLesson ;
+           rdfs:label "has lesson" .
+
+
+###  http://example.org/proto#hasSourceDomain
+:hasSourceDomain rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Proverb ;
+                 rdfs:range :SourceDomain ;
+                 rdfs:label "has source domain" .
+
+
+###  http://example.org/proto#linksProverbA
+:linksProverbA rdf:type owl:ObjectProperty ;
+               rdfs:domain :CrossCulturalEquivalence ;
+               rdfs:range :Proverb ;
+               rdfs:label "links proverb A" .
+
+
+###  http://example.org/proto#linksProverbB
+:linksProverbB rdf:type owl:ObjectProperty ;
+               rdfs:domain :CrossCulturalEquivalence ;
+               rdfs:range :Proverb ;
+               rdfs:label "links proverb B" .
+
+
+###  http://example.org/proto#usedIn
+:usedIn rdf:type owl:ObjectProperty ;
+        rdfs:domain :Proverb ;
+        rdfs:range :SituationOfUse ;
+        rdfs:label "used in" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/proto#annotatedBy
+:annotatedBy rdf:type owl:DatatypeProperty ;
+             rdfs:domain :CrossCulturalEquivalence ;
+             rdfs:range xsd:string ;
+             rdfs:label "annotated by" .
+
+
+###  http://example.org/proto#hasDivergenceNote
+:hasDivergenceNote rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :CrossCulturalEquivalence ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has divergence note" .
+
+
+###  http://example.org/proto#hasLabel
+:hasLabel rdf:type owl:DatatypeProperty ;
+          rdfs:domain :TacitLesson ;
+          rdfs:range xsd:string ;
+          rdfs:label "has label" .
+
+
+###  http://example.org/proto#hasLanguage
+:hasLanguage rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Proverb ;
+             rdfs:range xsd:string ;
+             rdfs:label "has language" .
+
+
+###  http://example.org/proto#hasProverbID
+:hasProverbID rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Proverb ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs." ;
+              rdfs:label "has proverb ID" .
+
+
+###  http://example.org/proto#hasText
+:hasText rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Proverb ;
+         rdfs:range xsd:string ;
+         rdfs:label "has text" .
+
+
+###  http://example.org/proto#hasTranslation
+:hasTranslation rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Proverb ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Word-for-word English gloss, distinct from hasText (the proverb in its original language)." ;
+                rdfs:label "has literal English translation" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/proto#CrossCulturalEquivalence
+:CrossCulturalEquivalence rdf:type owl:Class ;
+                          rdfs:comment "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)." ;
+                          rdfs:label "Cross-Cultural Equivalence" .
+
+
+###  http://example.org/proto#EquivalenceType
+:EquivalenceType rdf:type owl:Class ;
+                 rdfs:label "Equivalence Type" .
+
+
+###  http://example.org/proto#Proverb
+:Proverb rdf:type owl:Class ;
+         rdfs:comment "The surface expression of a proverb: its literal text, language, and image/source domain." ;
+         rdfs:label "Proverb" .
+
+
+###  http://example.org/proto#SituationOfUse
+:SituationOfUse rdf:type owl:Class ;
+                rdfs:comment "The pragmatic context in which a proverb would be deployed." ;
+                rdfs:label "Situation of Use" .
+
+
+###  http://example.org/proto#SourceDomain
+:SourceDomain rdf:type owl:Class ;
+              rdfs:comment "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)." ;
+              rdfs:label "Source Domain" .
+
+
+###  http://example.org/proto#TacitLesson
+:TacitLesson rdf:type owl:Class ;
+             rdfs:comment "The unspoken, language-independent moral a proverb conveys." ;
+             rdfs:label "Tacit Lesson" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/proto#DirectMatch
+:DirectMatch rdf:type owl:NamedIndividual ,
+                      :EquivalenceType ;
+             rdfs:comment "For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types." ;
+             rdfs:label "Direct match (same lesson AND same source domain)" .
+
+
+###  http://example.org/proto#FalseFriend
+:FalseFriend rdf:type owl:NamedIndividual ,
+                      :EquivalenceType ;
+             rdfs:label "False friend (same image, different lesson)" .
+
+
+###  http://example.org/proto#PartialOverlap
+:PartialOverlap rdf:type owl:NamedIndividual ,
+                         :EquivalenceType ;
+                rdfs:label "Partial overlap" .
+
+
+###  http://example.org/proto#SameLessonDifferentImage
+:SameLessonDifferentImage rdf:type owl:NamedIndividual ,
+                                   :EquivalenceType ;
+                          rdfs:label "Same lesson, different image" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Competency Questions — PROTO</title>
+  <meta name="description" content="The competency questions PROTO is designed to answer.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="mark">PROTO</span>
+        <span class="tagline">Proverbs &amp; Tacit-knowledge Ontology</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="proverbs.html">Proverbs</a></li>
+          <li><a href="database.html">Database</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="questions.html" aria-current="page">Questions</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:20px;">
+      <div class="wrap">
+        <p class="section-kicker">Requirements</p>
+        <h1 style="font-size:2.2rem;">Competency questions</h1>
+        <p class="lede">
+          Competency questions are the natural-language questions an ontology is designed to
+          be able to answer — the requirements that drove PROTO's modeling decisions (why
+          <code>CrossCulturalEquivalence</code> is reified, why lessons and source domains
+          are separate classes, and so on).
+        </p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <div class="notice">
+          <strong>Adopted by the team:</strong> these eight questions come from Polikseni Hasanaj's
+          15 September 2026 analyst review of the equivalence links. Each one is the SPARQL
+          query she ran against the live graph to produce a finding in that review, and the
+          team has adopted them as PROTO's competency questions.
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ1 — How many equivalence links are there of each type?</h2>
+        <p class="section-intro">Answer (15 Sept 2026): 43 <code>SameLessonDifferentImage</code>, 5 <code>DirectMatch</code>. <code>PartialOverlap</code> and <code>FalseFriend</code> are never assigned by the generation script — the starting point for the whole review.</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+SELECT ?type (COUNT(*) AS ?links)
+WHERE { ?e a p:CrossCulturalEquivalence ; p:hasEquivalenceType ?type }
+GROUP BY ?type</code></pre>
+        </details>
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ2 — What are all the equivalence links, with both proverbs' languages, translations and type?</h2>
+        <p class="section-intro">Answer: 48 rows — the full list reviewed pair-by-pair; no link ever joins two proverbs of the same language.</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+SELECT ?pair ?langA ?proverbA ?langB ?proverbB ?type
+WHERE {
+  ?pair a p:CrossCulturalEquivalence ;
+        p:linksProverbA ?a ; p:linksProverbB ?b ; p:hasEquivalenceType ?type .
+  ?a p:hasLanguage ?langA ; p:hasTranslation ?proverbA .
+  ?b p:hasLanguage ?langB ; p:hasTranslation ?proverbB .
+}
+ORDER BY ?pair</code></pre>
+        </details>
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ3 — Which proverb pairs between two given languages are direct matches?</h2>
+        <p class="section-intro">Answer for Italian–Albanian: one row — "Chi cerca, trova" / "Kush kërkon, gjen" (PRV-020 / PRV-029). Swap the two language codes to check any other pair.</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+SELECT ?proverbA ?proverbB
+WHERE {
+  ?pair p:hasEquivalenceType p:DirectMatch ;
+        p:linksProverbA ?a ; p:linksProverbB ?b .
+  ?a p:hasLanguage "ita" ; p:hasText ?proverbA .
+  ?b p:hasLanguage "alb" ; p:hasText ?proverbB .
+}</code></pre>
+        </details>
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ4 — Which source-domain images recur across more than one language?</h2>
+        <p class="section-intro">Answer: "Seeker/Finder" (Farsi, Italian, Albanian) and "Water" (English, Italian, Albanian) top the list, then several two-language pairs. This is also where tag-wording gaps show up — "Sun" is shared by Italian/Albanian, but "Storm"/"Rain" aren't, which is exactly why the generation script missed a real direct match (CQ1's caveat).</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+SELECT ?domain (GROUP_CONCAT(DISTINCT ?lang; separator=", ") AS ?languages)
+       (COUNT(DISTINCT ?lang) AS ?n)
+WHERE { ?prov p:hasSourceDomain ?domain ; p:hasLanguage ?lang }
+GROUP BY ?domain
+HAVING (COUNT(DISTINCT ?lang) &gt; 1)
+ORDER BY DESC(?n)</code></pre>
+        </details>
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ5 — Which proverbs share a source-domain image but teach different lessons? (false-friend candidates)</h2>
+        <p class="section-intro">Answer: 4 pairs — see the <a href="database.html#review">analyst review</a> for detail. The generation script can't produce these on its own (it only ever links proverbs that already share a lesson); this query finds them by searching across lessons instead.</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+SELECT ?domain ?a ?lessonA ?b ?lessonB
+WHERE {
+  ?a p:hasSourceDomain ?domain ; p:hasLesson ?lessonA ; p:hasLanguage ?langA .
+  ?b p:hasSourceDomain ?domain ; p:hasLesson ?lessonB ; p:hasLanguage ?langB .
+  FILTER (?lessonA != ?lessonB &amp;&amp; STR(?a) &lt; STR(?b))
+}</code></pre>
+        </details>
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ6 — Which tacit lessons have no direct match at all among the sampled proverbs?</h2>
+        <p class="section-intro">Answer: "Actions over intentions," "Karma," "Optimism in adversity." (Under the review's proposed reclassification, "Optimism in adversity" would leave this list — see the Italian/Albanian "after the rain, the sun" finding.)</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+SELECT ?lesson
+WHERE {
+  ?lesson a p:TacitLesson .
+  FILTER NOT EXISTS {
+    ?e p:hasEquivalenceType p:DirectMatch ; p:linksProverbA ?x .
+    ?x p:hasLesson ?lesson
+  }
+}</code></pre>
+        </details>
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ7 — How many proverbs did each language contribute to each lesson?</h2>
+        <p class="section-intro">Answer: one proverb per language per lesson, except Albanian (two each in "Actions," "Determination," "Karma") and Farsi (two in "Optimism"). This sampling imbalance is part of why the direct-match count is likely an undercount of what's really out there (see the review's finding 6).</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+SELECT ?lesson ?lang (COUNT(?prov) AS ?proverbs)
+WHERE { ?prov p:hasLesson ?l ; p:hasLanguage ?lang . ?l p:hasLabel ?lesson }
+GROUP BY ?lesson ?lang
+ORDER BY ?lesson ?lang</code></pre>
+        </details>
+
+        <h2 class="section-title" style="font-size:1.3rem;">CQ8 — What is everything linked to a given proverb, together with its situation of use?</h2>
+        <p class="section-intro">Answer for PRV-032 ("Uji i qetë të mbyt" / "Quiet water drowns you"): linked to the English, Farsi and Italian "quiet water" proverbs — and their situations of use show they don't all mean the same thing by it (English is admiring, the others warn). Swap in any proverb ID.</p>
+        <details style="margin-bottom:26px;">
+          <summary>SPARQL</summary>
+          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+SELECT ?other ?lang ?proverb ?type ?situation
+WHERE {
+  { ?e p:linksProverbA p:PRV-032 ; p:linksProverbB ?other }
+  UNION
+  { ?e p:linksProverbB p:PRV-032 ; p:linksProverbA ?other }
+  ?e p:hasEquivalenceType ?type .
+  ?other p:hasLanguage ?lang ; p:hasTranslation ?proverb ; p:usedIn ?s .
+  ?s rdfs:label ?situation .
+}</code></pre>
+        </details>
+
+        <p class="section-intro">All eight run live against
+          <a href="https://triplydb.com/SevdaRezaeiMelal/proverbs-kr/sparql" target="_blank" rel="noopener">the TriplyDB SPARQL endpoint</a>.
+          A few more illustrative (but less load-bearing) queries are on the
+          <a href="database.html#sparql">database page</a>.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <h4>Project</h4>
+          <ul>
+            <li><a href="proverbs.html">Proverbs</a></li>
+            <li><a href="database.html">Database</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="questions.html">Competency questions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/callmesevda/KR-Project" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="database.html#downloads">Download the ontology (.ttl)</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Cite &amp; archive</h4>
+          <ul>
+            <li>License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></li>
+            <li>DOI: <em>pending Zenodo deposit</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PROTO project.</span>
+        <span>Built by the PROTO team.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

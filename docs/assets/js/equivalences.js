@@ -1,5 +1,3 @@
-// Renders the cross-cultural equivalence browser on database.html.
-// Reads from PROVERBS and EQUIVALENCES, defined in proto-data.js.
 (function () {
   const tbody = document.getElementById("equiv-body");
   if (!tbody) return;

@@ -1,5 +1,3 @@
-// Auto-generated from proto_data.ttl / the source spreadsheet.
-// Do not hand-edit — regenerate via the project's data pipeline.
 const PROVERBS = [
   {
     "id": "PRV-001",

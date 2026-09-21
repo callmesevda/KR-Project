@@ -1,8 +1,3 @@
-/* ==========================================================================
-   PROTO — Proverbs & Tacit-knowledge Ontology
-   Shared stylesheet for the project website
-   ========================================================================== */
-
 :root {
   --ink: #2b241c;
   --ink-soft: #5c5347;
@@ -74,7 +69,6 @@ a:hover { color: var(--accent); }
   padding: 0 24px;
 }
 
-/* ---- Header / nav ---- */
 header.site-header {
   position: sticky;
   top: env(safe-area-inset-top, 0px);
@@ -137,7 +131,6 @@ nav.site-nav a[aria-current="page"] {
   color: #fff;
 }
 
-/* ---- Hero ---- */
 .hero {
   padding: 64px 0 40px;
   border-bottom: 1px solid var(--line);
@@ -176,7 +169,6 @@ nav.site-nav a[aria-current="page"] {
 }
 .btn:hover { opacity: 0.85; }
 
-/* ---- Sections ---- */
 main { padding-bottom: 64px; }
 section { padding: 48px 0; border-bottom: 1px solid var(--line); }
 section:last-of-type { border-bottom: none; }
@@ -198,7 +190,6 @@ h2.section-title {
   margin-bottom: 28px;
 }
 
-/* ---- Cards / grid ---- */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -220,7 +211,6 @@ h2.section-title {
   letter-spacing: 0.06em;
 }
 
-/* ---- Stat row ---- */
 .stat-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -246,7 +236,6 @@ h2.section-title {
   letter-spacing: 0.05em;
 }
 
-/* ---- Tables ---- */
 .table-scroll { overflow-x: auto; }
 table.data-table {
   width: 100%;
@@ -277,7 +266,6 @@ table.data-table tr:hover td { background: var(--accent-soft); }
   font-size: 0.75rem;
 }
 
-/* ---- Filter bar (proverbs page) ---- */
 .filter-bar {
   display: flex;
   gap: 10px;
@@ -295,7 +283,6 @@ table.data-table tr:hover td { background: var(--accent-soft); }
 }
 .filter-bar input { flex: 1; min-width: 180px; }
 
-/* ---- Code / turtle blocks ---- */
 pre, code {
   font-family: "SF Mono", Menlo, Consolas, monospace;
   font-size: 0.86rem;
@@ -310,7 +297,6 @@ pre {
 code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; }
 pre code { background: none; padding: 0; }
 
-/* ---- Details / summary (collapsible SPARQL, etc.) ---- */
 details {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -327,7 +313,6 @@ details summary {
 }
 details pre { margin-top: 4px; }
 
-/* ---- Notice / pending banner ---- */
 .notice {
   border: 1px dashed var(--accent);
   background: var(--accent-soft);
@@ -339,7 +324,6 @@ details pre { margin-top: 4px; }
 }
 .notice strong { color: var(--ink); }
 
-/* ---- Team ---- */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -370,7 +354,6 @@ details pre { margin-top: 4px; }
 .team-card .role { color: var(--accent-ink); font-size: 0.85rem; margin-bottom: 8px; }
 .team-card p { color: var(--ink-soft); font-size: 0.9rem; }
 
-/* ---- Footer ---- */
 footer.site-footer {
   border-top: 1px solid var(--line);
   padding: 32px 0 40px;

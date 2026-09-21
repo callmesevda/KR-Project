@@ -1,5 +1,3 @@
-// Renders the filterable proverbs table on proverbs.html.
-// Reads from PROVERBS, defined in proto-data.js.
 (function () {
   const tbody = document.getElementById("proverb-body");
   const searchEl = document.getElementById("search");

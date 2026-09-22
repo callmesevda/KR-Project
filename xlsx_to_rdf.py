@@ -3,7 +3,7 @@ import re
 import pandas as pd
 from rdflib import Graph, Namespace, Literal, RDF, RDFS, OWL
 
-# Namespaces — taken directly from ontology.ttl
+# Namespaces — taken directly from proto-ontology-structure.ttl
 PROTO = Namespace("http://example.org/proto#")
 WD = Namespace("http://www.wikidata.org/entity/")
 
@@ -28,7 +28,7 @@ def split_pair(label_cell: str, uri_cell: str):
 
 # Load spreadsheet
 
-df = pd.read_excel("The_Single_Source_of_Truth_-_Formatted__2_.xlsx", sheet_name="first page")
+df = pd.read_excel("The Single Source of Truth - Formatted.xlsx", sheet_name="first page")
 df.columns = [c.strip() for c in df.columns]
 
 lesson_node_by_label = {}       # lesson label -> URIRef, deduped

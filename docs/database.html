@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Database — PROTO</title>
+  <meta name="description" content="Download the PROTO TBox and ABox, see dataset statistics, browse cross-cultural equivalences, and example SPARQL queries.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="mark">PROTO</span>
+        <span class="tagline">Proverbs &amp; Tacit-knowledge Ontology</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="proverbs.html">Proverbs</a></li>
+          <li><a href="database.html" aria-current="page">Database</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="questions.html">Questions</a></li>
+          <li><a href="team.html">Team</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-bottom:20px;">
+      <div class="wrap">
+        <p class="section-kicker">Data</p>
+        <h1 style="font-size:2.2rem;">The database</h1>
+        <p class="lede">
+          PROTO's knowledge base is published as two Turtle files — a small TBox (schema) and
+          an ABox (instance data) generated from the project's shared spreadsheet — both
+          versioned in the <a href="https://github.com/callmesevda/KR-Project" target="_blank" rel="noopener">GitHub repository</a>
+          and downloadable below. The combined graph is also published live on TriplyDB as
+          the <code>proverbs-kr</code> dataset, with a working public SPARQL endpoint.
+        </p>
+      </div>
+    </section>
+
+    <section id="downloads" style="padding-top:0;">
+      <div class="wrap">
+        <h2 class="section-title">Downloads</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>TBox — schema</h3>
+            <p><code>proto-ontology-structure.ttl</code> — 5 classes, 1 controlled vocabulary, 6 object properties, 8 data properties.</p>
+            <div class="meta"><a href="data/proto-ontology-structure.ttl" download>Download .ttl</a></div>
+          </div>
+          <div class="card">
+            <h3>ABox — instance data</h3>
+            <p><code>proto_data.ttl</code> — 834 triples generated from the spreadsheet: 28 proverbs, 6 tacit lessons, 40 source domains, 48 cross-cultural equivalences.</p>
+            <div class="meta"><a href="data/proto_data.ttl" download>Download .ttl</a></div>
+          </div>
+          <div class="card">
+            <h3>Source spreadsheet</h3>
+            <p>"The Single Source of Truth" — the shared spreadsheet from which the ABox is generated, one row per proverb, each grounded in Wikidata QIDs.</p>
+            <div class="meta"><a href="https://github.com/callmesevda/KR-Project/blob/main/The%20Single%20Source%20of%20Truth%20-%20Formatted.xlsx" target="_blank" rel="noopener">View on GitHub</a></div>
+          </div>
+          <div class="card">
+            <h3>Conversion script</h3>
+            <p><code>xlsx_to_rdf.py</code> — reads the spreadsheet, dedupes lessons/domains into shared individuals, and derives cross-cultural equivalences automatically.</p>
+            <div class="meta"><a href="https://github.com/callmesevda/KR-Project/blob/main/xlsx_to_rdf.py" target="_blank" rel="noopener">View on GitHub</a></div>
+          </div>
+          <div class="card">
+            <h3>Live knowledge graph</h3>
+            <p>TBox + ABox merged and published on TriplyDB as <code>proverbs-kr</code>, with a
+              working public SPARQL endpoint — no local triplestore needed.</p>
+            <div class="meta"><a href="https://triplydb.com/SevdaRezaeiMelal/proverbs-kr" target="_blank" rel="noopener">Open on TriplyDB →</a></div>
+          </div>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat"><span class="num">931</span><span class="label">Triples (published graph)</span></div>
+          <div class="stat"><span class="num">28</span><span class="label">Proverbs</span></div>
+          <div class="stat"><span class="num">6</span><span class="label">Tacit lessons</span></div>
+          <div class="stat"><span class="num">40</span><span class="label">Source domains</span></div>
+          <div class="stat"><span class="num">28</span><span class="label">Situations of use</span></div>
+          <div class="stat"><span class="num">48</span><span class="label">Equivalence links</span></div>
+        </div>
+        <p class="section-intro" style="margin-top:8px;">
+          931 = 97 TBox triples + 834 ABox triples, merged into the one graph published on
+          TriplyDB. Of the 48 <code>CrossCulturalEquivalence</code> instances, as generated by
+          the conversion script, 43 are typed <code>SameLessonDifferentImage</code> and 5 are
+          typed <code>DirectMatch</code> (same tacit lesson <em>and</em> the same source
+          domain) — see the <a href="#review">analyst review</a> below for a proposed, more
+          fine-grained reclassification that hasn't been applied to the graph yet.
+        </p>
+      </div>
+    </section>
+
+    <section id="equivalences">
+      <div class="wrap">
+        <h2 class="section-title">Browse cross-cultural equivalences</h2>
+        <p class="section-intro">
+          Every pair of proverbs in different languages that share a tacit lesson, as derived
+          by the conversion script. Filter by equivalence type.
+        </p>
+        <div class="filter-bar">
+          <select id="equiv-type-filter" aria-label="Filter by equivalence type">
+            <option value="">All types</option>
+          </select>
+        </div>
+        <p id="equiv-count" class="section-intro" style="margin-bottom:12px;"></p>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Proverb A</th>
+                <th>Proverb B</th>
+                <th>Equivalence type</th>
+                <th>Note</th>
+              </tr>
+            </thead>
+            <tbody id="equiv-body">
+              <tr><td colspan="4">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="review">
+      <div class="wrap">
+        <p class="section-kicker">Human review · Draft 1 · 15 Sept 2026 · Analyst: Polikseni Hasanaj</p>
+        <h2 class="section-title">Analyst review of the 48 equivalence links</h2>
+        <p class="section-intro">
+          The conversion script only compares source-domain <em>tags</em> for equality, so it
+          can only ever produce <code>DirectMatch</code> or <code>SameLessonDifferentImage</code>.
+          Polikseni read all 48 links by hand — original text, translation, and situation of use
+          together — and reclassified several. <strong>None of this has been applied to the
+          graph yet</strong>: the reclassification is still a proposal, kept here for
+          transparency rather than presented as done. The team has since settled the open
+          questions from the review (see the decisions below).
+        </p>
+
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Type</th><th>Machine (published)</th><th>After review (draft)</th></tr></thead>
+            <tbody>
+              <tr><td><code>DirectMatch</code></td><td>5</td><td>6</td></tr>
+              <tr><td><code>PartialOverlap</code></td><td>0</td><td>10</td></tr>
+              <tr><td><code>SameLessonDifferentImage</code></td><td>43</td><td>32</td></tr>
+              <tr><td><code>FalseFriend</code></td><td>0</td><td>0 (4 cross-lesson candidates found — see below)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>What the review found</h3>
+        <ul class="bullets" style="margin-top:8px; gap:12px;">
+          <li>The machine under-counts similarity: it missed the Italian–Albanian "after the rain, the sun" pair as a direct match purely because one tag says "Storm" and the other "Rain."</li>
+          <li>Two of the six tacit lessons actually bundle two distinct ideas each — <em>"Actions over intentions"</em> mixes "deeds over words" with "a foolish friend does harm," and <em>"Group vulnerability"</em> mixes "weakest point" with "contagion." 11 of the 48 links join proverbs across these sub-lessons. The team decided <strong>not</strong> to split the lessons: the six lessons stay, and the sub-lesson is recorded in the notes.</li>
+          <li>Image and pragmatic use can diverge: English, Italian and Albanian all use "quiet water," but the English proverb praises quiet people while the Italian and Albanian warn against them — a reminder that <code>SituationOfUse</code>, not just <code>SourceDomain</code>, belongs in any equivalence comparison.</li>
+          <li>Where languages converge, it's often shared textual transmission rather than independent invention — e.g. the seeker/finder image in Farsi, Italian and Albanian likely traces to Matthew 7:7.</li>
+        </ul>
+
+        <h3 style="margin-top:28px;">False-friend candidates (not yet links in the graph)</h3>
+        <p class="section-intro">The generation script never assigns <code>FalseFriend</code> because it only links proverbs that already share a lesson. Reading across lessons for a shared image surfaces these:</p>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Shared image</th><th>Proverb A</th><th>Proverb B</th><th>Note</th></tr></thead>
+            <tbody>
+              <tr><td>Cloud</td><td>PRV-003 (en) — "Every cloud has a silver lining"</td><td>PRV-027 (alb) — "A word without a deed is like a cloud without rain"</td><td>Same object, opposite mood — genuine cross-language false friend.</td></tr>
+              <tr><td>Wall</td><td>PRV-013 (fa) — "A wall collapses from its broken part"</td><td>PRV-030 (alb) — "Stone upon stone, a wall is made"</td><td>Same object, unrelated lessons.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top:28px;">Team decisions on the review's open questions</h3>
+        <ul class="bullets" style="margin-top:8px; gap:10px;">
+          <li><strong>Lessons:</strong> not split. The six lessons stay, with the sub-lesson recorded in the notes.</li>
+          <li><strong>Persian and Italian readings:</strong> confirmed.</li>
+          <li><strong>Competency questions:</strong> the analyst's eight SPARQL queries are adopted as the project's <a href="questions.html">competency questions</a>.</li>
+          <li><strong>Reclassification:</strong> not applied to the published graph in this release. It is listed as future work, and the published types (5 / 43 / 0 / 0) are the script's output.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sparql">
+      <div class="wrap">
+        <h2 class="section-title">Example queries</h2>
+        <p class="section-intro">
+          Illustrative SPARQL queries — useful starting points, distinct from the project's
+          formal <a href="questions.html">competency questions</a>. Run them against the
+          <a href="https://triplydb.com/SevdaRezaeiMelal/proverbs-kr/sparql" target="_blank" rel="noopener">live public SPARQL endpoint</a>
+          on TriplyDB, or load the .ttl files above into a local triplestore (Apache Jena
+          Fuseki, GraphDB, RDFLib).
+        </p>
+
+        <h3>Every proverb that teaches "Determination / Perseverance"</h3>
+        <pre><code>PREFIX : &lt;http://example.org/proto#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?proverb ?text ?language WHERE {
+  ?proverb a :Proverb ;
+           :hasLesson ?lesson ;
+           :hasText ?text ;
+           :hasLanguage ?language .
+  ?lesson :hasLabel "Determination / Perseverance" .
+}</code></pre>
+
+        <h3>Proverb pairs that are a "direct match" (same lesson AND same imagery)</h3>
+        <pre><code>PREFIX : &lt;http://example.org/proto#&gt;
+
+SELECT ?proverbA ?proverbB ?note WHERE {
+  ?equiv a :CrossCulturalEquivalence ;
+         :hasEquivalenceType :DirectMatch ;
+         :linksProverbA ?proverbA ;
+         :linksProverbB ?proverbB ;
+         :hasDivergenceNote ?note .
+}</code></pre>
+
+        <h3>Source domains used by more than one proverb</h3>
+        <pre><code>PREFIX : &lt;http://example.org/proto#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?domain (COUNT(?proverb) AS ?nProverbs) WHERE {
+  ?proverb :hasSourceDomain ?domain .
+}
+GROUP BY ?domain
+HAVING (COUNT(?proverb) &gt; 1)</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-cols">
+        <div>
+          <h4>Project</h4>
+          <ul>
+            <li><a href="proverbs.html">Proverbs</a></li>
+            <li><a href="database.html">Database</a></li>
+            <li><a href="documentation.html">Documentation</a></li>
+            <li><a href="questions.html">Competency questions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="https://github.com/callmesevda/KR-Project" target="_blank" rel="noopener">GitHub repository</a></li>
+            <li><a href="database.html#downloads">Download the ontology (.ttl)</a></li>
+            <li><a href="team.html">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Cite &amp; archive</h4>
+          <ul>
+            <li>License: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></li>
+            <li>DOI: <em>pending Zenodo deposit</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PROTO project.</span>
+        <span>Built by the PROTO team.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/proto-data.js"></script>
+  <script src="assets/js/equivalences.js"></script>
+</body>
+</html>

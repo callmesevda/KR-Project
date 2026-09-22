@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this ontology or dataset, please cite it as below."
+title: "PROTO — Proverbs & Tacit-knowledge Ontology"
+type: software
+abstract: >-
+  An OWL ontology and accompanying dataset modeling proverbs, the tacit
+  (unspoken) lessons they carry, the situations in which they are used,
+  and the cross-cultural equivalences that link a proverb in one language
+  to a proverb in another when they teach the same lesson.
+authors:
+  - family-names: "Rezaei Melal"
+    given-names: "Sevda"
+  - family-names: "Hasanaj"
+    given-names: "Polikseni"
+  - family-names: "Afsharzadehtorghab"
+    given-names: "Saba"
+  - family-names: "Briccolani"
+    given-names: "Claudia"
+repository-code: "https://github.com/callmesevda/KR-Project"
+license: CC-BY-4.0
+keywords:
+  - ontology
+  - OWL
+  - proverbs
+  - tacit knowledge
+  - cross-cultural equivalence
+  - knowledge representation

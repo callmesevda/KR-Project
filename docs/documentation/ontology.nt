@@ -1,0 +1,184 @@
+<http://example.org/proto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://example.org/proto> <http://www.w3.org/2000/01/rdf-schema#comment> "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery." .
+<http://example.org/proto> <http://www.w3.org/2000/01/rdf-schema#label> "PROTO — Proverbs & Tacit-knowledge Ontology" .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/proto#groundedIn
+<http://example.org/proto#groundedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/proto#groundedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/proto#TacitLesson> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/proto#SourceDomain> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/proto#groundedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns." .
+<http://example.org/proto#groundedIn> <http://www.w3.org/2000/01/rdf-schema#label> "grounded in (Wikidata)" .
+# 
+# http://example.org/proto#hasEquivalenceType
+<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
+<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#EquivalenceType> .
+<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#label> "has equivalence type" .
+# 
+# http://example.org/proto#hasLesson
+<http://example.org/proto#hasLesson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/proto#hasLesson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
+<http://example.org/proto#hasLesson> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#TacitLesson> .
+<http://example.org/proto#hasLesson> <http://www.w3.org/2000/01/rdf-schema#label> "has lesson" .
+# 
+# http://example.org/proto#hasSourceDomain
+<http://example.org/proto#hasSourceDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/proto#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
+<http://example.org/proto#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#SourceDomain> .
+<http://example.org/proto#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#label> "has source domain" .
+# 
+# http://example.org/proto#linksProverbA
+<http://example.org/proto#linksProverbA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/proto#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
+<http://example.org/proto#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#Proverb> .
+<http://example.org/proto#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#label> "links proverb A" .
+# 
+# http://example.org/proto#linksProverbB
+<http://example.org/proto#linksProverbB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/proto#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
+<http://example.org/proto#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#Proverb> .
+<http://example.org/proto#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#label> "links proverb B" .
+# 
+# http://example.org/proto#usedIn
+<http://example.org/proto#usedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://example.org/proto#usedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
+<http://example.org/proto#usedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#SituationOfUse> .
+<http://example.org/proto#usedIn> <http://www.w3.org/2000/01/rdf-schema#label> "used in" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://example.org/proto#annotatedBy
+<http://example.org/proto#annotatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/proto#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
+<http://example.org/proto#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/proto#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "annotated by" .
+# 
+# http://example.org/proto#hasDivergenceNote
+<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
+<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#label> "has divergence note" .
+# 
+# http://example.org/proto#hasLabel
+<http://example.org/proto#hasLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/proto#hasLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#TacitLesson> .
+<http://example.org/proto#hasLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/proto#hasLabel> <http://www.w3.org/2000/01/rdf-schema#label> "has label" .
+# 
+# http://example.org/proto#hasLanguage
+<http://example.org/proto#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/proto#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
+<http://example.org/proto#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/proto#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "has language" .
+# 
+# http://example.org/proto#hasProverbID
+<http://example.org/proto#hasProverbID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
+<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs." .
+<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#label> "has proverb ID" .
+# 
+# http://example.org/proto#hasText
+<http://example.org/proto#hasText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/proto#hasText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
+<http://example.org/proto#hasText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/proto#hasText> <http://www.w3.org/2000/01/rdf-schema#label> "has text" .
+# 
+# http://example.org/proto#hasTranslation
+<http://example.org/proto#hasTranslation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
+<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#comment> "Word-for-word English gloss, distinct from hasText (the proverb in its original language)." .
+<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#label> "has literal English translation" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://example.org/proto#CrossCulturalEquivalence
+<http://example.org/proto#CrossCulturalEquivalence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/proto#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)." .
+<http://example.org/proto#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#label> "Cross-Cultural Equivalence" .
+# 
+# http://example.org/proto#EquivalenceType
+<http://example.org/proto#EquivalenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/proto#EquivalenceType> <http://www.w3.org/2000/01/rdf-schema#label> "Equivalence Type" .
+# 
+# http://example.org/proto#Proverb
+<http://example.org/proto#Proverb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/proto#Proverb> <http://www.w3.org/2000/01/rdf-schema#comment> "The surface expression of a proverb: its literal text, language, and image/source domain." .
+<http://example.org/proto#Proverb> <http://www.w3.org/2000/01/rdf-schema#label> "Proverb" .
+# 
+# http://example.org/proto#SituationOfUse
+<http://example.org/proto#SituationOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/proto#SituationOfUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The pragmatic context in which a proverb would be deployed." .
+<http://example.org/proto#SituationOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Situation of Use" .
+# 
+# http://example.org/proto#SourceDomain
+<http://example.org/proto#SourceDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/proto#SourceDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)." .
+<http://example.org/proto#SourceDomain> <http://www.w3.org/2000/01/rdf-schema#label> "Source Domain" .
+# 
+# http://example.org/proto#TacitLesson
+<http://example.org/proto#TacitLesson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://example.org/proto#TacitLesson> <http://www.w3.org/2000/01/rdf-schema#comment> "The unspoken, language-independent moral a proverb conveys." .
+<http://example.org/proto#TacitLesson> <http://www.w3.org/2000/01/rdf-schema#label> "Tacit Lesson" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://example.org/proto#DirectMatch
+<http://example.org/proto#DirectMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/proto#DirectMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
+<http://example.org/proto#DirectMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types." .
+<http://example.org/proto#DirectMatch> <http://www.w3.org/2000/01/rdf-schema#label> "Direct match (same lesson AND same source domain)" .
+# 
+# http://example.org/proto#FalseFriend
+<http://example.org/proto#FalseFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/proto#FalseFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
+<http://example.org/proto#FalseFriend> <http://www.w3.org/2000/01/rdf-schema#label> "False friend (same image, different lesson)" .
+# 
+# http://example.org/proto#PartialOverlap
+<http://example.org/proto#PartialOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/proto#PartialOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
+<http://example.org/proto#PartialOverlap> <http://www.w3.org/2000/01/rdf-schema#label> "Partial overlap" .
+# 
+# http://example.org/proto#SameLessonDifferentImage
+<http://example.org/proto#SameLessonDifferentImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://example.org/proto#SameLessonDifferentImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
+<http://example.org/proto#SameLessonDifferentImage> <http://www.w3.org/2000/01/rdf-schema#label> "Same lesson, different image" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -36,7 +36,7 @@ The `docs/` folder is a static site (no build step) with the pages:
   the full [WIDOCO](https://github.com/dgarijo/Widoco)-generated
   documentation and WebVOWL schema browser (`docs/documentation/`).
 - **Questions** (`questions.html`) — the 8 competency questions, each
-  one a SPARQL query from Polikseni's analyst review.
+  one a SPARQL query from Polyxeni's analyst review.
 - **Team** (`team.html`) — contributors.
 
 Data used by the Proverbs/Database pages is generated from the ABox and
@@ -72,7 +72,7 @@ browser) — no changes needed there after a regeneration.
 
 - **Sevda Rezaei Melal** — knowledge graph (ABox) & the published knowledge graph
 - **Polyxeni Chasanai** — cross-cultural analysis
-- **Saba Afsharzadehtorghab** —  ontology structure model
+- **Saba Afsharzadehtorghab** — ontology structure model (TBox) & Persian-language verification
 - **Claudia Briccolani** — website, documentation & dissemination
 
 See [`docs/team.html`](docs/team.html).

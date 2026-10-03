@@ -105,7 +105,7 @@ def build_graph(rows):
         g.add((uri, RDF.type, kind))
 
     for row in rows:
-        pid, lang = row['Proverb ID'], row['Language']
+        pid, lang = row['Proverb ID'], row['Language'].replace("ita", "it").replace("alb", "sq")
         proverb = reserve(pid, 'Proverb', pid)
         individual(proverb, SCHEMA.Proverb)
         for prop, value in [(SCHEMA.hasProverbID, pid), (SCHEMA.hasLanguage, lang),

@@ -1,92 +1,54 @@
-@prefix : <http://example.org/proto#> .
+@prefix : <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ontolex: <http://www.w3.org/ns/lemon/ontolex#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-<http://example.org/proto> rdf:type owl:Ontology ;
-    dcterms:title "PROTO — Proverbs & Tacit-knowledge Ontology"@en ;
-    rdfs:label "PROTO — Proverbs & Tacit-knowledge Ontology"@en ;
-    dcterms:description "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."@en ;
-    rdfs:comment "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."@en ;
-    dcterms:abstract "PROTO models proverbs, the tacit (unspoken) lessons they carry, the situations in which they are used, and the cross-cultural equivalences that link a proverb in one language to a proverb in another when they teach the same lesson but diverge (or don't) in imagery. The current dataset covers 28 proverbs across four languages (English, Farsi, Italian, and Albanian), grounded in Wikidata for their tacit lessons and source-domain imagery."@en ;
-    dcterms:creator "Sevda Rezaei Melal" , "Polyxeni Chasanai" , "Saba Afsharzadehtorghab" , "Claudia Briccolani" ;
-    dcterms:created "2026-09-10"^^xsd:date ;
-    dcterms:modified "2026-10-01"^^xsd:date ;
-    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
-    dcterms:bibliographicCitation "Rezaei Melal, S., Chasanai, P., Afsharzadehtorghab, S., and Briccolani, C. (2026). PROTO — Proverbs & Tacit-knowledge Ontology, version 1.1.0. https://github.com/callmesevda/KR-Project" ;
-    owl:versionInfo "1.1.0" ;
-    owl:versionIRI <https://raw.githubusercontent.com/callmesevda/KR-Project/v1.1.0/proto-ontology-structure.ttl> ;
-    vann:preferredNamespacePrefix "proto" ;
-    vann:preferredNamespaceUri "http://example.org/proto#" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> rdf:type owl:Ontology ;
+    rdfs:label "PROTO — Proverbs & Tacit-knowledge Ontology" ;
+    rdfs:comment "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery." .
 
 #################################################################
 #    Classes
 #################################################################
 
 :Proverb rdf:type owl:Class ;
-    rdfs:label "Proverb"@en ;
-    rdfs:comment "The surface expression of a proverb: its literal text, language, and image/source domain."@en ;
-    skos:example "PRV-012: 'A chain is only as strong as its weakest link.' (en)" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Proverb" ;
+    rdfs:comment "The surface expression of a proverb: its literal text, language, and image/source domain." .
 
 :TacitLesson rdf:type owl:Class ;
-    rdfs:label "Tacit Lesson"@en ;
-    rdfs:comment "The unspoken, language-independent moral a proverb conveys; proverbs from different languages can share the same lesson."@en ;
-    skos:example "GroupVulnerability, labelled 'Group vulnerability'" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Tacit Lesson" ;
+    rdfs:comment "The unspoken, language-independent moral a proverb conveys." .
 
 :SituationOfUse rdf:type owl:Class ;
-    rdfs:label "Situation of Use"@en ;
-    rdfs:comment "The pragmatic context in which a proverb is deployed: what the speaker uses it to do, such as warn, comfort or encourage."@en ;
-    skos:example "Situation_PRV-012: 'Used to show how the strength of a group depends on every individual's ability'" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Situation of Use" ;
+    rdfs:comment "The pragmatic context in which a proverb would be deployed." .
 
 :SourceDomain rdf:type owl:Class ;
-    rdfs:label "Source Domain"@en ;
-    rdfs:comment "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)."@en ;
-    skos:example "Chain, Water, Bear" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Source Domain" ;
+    rdfs:comment "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)." .
 
 :CrossCulturalEquivalence rdf:type owl:Class ;
-    rdfs:label "Cross-Cultural Equivalence"@en ;
-    rdfs:comment "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)."@en ;
-    skos:example "Equiv_PRV-012_PRV-025: the English and Italian chain proverbs, a DirectMatch" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Cross-Cultural Equivalence" ;
+    rdfs:comment "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)." .
 
 # Controlled vocabulary for equivalence type
 :EquivalenceType rdf:type owl:Class ;
-    rdfs:label "Equivalence Type"@en ;
-    rdfs:comment "A controlled vocabulary for how two linked proverbs relate, based on whether they share a lesson and whether they share an image: DirectMatch, SameLessonDifferentImage, PartialOverlap or FalseFriend."@en ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Equivalence Type" .
 
 :SameLessonDifferentImage rdf:type owl:NamedIndividual , :EquivalenceType ;
-    rdfs:label "Same lesson, different image"@en ;
-    rdfs:comment "The two proverbs share a tacit lesson but no element of their imagery."@en ;
-    skos:example "Equiv_PRV-012_PRV-013: a chain (en) and a wall (fa) that both fail at their weakest point" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Same lesson, different image" .
 
 :FalseFriend rdf:type owl:NamedIndividual , :EquivalenceType ;
-    rdfs:label "False friend (same image, different lesson)"@en ;
-    rdfs:comment "The two proverbs share an image but teach different lessons."@en ;
-    skos:example "PRV-003 'Every cloud has a silver lining' (en) and PRV-027 'A word without a deed is like a cloud without rain' (alb): the same cloud, optimism versus empty words" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "False friend (same image, different lesson)" .
 
 :PartialOverlap rdf:type owl:NamedIndividual , :EquivalenceType ;
-    rdfs:label "Partial overlap"@en ;
-    rdfs:comment "Same lesson; the images share an element or scene type without being the same image."@en ;
-    skos:example "Equiv_PRV-004_PRV-016: the end of the night (fa) and the end of the storm (ita), the same sequence with different scenery" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Partial overlap" .
 
 :DirectMatch rdf:type owl:NamedIndividual , :EquivalenceType ;
-    rdfs:label "Direct match (same lesson AND same source domain)"@en ;
-    rdfs:comment "The two proverbs share both the tacit lesson and the core image (the same scene or object), even if their source-domain tags are worded differently."@en ;
-    skos:example "Equiv_PRV-020_PRV-029: 'Chi cerca, trova' (ita) and 'Kush kërkon, gjen' (alb), both 'who seeks, finds'" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "Direct match (same lesson AND same source domain)" ;
+    rdfs:comment "For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types." .
 
 #################################################################
 #    Object Properties
@@ -95,113 +57,159 @@
 :hasLesson rdf:type owl:ObjectProperty ;
     rdfs:domain :Proverb ;
     rdfs:range :TacitLesson ;
-    rdfs:label "has lesson"@en ;
-    rdfs:comment "Links a proverb to the tacit lesson it conveys."@en ;
-    skos:example "PRV-012 has lesson GroupVulnerability" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has lesson" .
 
 :hasSourceDomain rdf:type owl:ObjectProperty ;
     rdfs:domain :Proverb ;
     rdfs:range :SourceDomain ;
-    rdfs:label "has source domain"@en ;
-    rdfs:comment "Links a proverb to an image or domain its literal wording draws on; a proverb can have several."@en ;
-    skos:example "PRV-012 has source domains Chain and Link" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has source domain" .
 
 :usedIn rdf:type owl:ObjectProperty ;
     rdfs:domain :Proverb ;
     rdfs:range :SituationOfUse ;
-    rdfs:label "used in"@en ;
-    rdfs:comment "Links a proverb to a situation in which it is typically used."@en ;
-    skos:example "PRV-012 used in Situation_PRV-012" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "used in" .
 
-:linksProverbA rdf:type owl:ObjectProperty ;
+:linksProverbA rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:domain :CrossCulturalEquivalence ;
     rdfs:range :Proverb ;
-    rdfs:label "links proverb A"@en ;
-    rdfs:comment "Links a cross-cultural equivalence to the first of the two proverbs it connects; the generated data puts the lower proverb ID here, and the order carries no meaning."@en ;
-    skos:example "Equiv_PRV-012_PRV-025 links proverb A PRV-012" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "links proverb A" ;
+    rdfs:comment "Functional: one equivalence link points to exactly one proverb as its 'A' side." .
 
-:linksProverbB rdf:type owl:ObjectProperty ;
+:linksProverbB rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:domain :CrossCulturalEquivalence ;
     rdfs:range :Proverb ;
-    rdfs:label "links proverb B"@en ;
-    rdfs:comment "Links a cross-cultural equivalence to the second of the two proverbs it connects, which is in a different language from proverb A."@en ;
-    skos:example "Equiv_PRV-012_PRV-025 links proverb B PRV-025" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "links proverb B" ;
+    rdfs:comment "Functional: one equivalence link points to exactly one proverb as its 'B' side." .
 
-:hasEquivalenceType rdf:type owl:ObjectProperty ;
+:hasEquivalenceType rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
     rdfs:domain :CrossCulturalEquivalence ;
     rdfs:range :EquivalenceType ;
-    rdfs:label "has equivalence type"@en ;
-    rdfs:comment "Classifies a cross-cultural equivalence with one of the four equivalence types."@en ;
-    skos:example "Equiv_PRV-012_PRV-025 has equivalence type DirectMatch" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has equivalence type" ;
+    rdfs:comment "Functional: one equivalence link has exactly one equivalence type. Combined with the AllDifferent axiom on the four types below, this is what lets the reasoner catch a link accidentally assigned two different types." .
 
 :groundedIn rdf:type owl:ObjectProperty ;
     rdfs:domain [ rdf:type owl:Class ; owl:unionOf ( :TacitLesson :SourceDomain ) ] ;
-    rdfs:comment "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns."@en ;
-    rdfs:label "grounded in (Wikidata)"@en ;
-    skos:example "Bear grounded in wd:Q30090244" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:comment "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns. No rdfs:range is declared deliberately: the value is a Wikidata entity outside this ontology's own classes, so constraining it to one of our classes would be incorrect. This omission is intentional, not an oversight." ;
+    rdfs:label "grounded in (Wikidata)" .
 
 #################################################################
 #    Data Properties
 #################################################################
 
-:hasText rdf:type owl:DatatypeProperty ;
+:hasText rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:domain :Proverb ;
     rdfs:range xsd:string ;
-    rdfs:label "has text"@en ;
-    rdfs:comment "The proverb as written in its original language and script."@en ;
-    skos:example "PRV-020 has text 'Chi cerca, trova.'" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has text" ;
+    rdfs:comment "Functional: one proverb has exactly one literal text." .
 
 :hasTranslation rdf:type owl:DatatypeProperty ;
     rdfs:domain :Proverb ;
     rdfs:range xsd:string ;
-    rdfs:label "has literal English translation"@en ;
-    rdfs:comment "Word-for-word English gloss, distinct from hasText (the proverb in its original language)."@en ;
-    skos:example "PRV-020 has translation 'Those who search, find.'" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has literal English translation" ;
+    rdfs:comment "Word-for-word English gloss, distinct from hasText (the proverb in its original language)." .
 
-:hasProverbID rdf:type owl:DatatypeProperty ;
+:hasProverbID rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:domain :Proverb ;
     rdfs:range xsd:string ;
-    rdfs:label "has proverb ID"@en ;
-    rdfs:comment "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs."@en ;
-    skos:example "PRV-001" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has proverb ID" ;
+    rdfs:comment "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs. Functional: one proverb has exactly one ID." .
 
-:hasLanguage rdf:type owl:DatatypeProperty ;
+:hasLanguage rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
     rdfs:domain :Proverb ;
     rdfs:range xsd:string ;
-    rdfs:label "has language"@en ;
-    rdfs:comment "The language of the proverb's original text, as a short language code."@en ;
-    skos:example "en" , "fa" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has language" ;
+    rdfs:comment "Functional: one proverb individual is recorded in exactly one language." .
 
 :hasLabel rdf:type owl:DatatypeProperty ;
     rdfs:domain :TacitLesson ;
     rdfs:range xsd:string ;
-    rdfs:label "has label"@en ;
-    rdfs:comment "The human-readable name of a tacit lesson."@en ;
-    skos:example "Group vulnerability" ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has label" .
 
 :hasDivergenceNote rdf:type owl:DatatypeProperty ;
     rdfs:domain :CrossCulturalEquivalence ;
     rdfs:range xsd:string ;
-    rdfs:label "has divergence note"@en ;
-    rdfs:comment "A free-text note on how the two linked proverbs differ, in imagery, tone or use."@en ;
-    skos:example "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Bear)." ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "has divergence note" .
 
 :annotatedBy rdf:type owl:DatatypeProperty ;
     rdfs:domain :CrossCulturalEquivalence ;
     rdfs:range xsd:string ;
-    rdfs:label "annotated by"@en ;
-    rdfs:comment "The name of the person who reviewed and classified an equivalence link."@en ;
-    rdfs:isDefinedBy <http://example.org/proto> .
+    rdfs:label "annotated by" .
+
+#################################################################
+#    Disjointness and Restrictions (Professor's Point 5)
+#################################################################
+#
+# Goal: when bad data enters the graph, the reasoner (HermiT) must be
+# able to catch it. Everything below is a consistency check, not new
+# vocabulary - no new classes or properties are introduced here.
+
+# --- 1. The six classes are pairwise disjoint ---
+# No individual can be, say, both a Proverb and a TacitLesson at once.
+# Catches the test case: "a proverb typed also as a TacitLesson".
+[] rdf:type owl:AllDisjointClasses ;
+    owl:members ( :Proverb :TacitLesson :SituationOfUse :SourceDomain :CrossCulturalEquivalence :EquivalenceType ) .
+
+# --- 2. EquivalenceType is a closed list of exactly these four individuals ---
+# Nobody can introduce a fifth, unlisted equivalence type by accident;
+# the reasoner will flag any individual claimed to be an EquivalenceType
+# that isn't one of these four.
+:EquivalenceType owl:equivalentClass [
+    rdf:type owl:Class ;
+    owl:oneOf ( :DirectMatch :SameLessonDifferentImage :PartialOverlap :FalseFriend )
+] .
+
+# The four types are also explicitly asserted distinct from each other.
+# Combined with hasEquivalenceType being functional (see above), this is
+# what catches the test case: "a link with two different equivalence types".
+[] rdf:type owl:AllDifferent ;
+    owl:distinctMembers ( :DirectMatch :SameLessonDifferentImage :PartialOverlap :FalseFriend ) .
+
+# --- 3. Functional properties ---
+# hasProverbID, hasLanguage, hasText, linksProverbA, linksProverbB and
+# hasEquivalenceType are declared owl:FunctionalProperty directly on
+# their own definitions above (each can point to at most one value).
+
+# --- 4. Class restrictions on Proverb ---
+# Every Proverb individual must have exactly one lesson, at least one
+# source domain, and at least one situation of use. "exactly 1" is a
+# qualified cardinality restriction; "some" is an existential restriction
+# (at least one, no upper limit, since a proverb could plausibly fit more
+# than one situation).
+:Proverb rdfs:subClassOf
+    [ rdf:type owl:Restriction ;
+      owl:onProperty :hasLesson ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :TacitLesson ] ,
+    [ rdf:type owl:Restriction ;
+      owl:onProperty :hasSourceDomain ;
+      owl:someValuesFrom :SourceDomain ] ,
+    [ rdf:type owl:Restriction ;
+      owl:onProperty :usedIn ;
+      owl:someValuesFrom :SituationOfUse ] .
+
+# --- 5. Class restrictions on CrossCulturalEquivalence ---
+# Every equivalence individual must have exactly one proverb on each side
+# and exactly one equivalence type - this is what makes it a well-formed
+# reified link rather than a dangling or ambiguous one.
+:CrossCulturalEquivalence rdfs:subClassOf
+    [ rdf:type owl:Restriction ;
+      owl:onProperty :linksProverbA ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :Proverb ] ,
+    [ rdf:type owl:Restriction ;
+      owl:onProperty :linksProverbB ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :Proverb ] ,
+    [ rdf:type owl:Restriction ;
+      owl:onProperty :hasEquivalenceType ;
+      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onClass :EquivalenceType ] .
+
+# NOTE on open-world assumption: OWL does not flag a MISSING value - e.g.
+# a Proverb individual with no hasLesson triple at all will NOT trigger
+# an inconsistency, because OWL assumes unstated facts might still be
+# true elsewhere, not false. These restrictions only catch WRONG values
+# (a lesson of the wrong type, two conflicting equivalence types, etc.),
+# not ABSENT ones. Missing-value checks belong in Polyxeni's SPARQL
+# queries, not in these OWL axioms. State this plainly in the
+# documentation so nobody expects the reasoner to catch incomplete data.

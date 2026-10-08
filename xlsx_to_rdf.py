@@ -13,7 +13,12 @@ ABOX_DOC = URIRef('https://raw.githubusercontent.com/callmesevda/KR-Project/main
 SCHEMA = Namespace(str(TBOX_DOC) + '#')
 DATA = Namespace(str(ABOX_DOC) + '#')
 WD = Namespace('http://www.wikidata.org/entity/')
-DEFAULT_INPUT = ROOT / 'The Single Source of Truth - Formatted.xlsx'
+DEFAULT_INPUT = next((p for p in (ROOT / 'The_Single_Source_of_Truth_-_Formatted__2_.xlsx',
+                                  ROOT / 'The Single Source of Truth - Formatted.xlsx') if p.exists()),
+                     ROOT / 'The_Single_Source_of_Truth_-_Formatted__2_.xlsx')
+# Language codes in the spreadsheet -> ISO 639-1. NOTE: the Improvement Plan lists this as an open
+# question for the group; this mapping applies the ita->it / alb->sq fix. Edit here if the group decides otherwise.
+LANG_MAP = {'ita': 'it', 'alb': 'sq'}
 COLUMNS = ('Proverb ID', 'Language', 'Original Text', 'Literal English Translation',
            'Literal Image (Source Domain)', 'Tacit Lesson (Dropdown)',
            'Situation of Use', 'Literal Image URI', 'Tacit Lesson URI')
@@ -105,7 +110,7 @@ def build_graph(rows):
         g.add((uri, RDF.type, kind))
 
     for row in rows:
-        pid, lang = row['Proverb ID'], row['Language'].replace("ita", "it").replace("alb", "sq")
+        pid, lang = row['Proverb ID'], LANG_MAP.get(row['Language'], row['Language'])
         proverb = reserve(pid, 'Proverb', pid)
         individual(proverb, SCHEMA.Proverb)
         for prop, value in [(SCHEMA.hasProverbID, pid), (SCHEMA.hasLanguage, lang),

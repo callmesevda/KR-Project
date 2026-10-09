@@ -5,7 +5,7 @@ import re
 from pathlib import Path
 
 import pandas as pd
-from rdflib import Graph, Namespace, URIRef, Literal, RDF, RDFS, OWL
+from rdflib import Graph, Namespace, URIRef, Literal, RDF, RDFS, OWL, DCTERMS
 
 ROOT = Path(__file__).resolve().parent
 TBOX_DOC = URIRef('https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl')
@@ -13,6 +13,9 @@ ABOX_DOC = URIRef('https://raw.githubusercontent.com/callmesevda/KR-Project/main
 SCHEMA = Namespace(str(TBOX_DOC) + '#')
 DATA = Namespace(str(ABOX_DOC) + '#')
 WD = Namespace('http://www.wikidata.org/entity/')
+VERSION = '1.1.0'
+LICENSE = URIRef('https://creativecommons.org/licenses/by/4.0/')
+CREATORS = ('Sevda Rezaei Melal', 'Polyxeni Chasanai', 'Saba Afsharzadehtorghab', 'Claudia Briccolani')
 DEFAULT_INPUT = next((p for p in (ROOT / 'The_Single_Source_of_Truth_-_Formatted__2_.xlsx',
                                   ROOT / 'The Single Source of Truth - Formatted.xlsx') if p.exists()),
                      ROOT / 'The_Single_Source_of_Truth_-_Formatted__2_.xlsx')
@@ -88,11 +91,17 @@ def validate_schema(schema):
 
 def build_graph(rows):
     g = Graph()
-    for prefix, ns in [('proto', SCHEMA), ('', DATA), ('wd', WD), ('owl', OWL)]:
+    for prefix, ns in [('proto', SCHEMA), ('', DATA), ('wd', WD), ('owl', OWL), ('dcterms', DCTERMS)]:
         g.bind(prefix, ns)
     g.add((ABOX_DOC, RDF.type, OWL.Ontology))
     g.add((ABOX_DOC, OWL.imports, TBOX_DOC))
     g.add((ABOX_DOC, RDFS.label, Literal('PROTO knowledge graph', lang='en')))
+    g.add((ABOX_DOC, DCTERMS.title, Literal('PROTO knowledge graph', lang='en')))
+    g.add((ABOX_DOC, DCTERMS.description, Literal('Proverbs, tacit lessons, source domains, situations of use and cross-cultural equivalences described with the PROTO ontology.', lang='en')))
+    for creator in CREATORS:
+        g.add((ABOX_DOC, DCTERMS.creator, Literal(creator)))
+    g.add((ABOX_DOC, DCTERMS.license, LICENSE))
+    g.add((ABOX_DOC, OWL.versionInfo, Literal(VERSION)))
     lessons, domains, row_domains, by_lesson, owners = {}, {}, {}, {}, {}
     proverbs, equivalences = [], []
 

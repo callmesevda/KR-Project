@@ -118,7 +118,7 @@
   },
   {
     "id": "PRV-015",
-    "lang": "ita",
+    "lang": "it",
     "text": "Tra il dire e il fare, c'è di mezzo il mare.",
     "translation": "Between saying and doing, there is a sea.",
     "domain": "Sea",
@@ -127,7 +127,7 @@
   },
   {
     "id": "PRV-016",
-    "lang": "ita",
+    "lang": "it",
     "text": "Dopo il temporale, torna sempre il sereno.",
     "translation": "After the rain comes the sun.",
     "domain": "Storm / Sun",
@@ -136,7 +136,7 @@
   },
   {
     "id": "PRV-020",
-    "lang": "ita",
+    "lang": "it",
     "text": "Chi cerca, trova.",
     "translation": "Those who search, find.",
     "domain": "Seeker / Finder",
@@ -145,7 +145,7 @@
   },
   {
     "id": "PRV-021",
-    "lang": "ita",
+    "lang": "it",
     "text": "L'acqua cheta rovina i ponti.",
     "translation": "Still waters ruins bridges.",
     "domain": "Water / Bridge",
@@ -154,7 +154,7 @@
   },
   {
     "id": "PRV-023",
-    "lang": "ita",
+    "lang": "it",
     "text": "Chi semina vento, raccoglie tempesta.",
     "translation": "Those who sow wind, will reap storm.",
     "domain": "Wind / Storm",
@@ -163,7 +163,7 @@
   },
   {
     "id": "PRV-025",
-    "lang": "ita",
+    "lang": "it",
     "text": "La catena si spezza sempre nel punto più debole",
     "translation": "A chain breaks always in its weakest spot.",
     "domain": "Chain / Link",
@@ -172,7 +172,7 @@
   },
   {
     "id": "PRV-027",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Fjala pa vepër, si reja pa shi.",
     "translation": "A word without a deed is like a cloud without rain.",
     "domain": "Deed / Cloud / Rain",
@@ -181,7 +181,7 @@
   },
   {
     "id": "PRV-028",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Më mirë armik i mençur se mik budalla.",
     "translation": "Better a wise enemy than a foolish friend.",
     "domain": "Friend / Enemy",
@@ -190,7 +190,7 @@
   },
   {
     "id": "PRV-029",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Kush kërkon, gjen.",
     "translation": "Who seeks, finds.",
     "domain": "Seeker / Finder",
@@ -199,7 +199,7 @@
   },
   {
     "id": "PRV-030",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Gur mbi gur bëhet mur.",
     "translation": "Stone upon stone, a wall is made.",
     "domain": "Stones / Wall",
@@ -208,7 +208,7 @@
   },
   {
     "id": "PRV-031",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Një dele e zgjebosur prish gjithë tufën.",
     "translation": "One mangy sheep spoils the whole flock.",
     "domain": "Sheep / Flock",
@@ -217,7 +217,7 @@
   },
   {
     "id": "PRV-032",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Uji i qetë të mbyt.",
     "translation": "Quiet water drowns you.",
     "domain": "Water / Depth",
@@ -226,7 +226,7 @@
   },
   {
     "id": "PRV-033",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Ç'të mbjellësh, do të korrësh.",
     "translation": "What you sow, you shall reap.",
     "domain": "Sowing / Harvest",
@@ -235,7 +235,7 @@
   },
   {
     "id": "PRV-034",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Gropën që i hap tjetrit, bie vetë.",
     "translation": "The pit you dig for another, you fall into yourself.",
     "domain": "Pit / Trap",
@@ -244,7 +244,7 @@
   },
   {
     "id": "PRV-035",
-    "lang": "alb",
+    "lang": "sq",
     "text": "Pas shiut vjen dielli.",
     "translation": "After the rain comes the sun.",
     "domain": "Rain / Sun",

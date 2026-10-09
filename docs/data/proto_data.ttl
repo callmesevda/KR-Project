@@ -1,4 +1,5 @@
 @prefix : <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto_data.ttl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix proto: <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -6,7 +7,15 @@
 
 <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto_data.ttl> a owl:Ontology ;
     rdfs:label "PROTO knowledge graph"@en ;
-    owl:imports <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+    dcterms:creator "Claudia Briccolani",
+        "Polyxeni Chasanai",
+        "Saba Afsharzadehtorghab",
+        "Sevda Rezaei Melal" ;
+    dcterms:description "Proverbs, tacit lessons, source domains, situations of use and cross-cultural equivalences described with the PROTO ontology."@en ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:title "PROTO knowledge graph"@en ;
+    owl:imports <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> ;
+    owl:versionInfo "1.1.0" .
 
 :Equiv_PRV-001_PRV-002 a owl:NamedIndividual,
         proto:CrossCulturalEquivalence ;

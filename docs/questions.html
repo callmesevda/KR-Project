@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Competency Questions — PROTO</title>
+  <title>Competency questions and evaluation — PROTO</title>
   <meta name="description" content="The competency questions PROTO is designed to answer.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -32,12 +32,13 @@
     <section class="hero" style="padding-bottom:20px;">
       <div class="wrap">
         <p class="section-kicker">Requirements</p>
-        <h1 style="font-size:2.2rem;">Competency questions</h1>
+        <h1 style="font-size:2.2rem;">Competency questions and evaluation</h1>
         <p class="lede">
           Competency questions are the natural-language questions an ontology is designed to
           be able to answer — the requirements that drove PROTO's modeling decisions (why
           <code>CrossCulturalEquivalence</code> is reified, why lessons and source domains
-          are separate classes, and so on).
+          are separate classes, and so on). Below them are the data checks that complement
+          the OWL reasoner, and the <a href="#evaluation">evaluation of PROTO on real texts</a>.
         </p>
       </div>
     </section>
@@ -47,8 +48,11 @@
         <div class="notice">
           <strong>Adopted by the team:</strong> these eight questions come from Polyxeni Chasanai's
           15 September 2026 analyst review of the equivalence links. Each one is the SPARQL
-          query she ran against the live graph to produce a finding in that review, and the
-          team has adopted them as PROTO's competency questions.
+          query she ran against the graph to produce a finding in that review, and the
+          team has adopted them as PROTO's competency questions. In v1.1 the queries use the
+          new GitHub IRIs (<code>proto:</code> for the schema, <code>kg:</code> for the
+          individuals) and the ISO language codes <code>it</code> and <code>sq</code>. The
+          answers are the same as before.
         </div>
       </div>
     </section>
@@ -57,41 +61,42 @@
       <div class="wrap">
 
         <h2 class="section-title" style="font-size:1.3rem;">CQ1 — How many equivalence links are there of each type?</h2>
-        <p class="section-intro">Answer (15 Sept 2026): 43 <code>SameLessonDifferentImage</code>, 5 <code>DirectMatch</code>. <code>PartialOverlap</code> and <code>FalseFriend</code> are never assigned by the generation script — the starting point for the whole review.</p>
+        <p class="section-intro">Answer: 43 <code>SameLessonDifferentImage</code>, 5 <code>DirectMatch</code>. <code>PartialOverlap</code> and <code>FalseFriend</code> are never assigned by the generation script — the starting point for the whole review.</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
 SELECT ?type (COUNT(*) AS ?links)
-WHERE { ?e a p:CrossCulturalEquivalence ; p:hasEquivalenceType ?type }
-GROUP BY ?type</code></pre>
+WHERE { ?e a proto:CrossCulturalEquivalence ; proto:hasEquivalenceType ?type }
+GROUP BY ?type
+ORDER BY DESC(?links)</code></pre>
         </details>
 
         <h2 class="section-title" style="font-size:1.3rem;">CQ2 — What are all the equivalence links, with both proverbs' languages, translations and type?</h2>
         <p class="section-intro">Answer: 48 rows — the full list reviewed pair-by-pair; no link ever joins two proverbs of the same language.</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
 SELECT ?pair ?langA ?proverbA ?langB ?proverbB ?type
 WHERE {
-  ?pair a p:CrossCulturalEquivalence ;
-        p:linksProverbA ?a ; p:linksProverbB ?b ; p:hasEquivalenceType ?type .
-  ?a p:hasLanguage ?langA ; p:hasTranslation ?proverbA .
-  ?b p:hasLanguage ?langB ; p:hasTranslation ?proverbB .
+  ?pair a proto:CrossCulturalEquivalence ;
+        proto:linksProverbA ?a ; proto:linksProverbB ?b ; proto:hasEquivalenceType ?type .
+  ?a proto:hasLanguage ?langA ; proto:hasTranslation ?proverbA .
+  ?b proto:hasLanguage ?langB ; proto:hasTranslation ?proverbB .
 }
 ORDER BY ?pair</code></pre>
         </details>
 
         <h2 class="section-title" style="font-size:1.3rem;">CQ3 — Which proverb pairs between two given languages are direct matches?</h2>
-        <p class="section-intro">Answer for Italian–Albanian: one row — "Chi cerca, trova" / "Kush kërkon, gjen" (PRV-020 / PRV-029). Swap the two language codes to check any other pair.</p>
+        <p class="section-intro">Answer for Italian–Albanian: one row — "Chi cerca, trova" / "Kush kërkon, gjen" (PRV-020 / PRV-029). Swap the two language codes (<code>en</code>, <code>fa</code>, <code>it</code>, <code>sq</code>) to check any other pair.</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
 SELECT ?proverbA ?proverbB
 WHERE {
-  ?pair p:hasEquivalenceType p:DirectMatch ;
-        p:linksProverbA ?a ; p:linksProverbB ?b .
-  ?a p:hasLanguage "ita" ; p:hasText ?proverbA .
-  ?b p:hasLanguage "alb" ; p:hasText ?proverbB .
+  ?pair proto:hasEquivalenceType proto:DirectMatch ;
+        proto:linksProverbA ?a ; proto:linksProverbB ?b .
+  ?a proto:hasLanguage "it" ; proto:hasText ?proverbA .
+  ?b proto:hasLanguage "sq" ; proto:hasText ?proverbB .
 }</code></pre>
         </details>
 
@@ -99,50 +104,55 @@ WHERE {
         <p class="section-intro">Answer: "Seeker/Finder" (Farsi, Italian, Albanian) and "Water" (English, Italian, Albanian) top the list, then several two-language pairs. This is also where tag-wording gaps show up — "Sun" is shared by Italian/Albanian, but "Storm"/"Rain" aren't, which is exactly why the generation script missed a real direct match (CQ1's caveat).</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
+PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 SELECT ?domain (GROUP_CONCAT(DISTINCT ?lang; separator=", ") AS ?languages)
        (COUNT(DISTINCT ?lang) AS ?n)
-WHERE { ?prov p:hasSourceDomain ?domain ; p:hasLanguage ?lang }
+WHERE { ?prov proto:hasSourceDomain ?d ; proto:hasLanguage ?lang . ?d rdfs:label ?domain }
 GROUP BY ?domain
 HAVING (COUNT(DISTINCT ?lang) &gt; 1)
-ORDER BY DESC(?n)</code></pre>
+ORDER BY DESC(?n) ?domain</code></pre>
         </details>
 
         <h2 class="section-title" style="font-size:1.3rem;">CQ5 — Which proverbs share a source-domain image but teach different lessons? (false-friend candidates)</h2>
         <p class="section-intro">Answer: 4 pairs — see the <a href="database.html#review">analyst review</a> for detail. The generation script can't produce these on its own (it only ever links proverbs that already share a lesson); this query finds them by searching across lessons instead.</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
+PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 SELECT ?domain ?a ?lessonA ?b ?lessonB
 WHERE {
-  ?a p:hasSourceDomain ?domain ; p:hasLesson ?lessonA ; p:hasLanguage ?langA .
-  ?b p:hasSourceDomain ?domain ; p:hasLesson ?lessonB ; p:hasLanguage ?langB .
+  ?a proto:hasSourceDomain ?d ; proto:hasLesson ?lessonA .
+  ?b proto:hasSourceDomain ?d ; proto:hasLesson ?lessonB .
+  ?d rdfs:label ?domain .
   FILTER (?lessonA != ?lessonB &amp;&amp; STR(?a) &lt; STR(?b))
-}</code></pre>
+}
+ORDER BY ?domain</code></pre>
         </details>
 
         <h2 class="section-title" style="font-size:1.3rem;">CQ6 — Which tacit lessons have no direct match at all among the sampled proverbs?</h2>
         <p class="section-intro">Answer: "Actions over intentions," "Karma," "Optimism in adversity." (Under the review's proposed reclassification, "Optimism in adversity" would leave this list — see the Italian/Albanian "after the rain, the sun" finding.)</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
 SELECT ?lesson
 WHERE {
-  ?lesson a p:TacitLesson .
+  ?l a proto:TacitLesson ; proto:hasLabel ?lesson .
   FILTER NOT EXISTS {
-    ?e p:hasEquivalenceType p:DirectMatch ; p:linksProverbA ?x .
-    ?x p:hasLesson ?lesson
+    ?e proto:hasEquivalenceType proto:DirectMatch ; proto:linksProverbA ?x .
+    ?x proto:hasLesson ?l
   }
-}</code></pre>
+}
+ORDER BY ?lesson</code></pre>
         </details>
 
         <h2 class="section-title" style="font-size:1.3rem;">CQ7 — How many proverbs did each language contribute to each lesson?</h2>
         <p class="section-intro">Answer: one proverb per language per lesson, except Albanian (two each in "Actions," "Determination," "Karma") and Farsi (two in "Optimism"). This sampling imbalance is part of why the direct-match count is likely an undercount of what's really out there (see the review's finding 6).</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
 SELECT ?lesson ?lang (COUNT(?prov) AS ?proverbs)
-WHERE { ?prov p:hasLesson ?l ; p:hasLanguage ?lang . ?l p:hasLabel ?lesson }
+WHERE { ?prov a proto:Proverb ; proto:hasLesson ?l ; proto:hasLanguage ?lang . ?l proto:hasLabel ?lesson }
 GROUP BY ?lesson ?lang
 ORDER BY ?lesson ?lang</code></pre>
         </details>
@@ -151,23 +161,163 @@ ORDER BY ?lesson ?lang</code></pre>
         <p class="section-intro">Answer for PRV-032 ("Uji i qetë të mbyt" / "Quiet water drowns you"): linked to the English, Farsi and Italian "quiet water" proverbs — and their situations of use show they don't all mean the same thing by it (English is admiring, the others warn). Swap in any proverb ID.</p>
         <details style="margin-bottom:26px;">
           <summary>SPARQL</summary>
-          <pre><code>PREFIX p: &lt;http://example.org/proto#&gt;
-PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+          <pre><code>PREFIX proto: &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#&gt;
+PREFIX kg:    &lt;https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto_data.ttl#&gt;
+PREFIX rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 SELECT ?other ?lang ?proverb ?type ?situation
 WHERE {
-  { ?e p:linksProverbA p:PRV-032 ; p:linksProverbB ?other }
+  { ?e proto:linksProverbA kg:PRV-032 ; proto:linksProverbB ?other }
   UNION
-  { ?e p:linksProverbB p:PRV-032 ; p:linksProverbA ?other }
-  ?e p:hasEquivalenceType ?type .
-  ?other p:hasLanguage ?lang ; p:hasTranslation ?proverb ; p:usedIn ?s .
+  { ?e proto:linksProverbB kg:PRV-032 ; proto:linksProverbA ?other }
+  ?e proto:hasEquivalenceType ?type .
+  ?other proto:hasLanguage ?lang ; proto:hasTranslation ?proverb ; proto:usedIn ?s .
   ?s rdfs:label ?situation .
-}</code></pre>
+}
+ORDER BY ?other</code></pre>
         </details>
 
-        <p class="section-intro">All eight run live against
+        <p class="section-intro">All eight were re-run on the v1.1 files with
+          <a href="https://github.com/callmesevda/KR-Project/blob/main/test/run_queries.py" target="_blank" rel="noopener"><code>test/run_queries.py</code></a>
+          (output in <a href="https://github.com/callmesevda/KR-Project/blob/main/test/query_results.md" target="_blank" rel="noopener"><code>query_results.md</code></a>).
+          They can also be pasted into
           <a href="https://triplydb.com/SevdaRezaeiMelal/proverbs-kr/sparql" target="_blank" rel="noopener">the TriplyDB SPARQL endpoint</a>.
           A few more illustrative (but less load-bearing) queries are on the
           <a href="database.html#sparql">database page</a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="checks">
+      <div class="wrap">
+        <p class="section-kicker">Validation</p>
+        <h2 class="section-title">Data checks the reasoner cannot do</h2>
+        <p class="section-intro">
+          OWL reasons under the open-world assumption: it reports a <em>wrong</em> value (a
+          proverb that is also typed as a lesson, a link with two equivalence types) but not
+          a <em>missing</em> one. These SPARQL checks cover that gap. On the v1.1 graph all
+          of them return no rows, and an OWL 2 RL reasoner finds no inconsistency.
+        </p>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Check</th><th>Question</th><th>Result</th></tr></thead>
+            <tbody>
+              <tr><td>V1</td><td>Which proverbs have no tacit lesson?</td><td>none</td></tr>
+              <tr><td>V2</td><td>Which equivalence links join two proverbs of the same language?</td><td>none</td></tr>
+              <tr><td>V3</td><td>Which links that are not <code>FalseFriend</code> join proverbs with different lessons?</td><td>none</td></tr>
+              <tr><td>V4</td><td>Which proverb occurrences in the text graph have no stance or no target?</td><td>none</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-intro">
+          The queries are in <a href="https://github.com/callmesevda/KR-Project/blob/main/test/queries.rq" target="_blank" rel="noopener"><code>test/queries.rq</code></a>.
+        </p>
+      </div>
+    </section>
+
+    <section id="evaluation">
+      <div class="wrap">
+        <p class="section-kicker">Evaluation · Polyxeni Chasanai · October 2026</p>
+        <h2 class="section-title">Testing PROTO on real texts</h2>
+        <p class="section-intro">
+          To test the ontology, we used it as a lens on real texts where people use proverbs
+          from our corpus: news, blogs, a forum thread, a social media post and opinion
+          pieces. Every use was annotated by hand and turned into a small knowledge graph
+          that imports the PROTO schema and the main graph. PROTO is good at saying which
+          proverb is used and which lesson it carries. It has no way to say who the proverb
+          is aimed at or what attitude the speaker takes, and those are the things that show
+          bias, so the test also produced a proposed extension module.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat"><span class="num">9</span><span class="label">Texts</span></div>
+          <div class="stat"><span class="num">11</span><span class="label">Proverb occurrences</span></div>
+          <div class="stat"><span class="num">4</span><span class="label">Languages</span></div>
+          <div class="stat"><span class="num">6</span><span class="label">Existing lessons reused</span></div>
+          <div class="stat"><span class="num">1</span><span class="label">Proverb added (PRV-101)</span></div>
+        </div>
+
+        <h3>The texts</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>ID</th><th>Type</th><th>Lang.</th><th>Source</th><th>Proverb</th><th>Applied to</th></tr></thead>
+            <tbody>
+              <tr><td>T1</td><td>news</td><td>en</td><td><a href="https://abcnews.com/US/bad-apples-phrase-describing-rotten-police-officers-meaning/story?id=71201096" target="_blank" rel="noopener">ABC News, 14 Jun 2020</a></td><td>"a few bad apples" (new, PRV-101)</td><td>police officers</td></tr>
+              <tr><td>T2</td><td>news analysis</td><td>en</td><td><a href="https://theconversation.com/police-violence-in-the-united-states-what-lies-behind-the-bad-apples-narrative-139931" target="_blank" rel="noopener">The Conversation</a></td><td>"bad apples" (PRV-101)</td><td>police officers</td></tr>
+              <tr><td>T3</td><td>blog</td><td>en</td><td><a href="https://www.upfort.com/blog-articles/no-more-weakest-links-why-every-employee-needs-cybersecurity-protection" target="_blank" rel="noopener">Upfort</a></td><td>A chain is only as strong as its weakest link (PRV-012)</td><td>employees</td></tr>
+              <tr><td>T4</td><td>blog</td><td>en</td><td><a href="https://www.hrzone.com/talent/development/blog-still-waters-run-deep-never-underestimate-an-introvert" target="_blank" rel="noopener">HRZone, 26 Jun 2012</a></td><td>Still waters run deep (PRV-008)</td><td>introverts at work</td></tr>
+              <tr><td>T5</td><td>forum</td><td>en</td><td><a href="https://forum.wordreference.com/threads/still-water-runs-deep.448648/" target="_blank" rel="noopener">WordReference, 2007</a></td><td>Still waters run deep (PRV-008)</td><td>quiet people</td></tr>
+              <tr><td>T6</td><td>opinion</td><td>sq</td><td><a href="https://www.gazetatema.net/web/2015/03/03/historia-e-te-forteve-ne-politike-ose-cfare-te-mbjellesh-do-korresh" target="_blank" rel="noopener">Gazeta Tema, 3 Mar 2015</a></td><td>Ç'të mbjellësh, do të korrësh (PRV-033), used twice</td><td>politicians in power / the government&#x27;s reforms</td></tr>
+              <tr><td>T7</td><td>social media</td><td>it</td><td><a href="https://agenziastampaitalia.it/politica/politica-nazionale/74957-migranti-casini-avviso-ai-naviganti-chi-semina-vento-raccoglie-tempesta" target="_blank" rel="noopener">Agenzia Stampa Italia, 9 Aug 2026</a> (Instagram post by P.F. Casini)</td><td>Chi semina vento, raccoglie tempesta (PRV-023)</td><td>European migration policy</td></tr>
+              <tr><td>T8</td><td>editorial</td><td>it</td><td><a href="https://qds.it/chi-semina-vento-raccoglie-tempesta/" target="_blank" rel="noopener">Quotidiano di Sicilia, 14 Nov 2024</a></td><td>Chi semina vento, raccoglie tempesta (PRV-023), used twice</td><td>politicians / citizens</td></tr>
+              <tr><td>T9</td><td>personal blog</td><td>fa</td><td><a href="https://nahidkhirolahi.blogfa.com/post/199" target="_blank" rel="noopener">blogfa</a></td><td>دوستی خاله خرسه (PRV-002)</td><td>well-meaning friends</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-intro">T6 and T8 each apply the same proverb to two different targets, which gives 11 occurrences.</p>
+
+        <h3>What the ontology captured</h3>
+        <ul class="bullets" style="margin-top:8px; gap:12px;">
+          <li>All 11 occurrences fit the existing model: each becomes a new <code>SituationOfUse</code> attached to its proverb through <code>usedIn</code>, and each maps onto one of the six tacit lessons. No new lesson was needed.</li>
+          <li>One proverb was missing from the corpus: "a few bad apples". It was added as PRV-101 under <em>Group vulnerability</em>, with a new source domain <em>Apple</em>, and linked to the Albanian PRV-031 ("one mangy sheep spoils the whole flock") as <code>SameLessonDifferentImage</code>, with <code>annotatedBy</code> filled in.</li>
+          <li>Two texts back up the analyst review. In T5, forum users disagree on whether "Still waters run deep" is praise or a warning, so the English proverb overlaps in use with the Albanian "Uji i qetë të mbyt". T9 confirms that the Persian "Aunt Bear" proverb is about a foolish friend whose help does harm.</li>
+        </ul>
+
+        <h3 style="margin-top:28px;">What was missing, and the proposed extension</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Missing in PROTO</th><th>Example from the texts</th><th>Added in the extension</th></tr></thead>
+            <tbody>
+              <tr><td>The text and its type</td><td>T7 is an Instagram post, T5 a forum thread</td><td><code>Text</code>, <code>hasGenre</code></td></tr>
+              <tr><td>Who is speaking</td><td>T6: the journalist vs. the Prime Minister</td><td><code>speaker</code></td></tr>
+              <tr><td>Who the proverb is aimed at</td><td>T1 police officers, T3 employees</td><td><code>Target</code>, <code>SocialGroup</code>, <code>appliedTo</code></td></tr>
+              <tr><td>The speaker's attitude</td><td>T1 plays the problem down, T2 criticises that use</td><td><code>Stance</code> (6 values), <code>hasStance</code></td></tr>
+              <tr><td>A meaning different from ours</td><td>T1, T6</td><td><code>hasMeaningShift</code></td></tr>
+              <tr><td>Several uses in one text</td><td>T8 targets politicians and citizens</td><td><code>ProverbOccurrence</code>, <code>quote</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-intro">
+          The extension (<a href="https://github.com/callmesevda/KR-Project/blob/main/test/proto-text-extension.ttl" target="_blank" rel="noopener"><code>proto-text-extension.ttl</code></a>)
+          is a separate module and a proposal: it does not change the main schema. It follows
+          the same modelling rules as PROTO v1.1 (disjoint classes, closed value lists,
+          functional properties).
+        </p>
+
+        <h3 style="margin-top:28px;">Bias: what the queries show</h3>
+        <ul class="bullets" style="margin-top:8px; gap:12px;">
+          <li><strong>The same phrase can defend or accuse.</strong> "One bad apple" used to mean that one bad member spoils the whole group. In T1, officials say "a few bad apples" to argue the opposite: the police as a whole are fine. T2 criticises exactly this use. In the graph this is one proverb with two stances aimed at the same group.</li>
+          <li><strong>A warning can be turned into a promise.</strong> In T6 the journalist uses sow/reap as a warning to people in power, while the Prime Minister uses the same image to promise that today's reforms will pay off.</li>
+          <li><strong>Proverbs let people blame without naming anyone.</strong> T3 makes "employees" the weakest link in order to sell a security product. T7 warns about "whoever sows wind" in the migration debate and leaves the reader to work out who that is.</li>
+          <li><strong>Karma proverbs show up in politics.</strong> Four of the five Karma occurrences are warnings to politicians, governments or citizens.</li>
+        </ul>
+
+        <h3 style="margin-top:28px;">Can the proverbs be found automatically?</h3>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Method</th><th>Found</th><th>Correct</th><th>Recall</th><th>Missed</th></tr></thead>
+            <tbody>
+              <tr><td>Exact text from the graph (<code>hasText</code>)</td><td>6</td><td>6</td><td>0.67</td><td>"a few bad apples" (T1, T2), the split sow/reap form in T6</td></tr>
+              <tr><td>Key words</td><td>9</td><td>9</td><td>1.00</td><td>none</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-intro">
+          Both were compared with the hand annotation (9 text/proverb pairs) plus two decoy
+          sentences, and neither produced a false positive. People rarely quote a proverb
+          exactly: they shorten it, inflect it or split it across a sentence. The key-word
+          result is too optimistic, because the key words were written after reading these
+          texts. Neither method can tell who the proverb is aimed at or with what attitude.
+        </p>
+
+        <h3 style="margin-top:28px;">Limitations</h3>
+        <ul class="bullets" style="margin-top:8px; gap:10px;">
+          <li>Nine texts are enough to test the model, not to say how often a proverb is used.</li>
+          <li>The annotation was done by one person, and the stance labels are a judgement call.</li>
+          <li>The Persian text (T9) and the Italian texts (T7, T8) still need a check by native speakers.</li>
+        </ul>
+        <p class="section-intro" style="margin-top:16px;">
+          Full write-up, texts, graph, queries and scripts:
+          <a href="https://github.com/callmesevda/KR-Project/tree/main/test" target="_blank" rel="noopener">the <code>test/</code> folder on GitHub</a>.
         </p>
       </div>
     </section>

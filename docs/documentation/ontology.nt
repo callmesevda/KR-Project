@@ -1,6 +1,79 @@
-<http://example.org/proto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://example.org/proto> <http://www.w3.org/2000/01/rdf-schema#comment> "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery." .
-<http://example.org/proto> <http://www.w3.org/2000/01/rdf-schema#label> "PROTO — Proverbs & Tacit-knowledge Ontology" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://www.w3.org/2002/07/owl#versionIRI> <https://raw.githubusercontent.com/callmesevda/KR-Project/v1.1.0/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/abstract> "PROTO models proverbs, the tacit (unspoken) lessons they carry, the situations in which they are used, and the cross-cultural equivalences that link a proverb in one language to a proverb in another when they teach the same lesson but diverge (or don't) in imagery. The current dataset covers 28 proverbs across four languages (English, Farsi, Italian, and Albanian), grounded in Wikidata for their tacit lessons and source-domain imagery."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/bibliographicCitation> "Rezaei Melal, S., Chasanai, P., Afsharzadehtorghab, S., and Briccolani, C. (2026). PROTO — Proverbs & Tacit-knowledge Ontology, version 1.1.0. https://github.com/callmesevda/KR-Project" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/created> "2026-09-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/creator> "Claudia Briccolani" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/creator> "Polyxeni Chasanai" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/creator> "Saba Afsharzadehtorghab" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/creator> "Sevda Rezaei Melal" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/description> "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/issued> "2026-10-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/modified> "2026-10-09"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/dc/terms/title> "PROTO — Proverbs & Tacit-knowledge Ontology"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "proto" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://www.w3.org/2000/01/rdf-schema#comment> "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "PROTO — Proverbs & Tacit-knowledge Ontology"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
 # 
 # 
 # #################################################################
@@ -10,55 +83,78 @@
 # #################################################################
 # 
 # 
-# http://example.org/proto#groundedIn
-<http://example.org/proto#groundedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/proto#groundedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/proto#TacitLesson> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://example.org/proto#SourceDomain> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/proto#groundedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns." .
-<http://example.org/proto#groundedIn> <http://www.w3.org/2000/01/rdf-schema#label> "grounded in (Wikidata)" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns. No rdfs:range is declared deliberately: the value is a Wikidata entity outside this ontology's own classes, so constraining it to one of our classes would be incorrect. This omission is intentional, not an oversight."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn> <http://www.w3.org/2000/01/rdf-schema#label> "grounded in (Wikidata)"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn> <http://www.w3.org/2004/02/skos/core#example> "Bear grounded in wd:Q30090244" .
 # 
-# http://example.org/proto#hasEquivalenceType
-<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
-<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#EquivalenceType> .
-<http://example.org/proto#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#label> "has equivalence type" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifies a cross-cultural equivalence with one of the four equivalence types. Functional: one equivalence link has exactly one equivalence type. Combined with the AllDifferent axiom on the four types below, this is what lets the reasoner catch a link accidentally assigned two different types."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/2000/01/rdf-schema#label> "has equivalence type"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> <http://www.w3.org/2004/02/skos/core#example> "Equiv_PRV-012_PRV-025 has equivalence type DirectMatch" .
 # 
-# http://example.org/proto#hasLesson
-<http://example.org/proto#hasLesson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/proto#hasLesson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
-<http://example.org/proto#hasLesson> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#TacitLesson> .
-<http://example.org/proto#hasLesson> <http://www.w3.org/2000/01/rdf-schema#label> "has lesson" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a proverb to the tacit lesson it conveys."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> <http://www.w3.org/2000/01/rdf-schema#label> "has lesson"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> <http://www.w3.org/2004/02/skos/core#example> "PRV-012 has lesson GroupVulnerability" .
 # 
-# http://example.org/proto#hasSourceDomain
-<http://example.org/proto#hasSourceDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/proto#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
-<http://example.org/proto#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#SourceDomain> .
-<http://example.org/proto#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#label> "has source domain" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a proverb to an image or domain its literal wording draws on; a proverb can have several."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> <http://www.w3.org/2000/01/rdf-schema#label> "has source domain"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> <http://www.w3.org/2004/02/skos/core#example> "PRV-012 has source domains Chain and Link" .
 # 
-# http://example.org/proto#linksProverbA
-<http://example.org/proto#linksProverbA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/proto#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
-<http://example.org/proto#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#Proverb> .
-<http://example.org/proto#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#label> "links proverb A" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a cross-cultural equivalence to the first of the two proverbs it connects; the generated data puts the lower proverb ID here, and the order carries no meaning. Functional: one equivalence link points to exactly one proverb as its 'A' side."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/2000/01/rdf-schema#label> "links proverb A"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> <http://www.w3.org/2004/02/skos/core#example> "Equiv_PRV-012_PRV-025 links proverb A PRV-012" .
 # 
-# http://example.org/proto#linksProverbB
-<http://example.org/proto#linksProverbB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/proto#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
-<http://example.org/proto#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#Proverb> .
-<http://example.org/proto#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#label> "links proverb B" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a cross-cultural equivalence to the second of the two proverbs it connects, which is in a different language from proverb A. Functional: one equivalence link points to exactly one proverb as its 'B' side."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/2000/01/rdf-schema#label> "links proverb B"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> <http://www.w3.org/2004/02/skos/core#example> "Equiv_PRV-012_PRV-025 links proverb B PRV-025" .
 # 
-# http://example.org/proto#usedIn
-<http://example.org/proto#usedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://example.org/proto#usedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
-<http://example.org/proto#usedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/proto#SituationOfUse> .
-<http://example.org/proto#usedIn> <http://www.w3.org/2000/01/rdf-schema#label> "used in" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a proverb to a situation in which it is typically used."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> <http://www.w3.org/2000/01/rdf-schema#label> "used in"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> <http://www.w3.org/2004/02/skos/core#example> "PRV-012 used in Situation_PRV-012" .
 # 
 # 
 # 
@@ -69,49 +165,73 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://example.org/proto#annotatedBy
-<http://example.org/proto#annotatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/proto#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
-<http://example.org/proto#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/proto#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "annotated by" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the person who reviewed and classified an equivalence link."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "annotated by"@en .
 # 
-# http://example.org/proto#hasDivergenceNote
-<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#CrossCulturalEquivalence> .
-<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/proto#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#label> "has divergence note" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#comment> "A free-text note on how the two linked proverbs differ, in imagery, tone or use."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote> <http://www.w3.org/2000/01/rdf-schema#label> "has divergence note"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote> <http://www.w3.org/2004/02/skos/core#example> "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Bear)." .
 # 
-# http://example.org/proto#hasLabel
-<http://example.org/proto#hasLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/proto#hasLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#TacitLesson> .
-<http://example.org/proto#hasLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/proto#hasLabel> <http://www.w3.org/2000/01/rdf-schema#label> "has label" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "The human-readable name of a tacit lesson."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel> <http://www.w3.org/2000/01/rdf-schema#label> "has label"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel> <http://www.w3.org/2004/02/skos/core#example> "Group vulnerability" .
 # 
-# http://example.org/proto#hasLanguage
-<http://example.org/proto#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/proto#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
-<http://example.org/proto#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/proto#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "has language" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "The language of the proverb's original text, as an ISO 639-1 code. Functional: one proverb individual is recorded in exactly one language."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "has language"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2004/02/skos/core#example> "en" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2004/02/skos/core#example> "fa" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2004/02/skos/core#example> "it" .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage> <http://www.w3.org/2004/02/skos/core#example> "sq" .
 # 
-# http://example.org/proto#hasProverbID
-<http://example.org/proto#hasProverbID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
-<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs." .
-<http://example.org/proto#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#label> "has proverb ID" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#comment> "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs. Functional: one proverb has exactly one ID."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/2000/01/rdf-schema#label> "has proverb ID"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID> <http://www.w3.org/2004/02/skos/core#example> "PRV-001" .
 # 
-# http://example.org/proto#hasText
-<http://example.org/proto#hasText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/proto#hasText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
-<http://example.org/proto#hasText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/proto#hasText> <http://www.w3.org/2000/01/rdf-schema#label> "has text" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/2000/01/rdf-schema#comment> "The proverb as written in its original language and script. Functional: one proverb has exactly one literal text."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/2000/01/rdf-schema#label> "has text"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText> <http://www.w3.org/2004/02/skos/core#example> "PRV-020 has text 'Chi cerca, trova.'" .
 # 
-# http://example.org/proto#hasTranslation
-<http://example.org/proto#hasTranslation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/proto#Proverb> .
-<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#comment> "Word-for-word English gloss, distinct from hasText (the proverb in its original language)." .
-<http://example.org/proto#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#label> "has literal English translation" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#comment> "Word-for-word English gloss, distinct from hasText (the proverb in its original language)."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation> <http://www.w3.org/2000/01/rdf-schema#label> "has literal English translation"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation> <http://www.w3.org/2004/02/skos/core#example> "PRV-020 has translation 'Those who search, find.'" .
 # 
 # 
 # 
@@ -122,34 +242,89 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://example.org/proto#CrossCulturalEquivalence
-<http://example.org/proto#CrossCulturalEquivalence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/proto#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)." .
-<http://example.org/proto#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#label> "Cross-Cultural Equivalence" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/2000/01/rdf-schema#label> "Cross-Cultural Equivalence"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> <http://www.w3.org/2004/02/skos/core#example> "Equiv_PRV-012_PRV-025: the English and Italian chain proverbs, a DirectMatch" .
 # 
-# http://example.org/proto#EquivalenceType
-<http://example.org/proto#EquivalenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/proto#EquivalenceType> <http://www.w3.org/2000/01/rdf-schema#label> "Equivalence Type" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#oneOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> <http://www.w3.org/2000/01/rdf-schema#comment> "A controlled vocabulary for how two linked proverbs relate, based on whether they share a lesson and whether they share an image: DirectMatch, SameLessonDifferentImage, PartialOverlap or FalseFriend."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> <http://www.w3.org/2000/01/rdf-schema#label> "Equivalence Type"@en .
 # 
-# http://example.org/proto#Proverb
-<http://example.org/proto#Proverb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/proto#Proverb> <http://www.w3.org/2000/01/rdf-schema#comment> "The surface expression of a proverb: its literal text, language, and image/source domain." .
-<http://example.org/proto#Proverb> <http://www.w3.org/2000/01/rdf-schema#label> "Proverb" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> .
+_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/2000/01/rdf-schema#comment> "The surface expression of a proverb: its literal text, language, and image/source domain."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/2000/01/rdf-schema#label> "Proverb"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> <http://www.w3.org/2004/02/skos/core#example> "PRV-012: 'A chain is only as strong as its weakest link.' (en)" .
 # 
-# http://example.org/proto#SituationOfUse
-<http://example.org/proto#SituationOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/proto#SituationOfUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The pragmatic context in which a proverb would be deployed." .
-<http://example.org/proto#SituationOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Situation of Use" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The pragmatic context in which a proverb is deployed: what the speaker uses it to do, such as warn, comfort or encourage."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> <http://www.w3.org/2000/01/rdf-schema#label> "Situation of Use"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> <http://www.w3.org/2004/02/skos/core#example> "Situation_PRV-012: 'Used to show how the strength of a group depends on every individual's ability'" .
 # 
-# http://example.org/proto#SourceDomain
-<http://example.org/proto#SourceDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/proto#SourceDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)." .
-<http://example.org/proto#SourceDomain> <http://www.w3.org/2000/01/rdf-schema#label> "Source Domain" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> <http://www.w3.org/2000/01/rdf-schema#label> "Source Domain"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> <http://www.w3.org/2004/02/skos/core#example> "Chain, Water, Bear" .
 # 
-# http://example.org/proto#TacitLesson
-<http://example.org/proto#TacitLesson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://example.org/proto#TacitLesson> <http://www.w3.org/2000/01/rdf-schema#comment> "The unspoken, language-independent moral a proverb conveys." .
-<http://example.org/proto#TacitLesson> <http://www.w3.org/2000/01/rdf-schema#label> "Tacit Lesson" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> <http://www.w3.org/2000/01/rdf-schema#comment> "The unspoken, language-independent moral a proverb conveys; proverbs from different languages can share the same lesson."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> <http://www.w3.org/2000/01/rdf-schema#label> "Tacit Lesson"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> <http://www.w3.org/2004/02/skos/core#example> "GroupVulnerability, labelled 'Group vulnerability'" .
 # 
 # 
 # 
@@ -160,25 +335,81 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://example.org/proto#DirectMatch
-<http://example.org/proto#DirectMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/proto#DirectMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
-<http://example.org/proto#DirectMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types." .
-<http://example.org/proto#DirectMatch> <http://www.w3.org/2000/01/rdf-schema#label> "Direct match (same lesson AND same source domain)" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "The two proverbs share both the tacit lesson and the core image (the same scene or object), even if their source-domain tags are worded differently."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> <http://www.w3.org/2000/01/rdf-schema#label> "Direct match (same lesson AND same source domain)"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> <http://www.w3.org/2004/02/skos/core#example> "Equiv_PRV-020_PRV-029: 'Chi cerca, trova' (it) and 'Kush kërkon, gjen' (sq), both 'who seeks, finds'" .
 # 
-# http://example.org/proto#FalseFriend
-<http://example.org/proto#FalseFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/proto#FalseFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
-<http://example.org/proto#FalseFriend> <http://www.w3.org/2000/01/rdf-schema#label> "False friend (same image, different lesson)" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> <http://www.w3.org/2000/01/rdf-schema#comment> "The two proverbs share an image but teach different lessons."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> <http://www.w3.org/2000/01/rdf-schema#label> "False friend (same image, different lesson)"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> <http://www.w3.org/2004/02/skos/core#example> "PRV-003 'Every cloud has a silver lining' (en) and PRV-027 'A word without a deed is like a cloud without rain' (sq): the same cloud, optimism versus empty words" .
 # 
-# http://example.org/proto#PartialOverlap
-<http://example.org/proto#PartialOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/proto#PartialOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
-<http://example.org/proto#PartialOverlap> <http://www.w3.org/2000/01/rdf-schema#label> "Partial overlap" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> <http://www.w3.org/2000/01/rdf-schema#comment> "Same lesson; the images share an element or scene type without being the same image."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> <http://www.w3.org/2000/01/rdf-schema#label> "Partial overlap"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> <http://www.w3.org/2004/02/skos/core#example> "Equiv_PRV-004_PRV-016: the end of the night (fa) and the end of the storm (it), the same sequence with different scenery" .
 # 
-# http://example.org/proto#SameLessonDifferentImage
-<http://example.org/proto#SameLessonDifferentImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://example.org/proto#SameLessonDifferentImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/proto#EquivalenceType> .
-<http://example.org/proto#SameLessonDifferentImage> <http://www.w3.org/2000/01/rdf-schema#label> "Same lesson, different image" .
+# https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> <http://www.w3.org/2000/01/rdf-schema#comment> "The two proverbs share a tacit lesson but no element of their imagery."@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> <http://www.w3.org/2000/01/rdf-schema#label> "Same lesson, different image"@en .
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> <http://www.w3.org/2004/02/skos/core#example> "Equiv_PRV-012_PRV-013: a chain (en) and a wall (fa) that both fail at their weakest point" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid15 <http://www.w3.org/2002/07/owl#members> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid22 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

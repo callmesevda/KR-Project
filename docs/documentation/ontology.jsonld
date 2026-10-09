@@ -3,282 +3,744 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "http://example.org/proto#SourceDomain"
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain"
     }, {
-      "@id" : "http://example.org/proto#TacitLesson"
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson"
     } ]
   } ]
 }, {
-  "@id" : "http://example.org/proto",
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap"
+    }, {
+      "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "PROTO models proverbs, the tacit (unspoken) lessons they carry, the situations in which they are used, and the cross-cultural equivalences that link a proverb in one language to a proverb in another when they teach the same lesson but diverge (or don't) in imagery. The current dataset covers 28 proverbs across four languages (English, Farsi, Italian, and Albanian), grounded in Wikidata for their tacit lessons and source-domain imagery."
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Rezaei Melal, S., Chasanai, P., Afsharzadehtorghab, S., and Briccolani, C. (2026). PROTO — Proverbs & Tacit-knowledge Ontology, version 1.1.0. https://github.com/callmesevda/KR-Project"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-09-10"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Claudia Briccolani"
+  }, {
+    "@value" : "Polyxeni Chasanai"
+  }, {
+    "@value" : "Saba Afsharzadehtorghab"
+  }, {
+    "@value" : "Sevda Rezaei Melal"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-09"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-09"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "PROTO — Proverbs & Tacit-knowledge Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "proto"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "PROTO — Proverbs & Tacit-knowledge Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/v1.1.0/proto-ontology-structure.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.1.0"
   } ]
 }, {
-  "@id" : "http://example.org/proto#CrossCulturalEquivalence",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Cross-Cultural Equivalence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Equiv_PRV-012_PRV-025: the English and Italian chain proverbs, a DirectMatch"
   } ]
 }, {
-  "@id" : "http://example.org/proto#DirectMatch",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://example.org/proto#EquivalenceType"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types."
+    "@language" : "en",
+    "@value" : "The two proverbs share both the tacit lesson and the core image (the same scene or object), even if their source-domain tags are worded differently."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Direct match (same lesson AND same source domain)"
-  } ]
-}, {
-  "@id" : "http://example.org/proto#EquivalenceType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Equivalence Type"
-  } ]
-}, {
-  "@id" : "http://example.org/proto#FalseFriend",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://example.org/proto#EquivalenceType"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "False friend (same image, different lesson)"
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Equiv_PRV-020_PRV-029: 'Chi cerca, trova' (it) and 'Kush kërkon, gjen' (sq), both 'who seeks, finds'"
   } ]
 }, {
-  "@id" : "http://example.org/proto#PartialOverlap",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://example.org/proto#EquivalenceType"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Partial overlap"
-  } ]
-}, {
-  "@id" : "http://example.org/proto#Proverb",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A controlled vocabulary for how two linked proverbs relate, based on whether they share a lesson and whether they share an image: DirectMatch, SameLessonDifferentImage, PartialOverlap or FalseFriend."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Equivalence Type"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid7"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The two proverbs share an image but teach different lessons."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "False friend (same image, different lesson)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-003 'Every cloud has a silver lining' (en) and PRV-027 'A word without a deed is like a cloud without rain' (sq): the same cloud, optimism versus empty words"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Same lesson; the images share an element or scene type without being the same image."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Partial overlap"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Equiv_PRV-004_PRV-016: the end of the night (fa) and the end of the storm (it), the same sequence with different scenery"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "The surface expression of a proverb: its literal text, language, and image/source domain."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-012: 'A chain is only as strong as its weakest link.' (en)"
   } ]
 }, {
-  "@id" : "http://example.org/proto#SameLessonDifferentImage",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://example.org/proto#EquivalenceType"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The two proverbs share a tacit lesson but no element of their imagery."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Same lesson, different image"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Equiv_PRV-012_PRV-013: a chain (en) and a wall (fa) that both fail at their weakest point"
   } ]
 }, {
-  "@id" : "http://example.org/proto#SituationOfUse",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The pragmatic context in which a proverb would be deployed."
+    "@language" : "en",
+    "@value" : "The pragmatic context in which a proverb is deployed: what the speaker uses it to do, such as warn, comfort or encourage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Situation of Use"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Situation_PRV-012: 'Used to show how the strength of a group depends on every individual's ability'"
   } ]
 }, {
-  "@id" : "http://example.org/proto#SourceDomain",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Source Domain"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Chain, Water, Bear"
   } ]
 }, {
-  "@id" : "http://example.org/proto#TacitLesson",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The unspoken, language-independent moral a proverb conveys."
+    "@language" : "en",
+    "@value" : "The unspoken, language-independent moral a proverb conveys; proverbs from different languages can share the same lesson."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "Tacit Lesson"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "GroupVulnerability, labelled 'Group vulnerability'"
   } ]
 }, {
-  "@id" : "http://example.org/proto#annotatedBy",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name of the person who reviewed and classified an equivalence link."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#CrossCulturalEquivalence"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "annotated by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://example.org/proto#groundedIn",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns."
+    "@language" : "en",
+    "@value" : "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns. No rdfs:range is declared deliberately: the value is a Wikidata entity outside this ontology's own classes, so constraining it to one of our classes would be incorrect. This omission is intentional, not an oversight."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid1"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "grounded in (Wikidata)"
-  } ]
-}, {
-  "@id" : "http://example.org/proto#hasDivergenceNote",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#CrossCulturalEquivalence"
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "grounded in (Wikidata)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Bear grounded in wd:Q30090244"
+  } ]
+}, {
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A free-text note on how the two linked proverbs differ, in imagery, tone or use."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has divergence note"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Bear)."
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasEquivalenceType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Classifies a cross-cultural equivalence with one of the four equivalence types. Functional: one equivalence link has exactly one equivalence type. Combined with the AllDifferent axiom on the four types below, this is what lets the reasoner catch a link accidentally assigned two different types."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#CrossCulturalEquivalence"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has equivalence type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/proto#EquivalenceType"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Equiv_PRV-012_PRV-025 has equivalence type DirectMatch"
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasLabel",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The human-readable name of a tacit lesson."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#TacitLesson"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has label"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Group vulnerability"
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasLanguage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The language of the proverb's original text, as an ISO 639-1 code. Functional: one proverb individual is recorded in exactly one language."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has language"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "en"
+  }, {
+    "@value" : "fa"
+  }, {
+    "@value" : "it"
+  }, {
+    "@value" : "sq"
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasLesson",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a proverb to the tacit lesson it conveys."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has lesson"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/proto#TacitLesson"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-012 has lesson GroupVulnerability"
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasProverbID",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs."
+    "@language" : "en",
+    "@value" : "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs. Functional: one proverb has exactly one ID."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has proverb ID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-001"
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasSourceDomain",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a proverb to an image or domain its literal wording draws on; a proverb can have several."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has source domain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/proto#SourceDomain"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-012 has source domains Chain and Link"
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasText",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The proverb as written in its original language and script. Functional: one proverb has exactly one literal text."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has text"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-020 has text 'Chi cerca, trova.'"
   } ]
 }, {
-  "@id" : "http://example.org/proto#hasTranslation",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
     "@value" : "Word-for-word English gloss, distinct from hasText (the proverb in its original language)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "has literal English translation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-020 has translation 'Those who search, find.'"
   } ]
 }, {
-  "@id" : "http://example.org/proto#linksProverbA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a cross-cultural equivalence to the first of the two proverbs it connects; the generated data puts the lower proverb ID here, and the order carries no meaning. Functional: one equivalence link points to exactly one proverb as its 'A' side."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#CrossCulturalEquivalence"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "links proverb A"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Equiv_PRV-012_PRV-025 links proverb A PRV-012"
   } ]
 }, {
-  "@id" : "http://example.org/proto#linksProverbB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a cross-cultural equivalence to the second of the two proverbs it connects, which is in a different language from proverb A. Functional: one equivalence link points to exactly one proverb as its 'B' side."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#CrossCulturalEquivalence"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "links proverb B"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "Equiv_PRV-012_PRV-025 links proverb B PRV-025"
   } ]
 }, {
-  "@id" : "http://example.org/proto#usedIn",
+  "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a proverb to a situation in which it is typically used."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://example.org/proto#Proverb"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "used in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://example.org/proto#SituationOfUse"
+    "@id" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@value" : "PRV-012 used in Situation_PRV-012"
   } ]
 } ]

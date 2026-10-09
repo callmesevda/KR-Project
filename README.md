@@ -12,17 +12,39 @@ imagery.
 
 | File | Description |
 |---|---|
-| [`proto-ontology-structure.ttl`](proto-ontology-structure.ttl) | The TBox: 5 classes, a 4-value controlled vocabulary (`EquivalenceType`), 6 object properties, 8 data properties. |
-| [`proto_data.ttl`](proto_data.ttl) | The ABox: 834 triples generated from the spreadsheet below — 28 proverbs, 6 tacit lessons, 40 source domains, 48 cross-cultural equivalences. |
+| [`proto-ontology-structure.ttl`](proto-ontology-structure.ttl) | The TBox: 5 classes, a 4-value controlled vocabulary (`EquivalenceType`), 7 object properties, 7 data properties, plus disjointness and cardinality axioms. Every element is annotated with a label, a definition and an example. |
+| [`proto_data.ttl`](proto_data.ttl) | The ABox: 845 triples generated from the spreadsheet below, importing the TBox with `owl:imports` — 28 proverbs, 6 tacit lessons, 40 source domains, 48 cross-cultural equivalences. |
 | [`The Single Source of Truth - Formatted.xlsx`](<The Single Source of Truth - Formatted.xlsx>) | The shared spreadsheet: one row per proverb, annotated with language, literal text, translation, source domain, tacit lesson, situation of use, and Wikidata groundings. |
 | [`xlsx_to_rdf.py`](xlsx_to_rdf.py) | Converts the spreadsheet into the ABox, deduplicating repeated lessons/domains and deriving `CrossCulturalEquivalence` instances automatically. |
+| [`test/`](test/) | The test of the ontology on real texts: nine texts, the text knowledge graph, a proposed extension module, the SPARQL queries (competency questions, data checks, text queries) and their results. See [`test/README.md`](test/README.md). |
 | [`docs/`](docs/) | The project website (see below). |
 
-TBox + ABox (931 triples combined) are also published live as the
+TBox + ABox are also published live as the
 `proverbs-kr` dataset on
 [TriplyDB](https://triplydb.com/SevdaRezaeiMelal/proverbs-kr), with a
 working public [SPARQL endpoint](https://triplydb.com/SevdaRezaeiMelal/proverbs-kr/sparql) —
 no local triplestore needed to query it.
+
+## Version 1.1
+
+Version 1.1 (October 2026) answers the feedback received after the project
+presentation:
+
+- **IRIs** — the ontology and its elements use the GitHub raw-file IRIs
+  instead of `http://example.org/proto#`: `https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#` for the schema and
+  `https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto_data.ttl#` for the individuals.
+- **Imports** — `proto_data.ttl` is itself an `owl:Ontology` that imports
+  the TBox, so property types are present when the data is opened alone.
+- **Property types** — all 14 properties are declared as object or datatype
+  properties.
+- **Restrictions and disjointness** — pairwise disjoint classes, a closed
+  list of equivalence types, six functional properties, and cardinality
+  restrictions on `Proverb` and `CrossCulturalEquivalence`.
+- **Annotations** — ontology metadata (title, authors, dates, license,
+  version, citation) is in the ontology header; every class, property and
+  equivalence type has a label, a definition and an example.
+- **Testing** — the ontology was tested on real texts (see `test/`).
+- **Language codes** — ISO 639-1 throughout (`en`, `fa`, `it`, `sq`).
 
 ## The website
 
@@ -36,7 +58,8 @@ The `docs/` folder is a static site (no build step) with the pages:
   the full [WIDOCO](https://github.com/dgarijo/Widoco)-generated
   documentation and WebVOWL schema browser (`docs/documentation/`).
 - **Questions** (`questions.html`) — the 8 competency questions, each
-  one a SPARQL query from Polyxeni's analyst review.
+  one a SPARQL query from Polyxeni's analyst review, the data checks that
+  complement the reasoner, and the evaluation of PROTO on real texts.
 - **Team** (`team.html`) — contributors.
 
 Data used by the Proverbs/Database pages is generated from the ABox and
@@ -48,7 +71,7 @@ as plain JSON).
 
 `docs/documentation/` is already generated and committed. If the TBox
 (`proto-ontology-structure.ttl`) changes, regenerate it with
-[WIDOCO](https://github.com/dgarijo/Widoco) (requires Java 11+) from the
+[WIDOCO](https://github.com/dgarijo/Widoco) (requires Java 11+; last generated with WIDOCO 1.4.25 on Java 17) from the
 repository root:
 
 ```bash

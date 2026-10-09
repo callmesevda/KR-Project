@@ -2,6 +2,8 @@ cff-version: 1.2.0
 message: "If you use this ontology or dataset, please cite it as below."
 title: "PROTO — Proverbs & Tacit-knowledge Ontology"
 type: software
+version: "1.1.0"
+date-released: "2026-10-09"
 abstract: >-
   An OWL ontology and accompanying dataset modeling proverbs, the tacit
   (unspoken) lessons they carry, the situations in which they are used,

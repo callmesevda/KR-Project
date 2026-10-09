@@ -37,6 +37,8 @@
           Full class and property reference for the PROTO TBox, generated automatically from
           <code>proto-ontology-structure.ttl</code> with
           <a href="https://github.com/dgarijo/Widoco" target="_blank" rel="noopener">WIDOCO</a>.
+          This page describes version 1.1.0. In the tables below, <code>:</code> stands for
+          the schema namespace <code>https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#</code>.
         </p>
       </div>
     </section>
@@ -70,11 +72,11 @@
             <thead><tr><th>Class</th><th>Label</th><th>Comment</th></tr></thead>
             <tbody>
               <tr><td><code>:Proverb</code></td><td>Proverb</td><td>The surface expression of a proverb: its literal text, language, and image/source domain.</td></tr>
-              <tr><td><code>:TacitLesson</code></td><td>Tacit Lesson</td><td>The unspoken, language-independent moral a proverb conveys.</td></tr>
-              <tr><td><code>:SituationOfUse</code></td><td>Situation of Use</td><td>The pragmatic context in which a proverb would be deployed.</td></tr>
+              <tr><td><code>:TacitLesson</code></td><td>Tacit Lesson</td><td>The unspoken, language-independent moral a proverb conveys; proverbs from different languages can share the same lesson.</td></tr>
+              <tr><td><code>:SituationOfUse</code></td><td>Situation of Use</td><td>The pragmatic context in which a proverb is deployed: what the speaker uses it to do, such as warn, comfort or encourage.</td></tr>
               <tr><td><code>:SourceDomain</code></td><td>Source Domain</td><td>The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food).</td></tr>
               <tr><td><code>:CrossCulturalEquivalence</code></td><td>Cross-Cultural Equivalence</td><td>A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator).</td></tr>
-              <tr><td><code>:EquivalenceType</code></td><td>Equivalence Type</td><td>Controlled vocabulary for equivalence type, with four named individuals (below).</td></tr>
+              <tr><td><code>:EquivalenceType</code></td><td>Equivalence Type</td><td>A controlled vocabulary for how two linked proverbs relate, based on whether they share a lesson and whether they share an image. A closed list of four named individuals (below).</td></tr>
             </tbody>
           </table>
         </div>
@@ -82,12 +84,12 @@
         <h3>Equivalence type vocabulary</h3>
         <div class="table-scroll">
           <table class="data-table">
-            <thead><tr><th>Individual</th><th>Label</th></tr></thead>
+            <thead><tr><th>Individual</th><th>Label</th><th>Definition</th><th>Example</th></tr></thead>
             <tbody>
-              <tr><td><code>:SameLessonDifferentImage</code></td><td>Same lesson, different image</td></tr>
-              <tr><td><code>:FalseFriend</code></td><td>False friend (same image, different lesson)</td></tr>
-              <tr><td><code>:PartialOverlap</code></td><td>Partial overlap</td></tr>
-              <tr><td><code>:DirectMatch</code></td><td>Direct match (same lesson AND same source domain)</td></tr>
+              <tr><td><code>:DirectMatch</code></td><td>Direct match (same lesson AND same source domain)</td><td>The two proverbs share both the tacit lesson and the core image (the same scene or object), even if their source-domain tags are worded differently.</td><td>"Chi cerca, trova" (it) and "Kush kërkon, gjen" (sq), both "who seeks, finds"</td></tr>
+              <tr><td><code>:PartialOverlap</code></td><td>Partial overlap</td><td>Same lesson; the images share an element or scene type without being the same image.</td><td>The end of the night (fa) and the end of the storm (it): the same sequence with different scenery</td></tr>
+              <tr><td><code>:SameLessonDifferentImage</code></td><td>Same lesson, different image</td><td>The two proverbs share a tacit lesson but no element of their imagery.</td><td>A chain (en) and a wall (fa) that both fail at their weakest point</td></tr>
+              <tr><td><code>:FalseFriend</code></td><td>False friend (same image, different lesson)</td><td>The two proverbs share an image but teach different lessons.</td><td>"Every cloud has a silver lining" (en) and "A word without a deed is like a cloud without rain" (sq)</td></tr>
             </tbody>
           </table>
         </div>
@@ -95,15 +97,15 @@
         <h3>Object properties</h3>
         <div class="table-scroll">
           <table class="data-table">
-            <thead><tr><th>Property</th><th>Domain</th><th>Range</th></tr></thead>
+            <thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Definition</th></tr></thead>
             <tbody>
-              <tr><td><code>:hasLesson</code></td><td><code>:Proverb</code></td><td><code>:TacitLesson</code></td></tr>
-              <tr><td><code>:hasSourceDomain</code></td><td><code>:Proverb</code></td><td><code>:SourceDomain</code></td></tr>
-              <tr><td><code>:usedIn</code></td><td><code>:Proverb</code></td><td><code>:SituationOfUse</code></td></tr>
-              <tr><td><code>:linksProverbA</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:Proverb</code></td></tr>
-              <tr><td><code>:linksProverbB</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:Proverb</code></td></tr>
-              <tr><td><code>:hasEquivalenceType</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:EquivalenceType</code></td></tr>
-              <tr><td><code>:groundedIn</code></td><td><code>:TacitLesson</code> or <code>:SourceDomain</code></td><td>External (Wikidata, e.g. <code>wd:Q...</code>)</td></tr>
+              <tr><td><code>:hasLesson</code></td><td><code>:Proverb</code></td><td><code>:TacitLesson</code></td><td>Links a proverb to the tacit lesson it conveys.</td></tr>
+              <tr><td><code>:hasSourceDomain</code></td><td><code>:Proverb</code></td><td><code>:SourceDomain</code></td><td>Links a proverb to an image or domain its literal wording draws on; a proverb can have several.</td></tr>
+              <tr><td><code>:usedIn</code></td><td><code>:Proverb</code></td><td><code>:SituationOfUse</code></td><td>Links a proverb to a situation in which it is typically used.</td></tr>
+              <tr><td><code>:linksProverbA</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:Proverb</code></td><td>Links an equivalence to the first of the two proverbs it connects. The order carries no meaning. Functional.</td></tr>
+              <tr><td><code>:linksProverbB</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:Proverb</code></td><td>Links an equivalence to the second of the two proverbs, which is in a different language from proverb A. Functional.</td></tr>
+              <tr><td><code>:hasEquivalenceType</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>:EquivalenceType</code></td><td>Classifies an equivalence with one of the four equivalence types. Functional.</td></tr>
+              <tr><td><code>:groundedIn</code></td><td><code>:TacitLesson</code> or <code>:SourceDomain</code></td><td>External (Wikidata, e.g. <code>wd:Q...</code>)</td><td>Links a lesson or source domain to its grounding concept in Wikidata. No range is declared, deliberately: the value lies outside the ontology's own classes.</td></tr>
             </tbody>
           </table>
         </div>
@@ -111,18 +113,42 @@
         <h3>Data properties</h3>
         <div class="table-scroll">
           <table class="data-table">
-            <thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Comment</th></tr></thead>
+            <thead><tr><th>Property</th><th>Domain</th><th>Range</th><th>Definition</th></tr></thead>
             <tbody>
-              <tr><td><code>:hasText</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
+              <tr><td><code>:hasText</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>The proverb as written in its original language and script. Functional.</td></tr>
               <tr><td><code>:hasTranslation</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>Word-for-word English gloss, distinct from <code>hasText</code>.</td></tr>
-              <tr><td><code>:hasProverbID</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>Stable human-readable ID from the spreadsheet, e.g. <code>PRV-001</code>.</td></tr>
-              <tr><td><code>:hasLanguage</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
-              <tr><td><code>:hasLabel</code></td><td><code>:TacitLesson</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
-              <tr><td><code>:hasDivergenceNote</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
-              <tr><td><code>:annotatedBy</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>xsd:string</code></td><td>&nbsp;</td></tr>
+              <tr><td><code>:hasProverbID</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>Stable human-readable ID from the spreadsheet, e.g. <code>PRV-001</code>. Functional.</td></tr>
+              <tr><td><code>:hasLanguage</code></td><td><code>:Proverb</code></td><td><code>xsd:string</code></td><td>The language of the proverb's original text, as an ISO 639-1 code (<code>en</code>, <code>fa</code>, <code>it</code>, <code>sq</code>). Functional.</td></tr>
+              <tr><td><code>:hasLabel</code></td><td><code>:TacitLesson</code></td><td><code>xsd:string</code></td><td>The human-readable name of a tacit lesson.</td></tr>
+              <tr><td><code>:hasDivergenceNote</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>xsd:string</code></td><td>A free-text note on how the two linked proverbs differ, in imagery, tone or use.</td></tr>
+              <tr><td><code>:annotatedBy</code></td><td><code>:CrossCulturalEquivalence</code></td><td><code>xsd:string</code></td><td>The name of the person who reviewed and classified an equivalence link.</td></tr>
             </tbody>
           </table>
         </div>
+
+        <h3 id="constraints">Constraints (new in v1.1)</h3>
+        <p class="section-intro">
+          These axioms add no vocabulary. They let a reasoner such as HermiT report data that
+          contradicts the model.
+        </p>
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead><tr><th>Axiom</th><th>What it says</th><th>What it catches</th></tr></thead>
+            <tbody>
+              <tr><td>Disjoint classes</td><td>The six classes are pairwise disjoint.</td><td>A proverb that is also typed as a <code>:TacitLesson</code>.</td></tr>
+              <tr><td>Closed list</td><td><code>:EquivalenceType</code> is exactly the four individuals above, and the four are declared different from each other.</td><td>Together with the functional <code>:hasEquivalenceType</code>: a link with two different equivalence types.</td></tr>
+              <tr><td>Functional properties</td><td><code>:hasProverbID</code>, <code>:hasLanguage</code>, <code>:hasText</code>, <code>:linksProverbA</code>, <code>:linksProverbB</code> and <code>:hasEquivalenceType</code> take at most one value.</td><td>A proverb with two different IDs or two different texts.</td></tr>
+              <tr><td>Restrictions on <code>:Proverb</code></td><td>Exactly one <code>:hasLesson</code> to a <code>:TacitLesson</code>; at least one <code>:hasSourceDomain</code>; at least one <code>:usedIn</code>.</td><td>Together with the disjoint classes: a proverb whose lesson is in fact a source domain.</td></tr>
+              <tr><td>Restrictions on <code>:CrossCulturalEquivalence</code></td><td>Exactly one proverb on each side and exactly one equivalence type.</td><td>Together with the disjoint classes: a link whose <code>:linksProverbA</code> points to a lesson.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-intro">
+          OWL works under the open-world assumption, so these axioms report <em>wrong</em>
+          values but not <em>missing</em> ones: a proverb with no lesson at all is not an
+          inconsistency. Missing values are covered by the
+          <a href="questions.html#checks">SPARQL data checks</a>.
+        </p>
 
         <p class="section-intro">
           Full machine-readable definitions: <a href="data/proto-ontology-structure.ttl" download>download the TBox (.ttl)</a>.

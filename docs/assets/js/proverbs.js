@@ -5,7 +5,7 @@
   const lessonEl = document.getElementById("lesson-filter");
   const countEl = document.getElementById("result-count");
 
-  const LANG_NAMES = { en: "English", fa: "Farsi", ita: "Italian", alb: "Albanian" };
+  const LANG_NAMES = { en: "English", fa: "Farsi", it: "Italian", sq: "Albanian" };
 
   function populateFilters() {
     const langs = [...new Set(PROVERBS.map((p) => p.lang))].sort();

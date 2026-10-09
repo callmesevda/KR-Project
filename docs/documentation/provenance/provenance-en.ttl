@@ -4,5 +4,8 @@
 @prefix : <> .
 <..\index-en.html> a prov:Entity;
 	 dc:title "PROTO — Proverbs & Tacit-knowledge Ontology";
+	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2026-09-10";
 .
+:agent0 a prov:Agent; foaf:name "Sevda Rezaei Melal, Polyxeni Chasanai, Saba Afsharzadehtorghab, Claudia Briccolani".

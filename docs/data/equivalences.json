@@ -15,7 +15,7 @@
     "a": "PRV-001",
     "b": "PRV-027",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Deed, Cloud, Rain)."
+    "note": "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Cloud, Deed, Rain)."
   },
   {
     "a": "PRV-001",
@@ -33,7 +33,7 @@
     "a": "PRV-002",
     "b": "PRV-027",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Bear vs Deed, Cloud, Rain)."
+    "note": "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Bear vs Cloud, Deed, Rain)."
   },
   {
     "a": "PRV-002",
@@ -51,61 +51,61 @@
     "a": "PRV-003",
     "b": "PRV-005",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Hope, Despair)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Despair, Hope)."
   },
   {
     "a": "PRV-003",
     "b": "PRV-016",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Sun, Storm)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Storm, Sun)."
   },
   {
     "a": "PRV-003",
     "b": "PRV-035",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Sun, Rain)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Cloud, Silver vs Rain, Sun)."
   },
   {
     "a": "PRV-004",
     "b": "PRV-016",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Night, White vs Sun, Storm)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Night, White vs Storm, Sun)."
   },
   {
     "a": "PRV-004",
     "b": "PRV-035",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Night, White vs Sun, Rain)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Night, White vs Rain, Sun)."
   },
   {
     "a": "PRV-005",
     "b": "PRV-016",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Hope, Despair vs Sun, Storm)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Despair, Hope vs Storm, Sun)."
   },
   {
     "a": "PRV-005",
     "b": "PRV-035",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Hope, Despair vs Sun, Rain)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Despair, Hope vs Rain, Sun)."
   },
   {
     "a": "PRV-006",
     "b": "PRV-007",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Seeker, Finder)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Finder, Seeker)."
   },
   {
     "a": "PRV-006",
     "b": "PRV-020",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Seeker, Finder)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Finder, Seeker)."
   },
   {
     "a": "PRV-006",
     "b": "PRV-029",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Seeker, Finder)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Way (Abstract), Will vs Finder, Seeker)."
   },
   {
     "a": "PRV-006",
@@ -117,19 +117,19 @@
     "a": "PRV-007",
     "b": "PRV-020",
     "type": "DirectMatch",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Seeker, Finder)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker)."
   },
   {
     "a": "PRV-007",
     "b": "PRV-029",
     "type": "DirectMatch",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Seeker, Finder)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker)."
   },
   {
     "a": "PRV-007",
     "b": "PRV-030",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Seeker, Finder vs Stones, Wall)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Finder, Seeker vs Stones, Wall)."
   },
   {
     "a": "PRV-008",
@@ -165,37 +165,37 @@
     "a": "PRV-010",
     "b": "PRV-011",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Hand)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Circle, Motion (Abstract) vs Hand)."
   },
   {
     "a": "PRV-010",
     "b": "PRV-023",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Wind, Storm)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Circle, Motion (Abstract) vs Storm, Wind)."
   },
   {
     "a": "PRV-010",
     "b": "PRV-033",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Sowing, Harvest)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Circle, Motion (Abstract) vs Harvest, Sowing)."
   },
   {
     "a": "PRV-010",
     "b": "PRV-034",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Motion (Abstract), Circle vs Pit, Trap)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Circle, Motion (Abstract) vs Pit, Trap)."
   },
   {
     "a": "PRV-011",
     "b": "PRV-023",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Hand vs Wind, Storm)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Hand vs Storm, Wind)."
   },
   {
     "a": "PRV-011",
     "b": "PRV-033",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Hand vs Sowing, Harvest)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Hand vs Harvest, Sowing)."
   },
   {
     "a": "PRV-011",
@@ -219,7 +219,7 @@
     "a": "PRV-012",
     "b": "PRV-031",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Sheep, Flock)."
+    "note": "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Flock, Sheep)."
   },
   {
     "a": "PRV-013",
@@ -231,13 +231,13 @@
     "a": "PRV-013",
     "b": "PRV-031",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Crack, Wall vs Sheep, Flock)."
+    "note": "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Crack, Wall vs Flock, Sheep)."
   },
   {
     "a": "PRV-015",
     "b": "PRV-027",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Sea vs Deed, Cloud, Rain)."
+    "note": "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Sea vs Cloud, Deed, Rain)."
   },
   {
     "a": "PRV-015",
@@ -249,19 +249,19 @@
     "a": "PRV-016",
     "b": "PRV-035",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Sun, Storm vs Sun, Rain)."
+    "note": "Auto-derived: shared tacit lesson 'Optimism in adversity'; source domains differ (Storm, Sun vs Rain, Sun)."
   },
   {
     "a": "PRV-020",
     "b": "PRV-029",
     "type": "DirectMatch",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Seeker, Finder)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance' AND identical source domain (Finder, Seeker)."
   },
   {
     "a": "PRV-020",
     "b": "PRV-030",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Seeker, Finder vs Stones, Wall)."
+    "note": "Auto-derived: shared tacit lesson 'Determination / Perseverance'; source domains differ (Finder, Seeker vs Stones, Wall)."
   },
   {
     "a": "PRV-021",
@@ -273,18 +273,18 @@
     "a": "PRV-023",
     "b": "PRV-033",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Wind, Storm vs Sowing, Harvest)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Storm, Wind vs Harvest, Sowing)."
   },
   {
     "a": "PRV-023",
     "b": "PRV-034",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Wind, Storm vs Pit, Trap)."
+    "note": "Auto-derived: shared tacit lesson 'Karma'; source domains differ (Storm, Wind vs Pit, Trap)."
   },
   {
     "a": "PRV-025",
     "b": "PRV-031",
     "type": "SameLessonDifferentImage",
-    "note": "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Sheep, Flock)."
+    "note": "Auto-derived: shared tacit lesson 'Group vulnerability'; source domains differ (Chain, Link vs Flock, Sheep)."
   }
 ]

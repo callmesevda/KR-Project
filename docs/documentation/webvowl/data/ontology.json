@@ -1,87 +1,194 @@
 {
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
-    "languages" : [ "undefined" ],
-    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://example.org/proto" ],
-    "iri" : "http://example.org/proto",
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl" ],
+    "title" : {
+      "en" : "PROTO — Proverbs & Tacit-knowledge Ontology"
+    },
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "version" : "1.1.0",
+    "author" : [ "Claudia Briccolani", "Polyxeni Chasanai", "Sevda Rezaei Melal", "Saba Afsharzadehtorghab" ],
+    "description" : {
+      "en" : "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."
+    },
     "labels" : {
-      "undefined" : "PROTO â€” Proverbs & Tacit-knowledge Ontology"
+      "en" : "PROTO — Proverbs & Tacit-knowledge Ontology"
     },
     "comments" : {
-      "undefined" : "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."
+      "en" : "Models proverbs, their unspoken lessons, the situations they're used in, and cross-cultural equivalences between proverbs that share a lesson but diverge in imagery."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Claudia Briccolani",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Sevda Rezaei Melal",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Polyxeni Chasanai",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Saba Afsharzadehtorghab",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2026-09-10",
+        "type" : "label"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "proto",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-10-09",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Rezaei Melal, S., Chasanai, P., Afsharzadehtorghab, S., and Briccolani, C. (2026). PROTO — Proverbs & Tacit-knowledge Ontology, version 1.1.0. https://github.com/callmesevda/KR-Project",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.1.0",
+        "type" : "label"
+      } ],
+      "abstract" : [ {
+        "identifier" : "abstract",
+        "language" : "en",
+        "value" : "PROTO models proverbs, the tacit (unspoken) lessons they carry, the situations in which they are used, and the cross-cultural equivalences that link a proverb in one language to a proverb in another when they teach the same lesson but diverge (or don't) in imagery. The current dataset covers 28 proverbs across four languages (English, Farsi, Italian, and Albanian), grounded in Wikidata for their tacit lessons and source-domain imagery.",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2026-10-09",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "PROTO — Proverbs & Tacit-knowledge Ontology",
+        "type" : "label"
+      } ]
     }
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "6",
+    "id" : "12",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "7",
-    "type" : "owl:Class"
+    "id" : "14",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "2",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "10",
+    "id" : "22",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "11",
+    "id" : "18",
     "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
   }, {
     "id" : "5",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "12",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "9",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "13",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "14",
-    "type" : "owl:Class"
-  }, {
-    "id" : "16",
+    "id" : "11",
     "type" : "owl:unionOf"
   }, {
-    "id" : "17",
+    "id" : "24",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
-    "id" : "24",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "http://example.org/proto#TacitLesson",
-    "baseIri" : "http://example.org/proto",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "12",
     "label" : {
-      "IRI-based" : "TacitLesson",
-      "undefined" : "Tacit Lesson"
-    },
-    "comment" : {
-      "undefined" : "The unspoken, language-independent moral a proverb conveys."
-    },
-    "id" : "6"
+      "undefined" : "Thing"
+    }
   }, {
-    "iri" : "http://example.org/proto#SituationOfUse",
-    "baseIri" : "http://example.org/proto",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SituationOfUse",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
     "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Situation_PRV-012: 'Used to show how the strength of a group depends on every individual's ability'",
+        "type" : "label"
+      } ]
+    },
     "label" : {
       "IRI-based" : "SituationOfUse",
-      "undefined" : "Situation of Use"
+      "en" : "Situation of Use"
     },
     "comment" : {
-      "undefined" : "The pragmatic context in which a proverb would be deployed."
+      "en" : "The pragmatic context in which a proverb is deployed: what the speaker uses it to do, such as warn, comfort or encourage."
     },
-    "id" : "7"
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -92,17 +199,167 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "10",
+    "id" : "22",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "11",
+    "id" : "18",
     "label" : {
       "IRI-based" : "string"
     }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#TacitLesson",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "GroupVulnerability, labelled 'Group vulnerability'",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "TacitLesson",
+      "en" : "Tacit Lesson"
+    },
+    "comment" : {
+      "en" : "The unspoken, language-independent moral a proverb conveys; proverbs from different languages can share the same lesson."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#EquivalenceType",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "EquivalenceType",
+      "en" : "Equivalence Type"
+    },
+    "individuals" : [ {
+      "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#PartialOverlap",
+      "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "Equiv_PRV-004_PRV-016: the end of the night (fa) and the end of the storm (it), the same sequence with different scenery",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Same lesson; the images share an element or scene type without being the same image."
+      },
+      "labels" : {
+        "IRI-based" : "PartialOverlap",
+        "en" : "Partial overlap"
+      }
+    }, {
+      "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#DirectMatch",
+      "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "Equiv_PRV-020_PRV-029: 'Chi cerca, trova' (it) and 'Kush kërkon, gjen' (sq), both 'who seeks, finds'",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The two proverbs share both the tacit lesson and the core image (the same scene or object), even if their source-domain tags are worded differently."
+      },
+      "labels" : {
+        "IRI-based" : "DirectMatch",
+        "en" : "Direct match (same lesson AND same source domain)"
+      }
+    }, {
+      "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#FalseFriend",
+      "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "PRV-003 'Every cloud has a silver lining' (en) and PRV-027 'A word without a deed is like a cloud without rain' (sq): the same cloud, optimism versus empty words",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The two proverbs share an image but teach different lessons."
+      },
+      "labels" : {
+        "IRI-based" : "FalseFriend",
+        "en" : "False friend (same image, different lesson)"
+      }
+    }, {
+      "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SameLessonDifferentImage",
+      "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+          "type" : "iri"
+        } ],
+        "example" : [ {
+          "identifier" : "example",
+          "language" : "undefined",
+          "value" : "Equiv_PRV-012_PRV-013: a chain (en) and a wall (fa) that both fail at their weakest point",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The two proverbs share a tacit lesson but no element of their imagery."
+      },
+      "labels" : {
+        "IRI-based" : "SameLessonDifferentImage",
+        "en" : "Same lesson, different image"
+      }
+    } ],
+    "comment" : {
+      "en" : "A controlled vocabulary for how two linked proverbs relate, based on whether they share a lesson and whether they share an image: DirectMatch, SameLessonDifferentImage, PartialOverlap or FalseFriend."
+    },
+    "id" : "23"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -111,113 +368,93 @@
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "12",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "9",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "13",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://example.org/proto#SourceDomain",
-    "baseIri" : "http://example.org/proto",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "SourceDomain",
-      "undefined" : "Source Domain"
-    },
-    "comment" : {
-      "undefined" : "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)."
-    },
-    "id" : "14"
-  }, {
-    "instances" : 0,
-    "union" : [ "6", "14" ],
+    "union" : [ "7", "9" ],
     "attributes" : [ "anonymous", "union" ],
-    "id" : "16"
+    "id" : "11"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "17",
+    "id" : "24",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://example.org/proto#Proverb",
-    "baseIri" : "http://example.org/proto",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#CrossCulturalEquivalence",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
     "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Equiv_PRV-012_PRV-025: the English and Italian chain proverbs, a DirectMatch",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "Proverb",
-      "undefined" : "Proverb"
+      "IRI-based" : "CrossCulturalEquivalence",
+      "en" : "Cross-Cultural Equivalence"
     },
     "comment" : {
-      "undefined" : "The surface expression of a proverb: its literal text, language, and image/source domain."
+      "en" : "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)."
     },
     "id" : "4"
   }, {
-    "iri" : "http://example.org/proto#EquivalenceType",
-    "baseIri" : "http://example.org/proto",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#SourceDomain",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
     "instances" : 0,
-    "label" : {
-      "IRI-based" : "EquivalenceType",
-      "undefined" : "Equivalence Type"
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Chain, Water, Bear",
+        "type" : "label"
+      } ]
     },
-    "individuals" : [ {
-      "iri" : "http://example.org/proto#FalseFriend",
-      "baseIri" : "http://example.org/proto",
-      "labels" : {
-        "IRI-based" : "FalseFriend",
-        "undefined" : "False friend (same image, different lesson)"
-      }
-    }, {
-      "iri" : "http://example.org/proto#DirectMatch",
-      "baseIri" : "http://example.org/proto",
-      "comment" : {
-        "undefined" : "For pairs that share both lesson and imagery across languages, e.g. two cultures both using 'a chain is only as strong as its weakest link.' Stronger than SameLessonDifferentImage; not covered by the original three types."
-      },
-      "labels" : {
-        "IRI-based" : "DirectMatch",
-        "undefined" : "Direct match (same lesson AND same source domain)"
-      }
-    }, {
-      "iri" : "http://example.org/proto#PartialOverlap",
-      "baseIri" : "http://example.org/proto",
-      "labels" : {
-        "IRI-based" : "PartialOverlap",
-        "undefined" : "Partial overlap"
-      }
-    }, {
-      "iri" : "http://example.org/proto#SameLessonDifferentImage",
-      "baseIri" : "http://example.org/proto",
-      "labels" : {
-        "IRI-based" : "SameLessonDifferentImage",
-        "undefined" : "Same lesson, different image"
-      }
-    } ],
-    "id" : "24"
-  }, {
-    "iri" : "http://example.org/proto#CrossCulturalEquivalence",
-    "baseIri" : "http://example.org/proto",
-    "instances" : 0,
     "label" : {
-      "IRI-based" : "CrossCulturalEquivalence",
-      "undefined" : "Cross-Cultural Equivalence"
+      "IRI-based" : "SourceDomain",
+      "en" : "Source Domain"
     },
     "comment" : {
-      "undefined" : "A reified link between two proverbs that share a TacitLesson but diverge (or don't) in imagery. Modeled as a full class so the equivalence itself can carry attributes (type, divergence notes, annotator)."
+      "en" : "The literal imagery/domain a proverb draws on (e.g. birds, fish, sleep, food)."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#Proverb",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-012: 'A chain is only as strong as its weakest link.' (en)",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Proverb",
+      "en" : "Proverb"
+    },
+    "comment" : {
+      "en" : "The surface expression of a proverb: its literal text, language, and image/source domain."
     },
     "id" : "1"
   } ],
@@ -228,204 +465,624 @@
     "id" : "3",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "15",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "18",
+    "id" : "16",
     "type" : "owl:objectProperty"
+  }, {
+    "id" : "17",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "19",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "20",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "21",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "22",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "23",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "25",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "26",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "27",
-    "type" : "owl:objectProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "28",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "29",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "30",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "31",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "32",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "34",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "35",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "36",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "37",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "38",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "40",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "43",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "http://example.org/proto#hasDivergenceNote",
-    "baseIri" : "http://example.org/proto",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLanguage",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
     "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "sq",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "it",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "fa",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "en",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "hasDivergenceNote",
-      "undefined" : "has divergence note"
+      "IRI-based" : "hasLanguage",
+      "en" : "has language"
     },
     "domain" : "1",
-    "attributes" : [ "datatype" ],
+    "comment" : {
+      "en" : "The language of the proverb's original text, as an ISO 639-1 code. Functional: one proverb individual is recorded in exactly one language."
+    },
+    "attributes" : [ "datatype", "functional" ],
     "id" : "0"
   }, {
-    "iri" : "http://example.org/proto#hasProverbID",
-    "baseIri" : "http://example.org/proto",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#annotatedBy",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
     "range" : "5",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "hasProverbID",
-      "undefined" : "has proverb ID"
+      "IRI-based" : "annotatedBy",
+      "en" : "annotated by"
     },
     "domain" : "4",
     "comment" : {
-      "undefined" : "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs."
+      "en" : "The name of the person who reviewed and classified an equivalence link."
     },
     "attributes" : [ "datatype" ],
     "id" : "3"
   }, {
-    "iri" : "http://example.org/proto#hasTranslation",
-    "baseIri" : "http://example.org/proto",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "hasTranslation",
-      "undefined" : "has literal English translation"
-    },
-    "domain" : "4",
-    "comment" : {
-      "undefined" : "Word-for-word English gloss, distinct from hasText (the proverb in its original language)."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "8"
-  }, {
-    "iri" : "http://example.org/proto#hasLesson",
-    "baseIri" : "http://example.org/proto",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "hasLesson",
-      "undefined" : "has lesson"
-    },
-    "domain" : "4",
-    "attributes" : [ "object" ],
-    "id" : "15"
-  }, {
-    "iri" : "http://example.org/proto#linksProverbA",
-    "baseIri" : "http://example.org/proto",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "linksProverbA",
-      "undefined" : "links proverb A"
-    },
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "18"
-  }, {
-    "iri" : "http://example.org/proto#linksProverbB",
-    "baseIri" : "http://example.org/proto",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "linksProverbB",
-      "undefined" : "links proverb B"
-    },
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "19"
-  }, {
-    "iri" : "http://example.org/proto#usedIn",
-    "baseIri" : "http://example.org/proto",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
     "range" : "7",
-    "label" : {
-      "IRI-based" : "usedIn",
-      "undefined" : "used in"
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-012 has source domains Chain and Link",
+        "type" : "label"
+      } ]
     },
-    "domain" : "4",
-    "attributes" : [ "object" ],
-    "id" : "20"
-  }, {
-    "iri" : "http://example.org/proto#hasText",
-    "baseIri" : "http://example.org/proto",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "hasText",
-      "undefined" : "has text"
-    },
-    "domain" : "4",
-    "attributes" : [ "datatype" ],
-    "id" : "21"
-  }, {
-    "iri" : "http://example.org/proto#groundedIn",
-    "baseIri" : "http://example.org/proto",
-    "range" : "13",
-    "label" : {
-      "IRI-based" : "groundedIn",
-      "undefined" : "grounded in (Wikidata)"
-    },
-    "domain" : "16",
-    "comment" : {
-      "undefined" : "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns."
-    },
-    "attributes" : [ "object" ],
-    "id" : "22"
-  }, {
-    "iri" : "http://example.org/proto#hasSourceDomain",
-    "baseIri" : "http://example.org/proto",
-    "range" : "14",
     "label" : {
       "IRI-based" : "hasSourceDomain",
-      "undefined" : "has source domain"
+      "en" : "has source domain"
     },
-    "domain" : "4",
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a proverb to an image or domain its literal wording draws on; a proverb can have several."
+    },
     "attributes" : [ "object" ],
-    "id" : "23"
+    "id" : "6"
   }, {
-    "iri" : "http://example.org/proto#hasLanguage",
-    "baseIri" : "http://example.org/proto",
-    "range" : "11",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLesson",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "9",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-012 has lesson GroupVulnerability",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "hasLanguage",
-      "undefined" : "has language"
+      "IRI-based" : "hasLesson",
+      "en" : "has lesson"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a proverb to the tacit lesson it conveys."
+    },
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#groundedIn",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "12",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Bear grounded in wd:Q30090244",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "groundedIn",
+      "en" : "grounded in (Wikidata)"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "Links a TacitLesson or SourceDomain to its grounding concept in Wikidata (range is external, e.g. wd:Q...). Matches the spreadsheet's 'Tacit Lesson URI' and 'Literal Image URI' columns. No rdfs:range is declared deliberately: the value is a Wikidata entity outside this ontology's own classes, so constraining it to one of our classes would be incorrect. This omission is intentional, not an oversight."
+    },
+    "attributes" : [ "object" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasTranslation",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "14",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-020 has translation 'Those who search, find.'",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTranslation",
+      "en" : "has literal English translation"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Word-for-word English gloss, distinct from hasText (the proverb in its original language)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbB",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Equiv_PRV-012_PRV-025 links proverb B PRV-025",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "linksProverbB",
+      "en" : "links proverb B"
     },
     "domain" : "4",
-    "attributes" : [ "datatype" ],
+    "comment" : {
+      "en" : "Links a cross-cultural equivalence to the second of the two proverbs it connects, which is in a different language from proverb A. Functional: one equivalence link points to exactly one proverb as its 'B' side."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "15"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#linksProverbA",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Equiv_PRV-012_PRV-025 links proverb A PRV-012",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "linksProverbA",
+      "en" : "links proverb A"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links a cross-cultural equivalence to the first of the two proverbs it connects; the generated data puts the lower proverb ID here, and the order carries no meaning. Functional: one equivalence link points to exactly one proverb as its 'A' side."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "16"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasText",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "18",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-020 has text 'Chi cerca, trova.'",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasText",
+      "en" : "has text"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The proverb as written in its original language and script. Functional: one proverb has exactly one literal text."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "17"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasProverbID",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "20",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-001",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasProverbID",
+      "en" : "has proverb ID"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Stable human-readable ID from the shared spreadsheet, e.g. PRV-001. Used as a key when generating URIs. Functional: one proverb has exactly one ID."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "19"
+  }, {
+    "range" : "9",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
-    "iri" : "http://example.org/proto#annotatedBy",
-    "baseIri" : "http://example.org/proto",
-    "range" : "17",
-    "label" : {
-      "IRI-based" : "annotatedBy",
-      "undefined" : "annotated by"
-    },
-    "domain" : "1",
-    "attributes" : [ "datatype" ],
+    "range" : "9",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
-    "iri" : "http://example.org/proto#hasEquivalenceType",
-    "baseIri" : "http://example.org/proto",
-    "range" : "24",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasSourceDomain",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-012 has source domains Chain and Link",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "hasEquivalenceType",
-      "undefined" : "has equivalence type"
+      "IRI-based" : "hasSourceDomain",
+      "en" : "has source domain"
     },
     "domain" : "1",
-    "attributes" : [ "object" ],
+    "comment" : {
+      "en" : "Links a proverb to an image or domain its literal wording draws on; a proverb can have several."
+    },
+    "attributes" : [ "someValues", "object" ],
     "id" : "27"
   }, {
-    "iri" : "http://example.org/proto#hasLabel",
-    "baseIri" : "http://example.org/proto",
-    "range" : "10",
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-012 used in Situation_PRV-012",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedIn",
+      "en" : "used in"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a proverb to a situation in which it is typically used."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "7",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
+  }, {
+    "range" : "7",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "9",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasLabel",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Group vulnerability",
+        "type" : "label"
+      } ]
+    },
     "label" : {
       "IRI-based" : "hasLabel",
-      "undefined" : "has label"
+      "en" : "has label"
     },
-    "domain" : "6",
+    "domain" : "9",
+    "comment" : {
+      "en" : "The human-readable name of a tacit lesson."
+    },
     "attributes" : [ "datatype" ],
-    "id" : "28"
+    "id" : "32"
+  }, {
+    "range" : "21",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "7",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "range" : "9",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "range" : "1",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "36"
+  }, {
+    "range" : "21",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "37"
+  }, {
+    "range" : "7",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "9",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "range" : "21",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#usedIn",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "21",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "PRV-012 used in Situation_PRV-012",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "usedIn",
+      "en" : "used in"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Links a proverb to a situation in which it is typically used."
+    },
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "range" : "23",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "42"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasDivergenceNote",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "24",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Auto-derived: shared tacit lesson 'Actions over intentions'; source domains differ (Hell, Road vs Bear).",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasDivergenceNote",
+      "en" : "has divergence note"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "A free-text note on how the two linked proverbs differ, in imagery, tone or use."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "44"
+  }, {
+    "iri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#hasEquivalenceType",
+    "baseIri" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+    "range" : "23",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl",
+        "type" : "iri"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "Equiv_PRV-012_PRV-025 has equivalence type DirectMatch",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasEquivalenceType",
+      "en" : "has equivalence type"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Classifies a cross-cultural equivalence with one of the four equivalence types. Functional: one equivalence link has exactly one equivalence type. Combined with the AllDifferent axiom on the four types below, this is what lets the reasoner catch a link accidentally assigned two different types."
+    },
+    "attributes" : [ "object", "functional" ],
+    "id" : "45"
   } ]
 }

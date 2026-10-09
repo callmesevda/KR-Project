@@ -1,0 +1,168 @@
+# PROTO v1.1 — SPARQL queries (Polyxeni Chasanai)
+#
+# Three groups, each query starts with a line "#### <ID> | <question>":
+#   CQ1-CQ8  the competency questions, updated to the v1.1 IRIs and language codes
+#   V1-V4    data checks that OWL reasoning cannot do (open-world assumption)
+#   TQ1-TQ5  questions over the text graph (test/text_kg.ttl, point 6)
+#
+# Run them all with:  python test/run_queries.py
+# Or paste one into the TriplyDB SPARQL editor (add the PREFIX lines below).
+
+#### PREFIXES
+PREFIX proto: <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#>
+PREFIX kg:    <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto_data.ttl#>
+PREFIX pext:  <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+#### CQ1 | How many equivalence links are there of each type?
+SELECT ?type (COUNT(*) AS ?links)
+WHERE { ?e a proto:CrossCulturalEquivalence ; proto:hasEquivalenceType ?type }
+GROUP BY ?type ORDER BY DESC(?links)
+
+#### CQ2 | What are all the equivalence links, with both proverbs' languages, translations and type?
+SELECT ?pair ?langA ?proverbA ?langB ?proverbB ?type
+WHERE {
+  ?pair a proto:CrossCulturalEquivalence ;
+        proto:linksProverbA ?a ; proto:linksProverbB ?b ; proto:hasEquivalenceType ?type .
+  ?a proto:hasLanguage ?langA ; proto:hasTranslation ?proverbA .
+  ?b proto:hasLanguage ?langB ; proto:hasTranslation ?proverbB .
+}
+ORDER BY ?pair
+
+#### CQ3 | Which proverb pairs between two given languages (here Italian and Albanian) are direct matches?
+SELECT ?proverbA ?proverbB
+WHERE {
+  ?pair proto:hasEquivalenceType proto:DirectMatch ;
+        proto:linksProverbA ?a ; proto:linksProverbB ?b .
+  ?a proto:hasLanguage "it" ; proto:hasText ?proverbA .
+  ?b proto:hasLanguage "sq" ; proto:hasText ?proverbB .
+}
+
+#### CQ4 | Which source-domain images recur across more than one language?
+SELECT ?domain (GROUP_CONCAT(DISTINCT ?lang; separator=", ") AS ?languages) (COUNT(DISTINCT ?lang) AS ?n)
+WHERE { ?prov proto:hasSourceDomain ?d ; proto:hasLanguage ?lang . ?d rdfs:label ?domain }
+GROUP BY ?domain
+HAVING (COUNT(DISTINCT ?lang) > 1)
+ORDER BY DESC(?n) ?domain
+
+#### CQ5 | Which proverbs share a source-domain image but teach different lessons? (false-friend candidates)
+SELECT ?domain ?a ?lessonA ?b ?lessonB
+WHERE {
+  ?a proto:hasSourceDomain ?d ; proto:hasLesson ?lessonA .
+  ?b proto:hasSourceDomain ?d ; proto:hasLesson ?lessonB .
+  ?d rdfs:label ?domain .
+  FILTER (?lessonA != ?lessonB && STR(?a) < STR(?b))
+}
+ORDER BY ?domain
+
+#### CQ6 | Which tacit lessons have no direct match at all?
+SELECT ?lesson
+WHERE {
+  ?l a proto:TacitLesson ; proto:hasLabel ?lesson .
+  FILTER NOT EXISTS {
+    ?e proto:hasEquivalenceType proto:DirectMatch ; proto:linksProverbA ?x .
+    ?x proto:hasLesson ?l
+  }
+}
+ORDER BY ?lesson
+
+#### CQ7 | How many proverbs did each language contribute to each lesson?
+SELECT ?lesson ?lang (COUNT(?prov) AS ?proverbs)
+WHERE { ?prov a proto:Proverb ; proto:hasLesson ?l ; proto:hasLanguage ?lang . ?l proto:hasLabel ?lesson }
+GROUP BY ?lesson ?lang
+ORDER BY ?lesson ?lang
+
+#### CQ8 | What is everything linked to a given proverb (here PRV-032), with its situation of use?
+SELECT ?other ?lang ?proverb ?type ?situation
+WHERE {
+  { ?e proto:linksProverbA kg:PRV-032 ; proto:linksProverbB ?other }
+  UNION
+  { ?e proto:linksProverbB kg:PRV-032 ; proto:linksProverbA ?other }
+  ?e proto:hasEquivalenceType ?type .
+  ?other proto:hasLanguage ?lang ; proto:hasTranslation ?proverb ; proto:usedIn ?s .
+  ?s rdfs:label ?situation .
+  FILTER NOT EXISTS { ?occ pext:inSituation ?s }   # corpus situations only, not the ones from the text test
+}
+ORDER BY ?other
+
+#### V1 | Check: which proverbs have no tacit lesson? (expected: none)
+SELECT ?prov
+WHERE { ?prov a proto:Proverb . FILTER NOT EXISTS { ?prov proto:hasLesson ?l } }
+
+#### V2 | Check: which equivalence links join two proverbs of the same language? (expected: none)
+SELECT ?e ?lang
+WHERE {
+  ?e a proto:CrossCulturalEquivalence ; proto:linksProverbA ?a ; proto:linksProverbB ?b .
+  ?a proto:hasLanguage ?lang . ?b proto:hasLanguage ?lang .
+}
+
+#### V3 | Check: which links that are not FalseFriend join proverbs with different lessons? (expected: none)
+SELECT ?e ?type
+WHERE {
+  ?e a proto:CrossCulturalEquivalence ; proto:hasEquivalenceType ?type ;
+     proto:linksProverbA ?a ; proto:linksProverbB ?b .
+  ?a proto:hasLesson ?la . ?b proto:hasLesson ?lb .
+  FILTER (?la != ?lb && ?type != proto:FalseFriend)
+}
+
+#### V4 | Check: which proverb occurrences have no stance or no target? (expected: none)
+SELECT ?occ
+WHERE {
+  ?occ a pext:ProverbOccurrence .
+  FILTER (NOT EXISTS { ?occ pext:hasStance ?s } || NOT EXISTS { ?occ pext:appliedTo ?t })
+}
+
+#### TQ1 | Which proverbs appear in which genres of text, and how often?
+SELECT ?proverb ?genre (COUNT(?occ) AS ?uses)
+WHERE {
+  ?occ pext:occurrenceOf ?p ; pext:occursIn ?text .
+  ?p proto:hasText ?proverb .
+  ?text pext:hasGenre ?g . ?g rdfs:label ?genre .
+}
+GROUP BY ?proverb ?genre
+ORDER BY ?proverb ?genre
+
+#### TQ2 | Bias: which tacit lessons are applied to whole social groups, and with what stance?
+SELECT ?lesson ?group ?stance ?proverb ?source
+WHERE {
+  ?occ pext:occurrenceOf ?p ; pext:appliedTo ?t ; pext:hasStance ?s ; pext:occursIn ?text .
+  ?t a pext:SocialGroup ; rdfs:label ?group .
+  ?s rdfs:label ?stance .
+  ?p proto:hasText ?proverb ; proto:hasLesson ?l .
+  ?l proto:hasLabel ?lesson .
+  ?text dcterms:publisher ?source .
+}
+ORDER BY ?lesson ?group
+
+#### TQ3 | Where is a proverb used with a meaning different from the one recorded in PROTO?
+SELECT ?proverb ?stance ?speaker ?note
+WHERE {
+  ?occ pext:hasMeaningShift true ; pext:occurrenceOf ?p ; pext:hasStance ?s ; pext:speaker ?speaker .
+  ?p proto:hasText ?proverb . ?s rdfs:label ?stance .
+  OPTIONAL { ?occ rdfs:comment ?note }
+}
+ORDER BY ?proverb
+
+#### TQ4 | Which proverbs are used with more than one stance across texts?
+SELECT ?proverb (GROUP_CONCAT(DISTINCT ?stance; separator=" / ") AS ?stances) (COUNT(DISTINCT ?s) AS ?n)
+WHERE {
+  ?occ pext:occurrenceOf ?p ; pext:hasStance ?s .
+  ?p proto:hasText ?proverb . ?s rdfs:label ?stance .
+}
+GROUP BY ?proverb
+HAVING (COUNT(DISTINCT ?s) > 1)
+ORDER BY DESC(?n)
+
+#### TQ5 | For each proverb found in texts: its recorded situation in PROTO vs. its situations in the texts
+SELECT ?proverb ?recorded (COUNT(DISTINCT ?occ) AS ?textUses) (GROUP_CONCAT(DISTINCT ?stance; separator=", ") AS ?textStances)
+WHERE {
+  ?occ pext:occurrenceOf ?p ; pext:hasStance ?s . ?s rdfs:label ?stance .
+  ?p proto:hasText ?proverb .
+  OPTIONAL {
+    ?p proto:usedIn ?rs . ?rs rdfs:label ?recorded .
+    FILTER NOT EXISTS { ?o2 pext:inSituation ?rs }
+  }
+}
+GROUP BY ?proverb ?recorded
+ORDER BY ?proverb

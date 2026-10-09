@@ -1,0 +1,229 @@
+[
+  {
+    "id": "T1",
+    "genre": "News",
+    "language": "en",
+    "title": "'A few bad apples': Phrase describing rotten police officers used to have different meaning",
+    "publisher": "ABC News",
+    "author": "Malorie Cunningham",
+    "date": "2020-06-14",
+    "url": "https://abcnews.com/US/bad-apples-phrase-describing-rotten-police-officers-meaning/story?id=71201096",
+    "excerpt": "So before the idea was that even one bad apple was enough to taint the whole group, and now the idea is, well, you can discount the bad apple because it's not representative of the entire group. National security adviser Robert O'Brien stated the issue was a result of a few bad apples, not systemic racism.",
+    "occurrences": [
+      {
+        "proverb": "PRV-101",
+        "speaker": "Robert O'Brien (US National Security Adviser), reported by ABC News",
+        "target": "police officers",
+        "target_is_group": true,
+        "stance": "Minimising",
+        "situation": "A government official uses 'a few bad apples' to describe police misconduct as the fault of isolated individuals, explicitly rejecting a systemic explanation.",
+        "meaning_shift": true,
+        "note": "The original proverb ('one bad apple spoils the barrel') warns that one member corrupts the whole group. Here it is used to say the opposite: the group is fine, only a few members are bad."
+      }
+    ]
+  },
+  {
+    "id": "T2",
+    "genre": "News",
+    "language": "en",
+    "title": "Police violence in the United States: what lies behind the 'bad apples' narrative",
+    "publisher": "The Conversation",
+    "author": null,
+    "date": null,
+    "url": "https://theconversation.com/police-violence-in-the-united-states-what-lies-behind-the-bad-apples-narrative-139931",
+    "excerpt": "The 'bad apples' narrative has been ascendant since the shift from the institutionalized and explicit racism of the pre-civil rights era to more subtle forms of racism today.",
+    "occurrences": [
+      {
+        "proverb": "PRV-101",
+        "speaker": "Academic author, The Conversation",
+        "target": "police officers",
+        "target_is_group": true,
+        "stance": "Critical",
+        "situation": "An academic article names the 'bad apples' phrase as a narrative and criticises it for hiding systemic racism in policing.",
+        "meaning_shift": true,
+        "note": "Meta-use: the text does not apply the proverb, it analyses how others apply it."
+      }
+    ]
+  },
+  {
+    "id": "T3",
+    "genre": "Blog",
+    "language": "en",
+    "title": "No More Weakest Links: Why Every Employee Needs Cybersecurity Protection",
+    "publisher": "Upfort",
+    "author": null,
+    "date": null,
+    "url": "https://www.upfort.com/blog-articles/no-more-weakest-links-why-every-employee-needs-cybersecurity-protection",
+    "excerpt": "You've heard the phrase 'a chain is only as strong as its weakest link'? This is especially apt when it comes to securing your business against cyber threats.",
+    "occurrences": [
+      {
+        "proverb": "PRV-012",
+        "speaker": "Company blog (cybersecurity vendor)",
+        "target": "employees",
+        "target_is_group": true,
+        "stance": "Warning",
+        "situation": "A cybersecurity company uses the proverb to present unprotected employees as the point where attackers break into a business, to sell protection for every employee.",
+        "meaning_shift": false,
+        "note": "Commercial use. Frames individual employees as the risk; matches the 'weakest point' sub-lesson."
+      }
+    ]
+  },
+  {
+    "id": "T4",
+    "genre": "Blog",
+    "language": "en",
+    "title": "Still waters run deep - Never underestimate an introvert",
+    "publisher": "HRZone",
+    "author": "Colin Graves",
+    "date": "2012-06-26",
+    "url": "https://www.hrzone.com/talent/development/blog-still-waters-run-deep-never-underestimate-an-introvert",
+    "excerpt": "Still waters run deep - Never underestimate an introvert. Introverts prefer working alone or in small groups and introverts generally spend time thinking and reflecting before 'doing'.",
+    "occurrences": [
+      {
+        "proverb": "PRV-008",
+        "speaker": "HR blog author",
+        "target": "introverts at work",
+        "target_is_group": true,
+        "stance": "Positive",
+        "situation": "An HR blog uses the proverb to praise quiet, introverted employees as having hidden value that managers overlook.",
+        "meaning_shift": false,
+        "note": "Positive reading, consistent with the Situation of Use already recorded for PRV-008."
+      }
+    ]
+  },
+  {
+    "id": "T5",
+    "genre": "Forum",
+    "language": "en",
+    "title": "Still water runs deep (WordReference forum thread)",
+    "publisher": "WordReference Forums",
+    "author": "several users",
+    "date": "2007-04-02",
+    "url": "https://forum.wordreference.com/threads/still-water-runs-deep.448648/",
+    "excerpt": "Alxmrphi: It means something that might not be big and attractive on the surface, can have a very deep person, I've heard this used about people. Josh_: Water, such as in a river or on beach, can be deceptive. Thomas Tompion: Still waters run deep - 10 uses - 5 negative, 2 positive, 3 hard to tell.",
+    "occurrences": [
+      {
+        "proverb": "PRV-008",
+        "speaker": "Forum users (native and non-native speakers)",
+        "target": "quiet people",
+        "target_is_group": true,
+        "stance": "Ambiguous",
+        "situation": "Forum users disagree on whether the proverb praises quiet people or warns against them; one user counts 5 negative, 2 positive and 3 unclear uses in a corpus.",
+        "meaning_shift": false,
+        "note": "Direct evidence for finding 3 of the cross-cultural review: the English proverb is not only positive. Its use overlaps with the Albanian 'Uji i qetë të mbyt' (warning)."
+      }
+    ]
+  },
+  {
+    "id": "T6",
+    "genre": "Opinion",
+    "language": "sq",
+    "title": "Historia e të fortëve në politikë, ose çfarë të mbjellësh, do korrësh",
+    "publisher": "Gazeta Tema",
+    "author": "Gjergj Erebara",
+    "date": "2015-03-03",
+    "url": "https://www.gazetatema.net/web/2015/03/03/historia-e-te-forteve-ne-politike-ose-cfare-te-mbjellesh-do-korresh",
+    "excerpt": "Historia e të fortëve në politikë, ose çfarë të mbjellësh, do korrësh. Sipas Ramës, ai ka mbjellë reforma sot për të korrur sukses nesër, ose më sactë, më 2017.",
+    "occurrences": [
+      {
+        "proverb": "PRV-033",
+        "speaker": "Gjergj Erebara (journalist), in the title",
+        "target": "politicians in power",
+        "target_is_group": true,
+        "stance": "Warning",
+        "situation": "An opinion piece uses the proverb in its title as a warning to powerful politicians that their actions will come back to them.",
+        "meaning_shift": false,
+        "note": "Standard use of the sow/reap lesson."
+      },
+      {
+        "proverb": "PRV-033",
+        "speaker": "Edi Rama (Prime Minister), paraphrased by the journalist",
+        "target": "his own government's reforms",
+        "target_is_group": false,
+        "stance": "Promise",
+        "situation": "The Prime Minister uses the sow/reap image to promise that reforms 'sown' today will bring success in 2017.",
+        "meaning_shift": true,
+        "note": "Same text, same proverb, opposite stance: the image of sowing is turned from a warning into a promise of reward."
+      }
+    ]
+  },
+  {
+    "id": "T7",
+    "genre": "SocialMedia",
+    "language": "it",
+    "title": "Migranti: Casini, Avviso ai Naviganti, chi semina vento raccoglie tempesta",
+    "publisher": "Agenzia Stampa Italia (reporting an Instagram post)",
+    "author": null,
+    "date": "2026-08-09",
+    "url": "https://agenziastampaitalia.it/politica/politica-nazionale/74957-migranti-casini-avviso-ai-naviganti-chi-semina-vento-raccoglie-tempesta",
+    "excerpt": "A margine della crisi europea sui migranti, Avviso ai Naviganti, basato solo sull'esperienza: attenzione! Chi semina vento raccoglie tempesta",
+    "occurrences": [
+      {
+        "proverb": "PRV-023",
+        "speaker": "Pier Ferdinando Casini (Italian politician), on Instagram",
+        "target": "European governments' migration policy",
+        "target_is_group": false,
+        "stance": "Warning",
+        "situation": "A politician posts the proverb on Instagram during the European migration crisis, warning that harsh or careless policies will come back as larger problems.",
+        "meaning_shift": false,
+        "note": "Social-media use. The target is implicit: the reader must infer who is 'sowing wind'. The proverb lets the speaker accuse without naming anyone."
+      }
+    ]
+  },
+  {
+    "id": "T8",
+    "genre": "Opinion",
+    "language": "it",
+    "title": "Chi semina vento raccoglie tempesta",
+    "publisher": "Quotidiano di Sicilia",
+    "author": "Carlo Alberto Tregua",
+    "date": "2024-11-14",
+    "url": "https://qds.it/chi-semina-vento-raccoglie-tempesta/",
+    "excerpt": "Chi semina vento, raccoglie tempesta.",
+    "occurrences": [
+      {
+        "proverb": "PRV-023",
+        "speaker": "Newspaper editor",
+        "target": "politicians who hand out improper favours",
+        "target_is_group": true,
+        "stance": "Warning",
+        "situation": "A newspaper editorial applies the proverb to politicians who distribute improper favours and so impoverish the population.",
+        "meaning_shift": false,
+        "note": "First of two applications in the same editorial (the text also applies it to climate change)."
+      },
+      {
+        "proverb": "PRV-023",
+        "speaker": "Newspaper editor",
+        "target": "citizens who stop thinking for themselves",
+        "target_is_group": true,
+        "stance": "Warning",
+        "situation": "The same editorial applies the proverb to citizens who repeat political slogans instead of thinking, and 'reap' high abstention and a weak democracy.",
+        "meaning_shift": false,
+        "note": "Second application in the same text: one text, two targets, two occurrences."
+      }
+    ]
+  },
+  {
+    "id": "T9",
+    "genre": "Blog",
+    "language": "fa",
+    "title": "دوستی خاله خرسه!",
+    "publisher": "Personal blog (blogfa)",
+    "author": "Nahid",
+    "date": null,
+    "url": "https://nahidkhirolahi.blogfa.com/post/199",
+    "excerpt": "هر کس که بخواهد از روی دوستی کاری برای کسی انجام بدهد که به ضرر او تمام می شود می گویند فلانی دوستی خاله خرسه می کند.",
+    "occurrences": [
+      {
+        "proverb": "PRV-002",
+        "speaker": "Personal blogger",
+        "target": "well-meaning friends",
+        "target_is_group": false,
+        "stance": "Warning",
+        "situation": "A personal blog retells the folk tale and explains that the proverb is said of anyone who, out of friendship, does something that ends up harming the other person.",
+        "meaning_shift": false,
+        "note": "Confirms the 'foolish friend does harm' reading of PRV-002 from the review (not 'good intentions without action'). Date given only in the Iranian calendar (year 1391 SH, about 2012-13). Translation to be checked by Saba."
+      }
+    ]
+  }
+]

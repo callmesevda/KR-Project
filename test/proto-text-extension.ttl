@@ -1,0 +1,160 @@
+@prefix pext: <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl#> .
+@prefix proto: <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Proposed extension of PROTO, produced by the text test (point 6).
+# Core PROTO can say WHICH proverb is used and in WHAT situation.
+# The test texts showed four things it cannot say: in which text, by whom,
+# applied to whom, and with what attitude. This module adds exactly those.
+
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl>
+    a owl:Ontology ;
+    owl:imports <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl> ;
+    rdfs:label "PROTO text-usage extension (proposal)"@en ;
+    rdfs:comment "Extends PROTO to describe concrete uses of proverbs in texts (news, blogs, forums, social media): the text, the speaker, the target the proverb is applied to, and the speaker's stance. Proposed after testing PROTO on nine real texts."@en ;
+    dcterms:creator "Polyxeni Chasanai" ;
+    dcterms:created "2026-10-07"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    owl:versionInfo "0.1.0" .
+
+#################################################################
+#    Classes
+#################################################################
+
+pext:Text a owl:Class ;
+    rdfs:label "Text"@en ;
+    rdfs:comment "A document in which proverbs are used: a news article, blog post, forum thread, editorial or social-media post."@en ;
+    rdfs:isDefinedBy <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl> .
+
+pext:ProverbOccurrence a owl:Class ;
+    rdfs:label "Proverb occurrence"@en ;
+    rdfs:comment "One concrete use of a proverb in one text, applied to one target. A text that applies the same proverb to two targets has two occurrences."@en ;
+    rdfs:isDefinedBy <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl> .
+
+pext:Target a owl:Class ;
+    rdfs:label "Target"@en ;
+    rdfs:comment "The person, group or thing the proverb is applied to in an occurrence (e.g. 'police officers', 'introverts at work')."@en ;
+    rdfs:isDefinedBy <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl> .
+
+pext:SocialGroup a owl:Class ;
+    rdfs:subClassOf pext:Target ;
+    rdfs:label "Social group"@en ;
+    rdfs:comment "A target that is a group of people. Applying a proverb's lesson to a whole group is where generalisation and bias can appear."@en ;
+    rdfs:isDefinedBy <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl> .
+
+pext:Stance a owl:Class ;
+    rdfs:label "Stance"@en ;
+    rdfs:comment "The evaluative attitude with which a proverb is used in an occurrence. Closed list of six values."@en ;
+    owl:equivalentClass [ a owl:Class ;
+        owl:oneOf ( pext:Positive pext:Warning pext:Minimising pext:Critical pext:Promise pext:Ambiguous ) ] ;
+    rdfs:isDefinedBy <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl> .
+
+pext:Genre a owl:Class ;
+    rdfs:label "Genre"@en ;
+    rdfs:comment "The kind of text: News, Opinion, Blog, Forum, SocialMedia."@en ;
+    owl:equivalentClass [ a owl:Class ;
+        owl:oneOf ( pext:News pext:Opinion pext:Blog pext:Forum pext:SocialMedia ) ] ;
+    rdfs:isDefinedBy <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl> .
+
+[] a owl:AllDisjointClasses ;
+    owl:members ( pext:Text pext:ProverbOccurrence pext:Target pext:Stance pext:Genre
+                  proto:Proverb proto:TacitLesson proto:SituationOfUse proto:SourceDomain ) .
+
+#################################################################
+#    Controlled vocabularies
+#################################################################
+
+pext:Positive a owl:NamedIndividual , pext:Stance ;
+    rdfs:label "Positive"@en ;
+    rdfs:comment "The proverb praises or reassures the target."@en .
+pext:Warning a owl:NamedIndividual , pext:Stance ;
+    rdfs:label "Warning"@en ;
+    rdfs:comment "The proverb warns the target or the reader of a risk or consequence."@en .
+pext:Minimising a owl:NamedIndividual , pext:Stance ;
+    rdfs:label "Minimising"@en ;
+    rdfs:comment "The proverb is used to make a problem look smaller or individual rather than systemic."@en .
+pext:Critical a owl:NamedIndividual , pext:Stance ;
+    rdfs:label "Critical"@en ;
+    rdfs:comment "The text criticises how the proverb is used by others (meta-use)."@en .
+pext:Promise a owl:NamedIndividual , pext:Stance ;
+    rdfs:label "Promise"@en ;
+    rdfs:comment "The proverb's image is turned into a promise of future reward."@en .
+pext:Ambiguous a owl:NamedIndividual , pext:Stance ;
+    rdfs:label "Ambiguous"@en ;
+    rdfs:comment "Speakers disagree, or the text does not make the stance clear."@en .
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( pext:Positive pext:Warning pext:Minimising pext:Critical pext:Promise pext:Ambiguous ) .
+
+pext:News a owl:NamedIndividual , pext:Genre ; rdfs:label "News"@en .
+pext:Opinion a owl:NamedIndividual , pext:Genre ; rdfs:label "Opinion / editorial"@en .
+pext:Blog a owl:NamedIndividual , pext:Genre ; rdfs:label "Blog"@en .
+pext:Forum a owl:NamedIndividual , pext:Genre ; rdfs:label "Forum / chat"@en .
+pext:SocialMedia a owl:NamedIndividual , pext:Genre ; rdfs:label "Social media"@en .
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( pext:News pext:Opinion pext:Blog pext:Forum pext:SocialMedia ) .
+
+#################################################################
+#    Object properties
+#################################################################
+
+pext:occurrenceOf a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range proto:Proverb ;
+    rdfs:label "occurrence of"@en ;
+    rdfs:comment "The proverb that is used in this occurrence."@en .
+
+pext:occursIn a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range pext:Text ;
+    rdfs:label "occurs in"@en ;
+    rdfs:comment "The text in which this occurrence appears."@en .
+
+pext:inSituation a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range proto:SituationOfUse ;
+    rdfs:label "in situation"@en ;
+    rdfs:comment "Links the occurrence to the PROTO SituationOfUse that describes it, so the core ontology and the extension stay connected."@en .
+
+pext:appliedTo a owl:ObjectProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range pext:Target ;
+    rdfs:label "applied to"@en ;
+    rdfs:comment "The person, group or thing the speaker applies the proverb's lesson to."@en .
+
+pext:hasStance a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range pext:Stance ;
+    rdfs:label "has stance"@en ;
+    rdfs:comment "The speaker's evaluative attitude in this occurrence."@en .
+
+pext:hasGenre a owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:domain pext:Text ; rdfs:range pext:Genre ;
+    rdfs:label "has genre"@en ;
+    rdfs:comment "The kind of text."@en .
+
+#################################################################
+#    Data properties
+#################################################################
+
+pext:quote a owl:DatatypeProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range xsd:string ;
+    rdfs:label "quote"@en ;
+    rdfs:comment "The passage of the text that contains the proverb, copied verbatim."@en .
+
+pext:speaker a owl:DatatypeProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range xsd:string ;
+    rdfs:label "speaker"@en ;
+    rdfs:comment "Who uses the proverb (author, politician, forum user)."@en .
+
+pext:hasMeaningShift a owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:domain pext:ProverbOccurrence ; rdfs:range xsd:boolean ;
+    rdfs:label "has meaning shift"@en ;
+    rdfs:comment "True when the occurrence uses the proverb with a lesson or stance different from the one recorded for it in PROTO."@en .
+
+#################################################################
+#    Class restrictions
+#################################################################
+
+pext:ProverbOccurrence rdfs:subClassOf
+    [ a owl:Restriction ; owl:onProperty pext:occurrenceOf ; owl:someValuesFrom proto:Proverb ] ,
+    [ a owl:Restriction ; owl:onProperty pext:occursIn ; owl:someValuesFrom pext:Text ] ,
+    [ a owl:Restriction ; owl:onProperty pext:hasStance ; owl:someValuesFrom pext:Stance ] .

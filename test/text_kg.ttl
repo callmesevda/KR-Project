@@ -1,0 +1,370 @@
+@prefix : <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/text_kg.ttl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix kg: <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto_data.ttl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pext: <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl#> .
+@prefix proto: <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/text_kg.ttl> a owl:Ontology ;
+    rdfs:label "PROTO text knowledge graph (test of point 6)"@en ;
+    dcterms:created "2026-10-07"^^xsd:date ;
+    dcterms:creator "Polyxeni Chasanai" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "Proverbs found in nine real texts (news, opinion, blogs, a forum and a social-media post in English, Albanian, Italian and Persian), described with PROTO and the proposed text-usage extension."@en ;
+    owl:imports <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto-ontology-structure.ttl>,
+        <https://raw.githubusercontent.com/callmesevda/KR-Project/main/proto_data.ttl>,
+        <https://raw.githubusercontent.com/callmesevda/KR-Project/main/test/proto-text-extension.ttl> .
+
+:Equiv_PRV-031_PRV-101 a owl:NamedIndividual,
+        proto:CrossCulturalEquivalence ;
+    proto:annotatedBy "Polyxeni Chasanai" ;
+    proto:hasDivergenceNote "Added from the text test. Same lesson as the Albanian 'Një dele e zgjebosur prish gjithë tufën' (one bad member spoils the group), different image (apple vs sheep). In current English usage the short form 'a few bad apples' reverses the lesson; see occurrences Occ_T1_1 and Occ_T2_1." ;
+    proto:hasEquivalenceType proto:SameLessonDifferentImage ;
+    proto:linksProverbA kg:PRV-031 ;
+    proto:linksProverbB :PRV-101 .
+
+:Occ_T1_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "The original proverb ('one bad apple spoils the barrel') warns that one member corrupts the whole group. Here it is used to say the opposite: the group is fine, only a few members are bad."@en ;
+    pext:appliedTo :Target_PoliceOfficers ;
+    pext:hasMeaningShift true ;
+    pext:hasStance pext:Minimising ;
+    pext:inSituation :Situation_T1_1 ;
+    pext:occurrenceOf :PRV-101 ;
+    pext:occursIn :T1 ;
+    pext:quote "So before the idea was that even one bad apple was enough to taint the whole group, and now the idea is, well, you can discount the bad apple because it's not representative of the entire group. National security adviser Robert O'Brien stated the issue was a result of a few bad apples, not systemic racism."@en ;
+    pext:speaker "Robert O'Brien (US National Security Adviser), reported by ABC News" .
+
+:Occ_T2_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Meta-use: the text does not apply the proverb, it analyses how others apply it."@en ;
+    pext:appliedTo :Target_PoliceOfficers ;
+    pext:hasMeaningShift true ;
+    pext:hasStance pext:Critical ;
+    pext:inSituation :Situation_T2_1 ;
+    pext:occurrenceOf :PRV-101 ;
+    pext:occursIn :T2 ;
+    pext:quote "The 'bad apples' narrative has been ascendant since the shift from the institutionalized and explicit racism of the pre-civil rights era to more subtle forms of racism today."@en ;
+    pext:speaker "Academic author, The Conversation" .
+
+:Occ_T3_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Commercial use. Frames individual employees as the risk; matches the 'weakest point' sub-lesson."@en ;
+    pext:appliedTo :Target_Employees ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Warning ;
+    pext:inSituation :Situation_T3_1 ;
+    pext:occurrenceOf kg:PRV-012 ;
+    pext:occursIn :T3 ;
+    pext:quote "You've heard the phrase 'a chain is only as strong as its weakest link'? This is especially apt when it comes to securing your business against cyber threats."@en ;
+    pext:speaker "Company blog (cybersecurity vendor)" .
+
+:Occ_T4_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Positive reading, consistent with the Situation of Use already recorded for PRV-008."@en ;
+    pext:appliedTo :Target_IntrovertsAtWork ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Positive ;
+    pext:inSituation :Situation_T4_1 ;
+    pext:occurrenceOf kg:PRV-008 ;
+    pext:occursIn :T4 ;
+    pext:quote "Still waters run deep - Never underestimate an introvert. Introverts prefer working alone or in small groups and introverts generally spend time thinking and reflecting before 'doing'."@en ;
+    pext:speaker "HR blog author" .
+
+:Occ_T5_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Direct evidence for finding 3 of the cross-cultural review: the English proverb is not only positive. Its use overlaps with the Albanian 'Uji i qetë të mbyt' (warning)."@en ;
+    pext:appliedTo :Target_QuietPeople ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Ambiguous ;
+    pext:inSituation :Situation_T5_1 ;
+    pext:occurrenceOf kg:PRV-008 ;
+    pext:occursIn :T5 ;
+    pext:quote "Alxmrphi: It means something that might not be big and attractive on the surface, can have a very deep person, I've heard this used about people. Josh_: Water, such as in a river or on beach, can be deceptive. Thomas Tompion: Still waters run deep - 10 uses - 5 negative, 2 positive, 3 hard to tell."@en ;
+    pext:speaker "Forum users (native and non-native speakers)" .
+
+:Occ_T6_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Standard use of the sow/reap lesson."@en ;
+    pext:appliedTo :Target_PoliticiansInPower ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Warning ;
+    pext:inSituation :Situation_T6_1 ;
+    pext:occurrenceOf kg:PRV-033 ;
+    pext:occursIn :T6 ;
+    pext:quote "Historia e të fortëve në politikë, ose çfarë të mbjellësh, do korrësh. Sipas Ramës, ai ka mbjellë reforma sot për të korrur sukses nesër, ose më sactë, më 2017."@sq ;
+    pext:speaker "Gjergj Erebara (journalist), in the title" .
+
+:Occ_T6_2 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Same text, same proverb, opposite stance: the image of sowing is turned from a warning into a promise of reward."@en ;
+    pext:appliedTo :Target_HisOwnGovernmentSReforms ;
+    pext:hasMeaningShift true ;
+    pext:hasStance pext:Promise ;
+    pext:inSituation :Situation_T6_2 ;
+    pext:occurrenceOf kg:PRV-033 ;
+    pext:occursIn :T6 ;
+    pext:quote "Historia e të fortëve në politikë, ose çfarë të mbjellësh, do korrësh. Sipas Ramës, ai ka mbjellë reforma sot për të korrur sukses nesër, ose më sactë, më 2017."@sq ;
+    pext:speaker "Edi Rama (Prime Minister), paraphrased by the journalist" .
+
+:Occ_T7_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Social-media use. The target is implicit: the reader must infer who is 'sowing wind'. The proverb lets the speaker accuse without naming anyone."@en ;
+    pext:appliedTo :Target_EuropeanGovernmentsMigrationPolicy ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Warning ;
+    pext:inSituation :Situation_T7_1 ;
+    pext:occurrenceOf kg:PRV-023 ;
+    pext:occursIn :T7 ;
+    pext:quote "A margine della crisi europea sui migranti, Avviso ai Naviganti, basato solo sull'esperienza: attenzione! Chi semina vento raccoglie tempesta"@it ;
+    pext:speaker "Pier Ferdinando Casini (Italian politician), on Instagram" .
+
+:Occ_T8_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "First of two applications in the same editorial (the text also applies it to climate change)."@en ;
+    pext:appliedTo :Target_PoliticiansWhoHandOutImproperFavours ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Warning ;
+    pext:inSituation :Situation_T8_1 ;
+    pext:occurrenceOf kg:PRV-023 ;
+    pext:occursIn :T8 ;
+    pext:quote "Chi semina vento, raccoglie tempesta."@it ;
+    pext:speaker "Newspaper editor" .
+
+:Occ_T8_2 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Second application in the same text: one text, two targets, two occurrences."@en ;
+    pext:appliedTo :Target_CitizensWhoStopThinkingForThemselves ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Warning ;
+    pext:inSituation :Situation_T8_2 ;
+    pext:occurrenceOf kg:PRV-023 ;
+    pext:occursIn :T8 ;
+    pext:quote "Chi semina vento, raccoglie tempesta."@it ;
+    pext:speaker "Newspaper editor" .
+
+:Occ_T9_1 a owl:NamedIndividual,
+        pext:ProverbOccurrence ;
+    rdfs:comment "Confirms the 'foolish friend does harm' reading of PRV-002 from the review (not 'good intentions without action'). Date given only in the Iranian calendar (year 1391 SH, about 2012-13). Translation to be checked by Saba."@en ;
+    pext:appliedTo :Target_WellMeaningFriends ;
+    pext:hasMeaningShift false ;
+    pext:hasStance pext:Warning ;
+    pext:inSituation :Situation_T9_1 ;
+    pext:occurrenceOf kg:PRV-002 ;
+    pext:occursIn :T9 ;
+    pext:quote "هر کس که بخواهد از روی دوستی کاری برای کسی انجام بدهد که به ضرر او تمام می شود می گویند فلانی دوستی خاله خرسه می کند."@fa ;
+    pext:speaker "Personal blogger" .
+
+kg:PRV-002 proto:usedIn :Situation_T9_1 .
+
+kg:PRV-012 proto:usedIn :Situation_T3_1 .
+
+:Apple a owl:NamedIndividual,
+        proto:SourceDomain ;
+    rdfs:label "Apple" ;
+    proto:groundedIn wd:Q89 .
+
+:T1 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:creator "Malorie Cunningham" ;
+    dcterms:date "2020-06-14"^^xsd:date ;
+    dcterms:language "en" ;
+    dcterms:publisher "ABC News" ;
+    dcterms:source <https://abcnews.com/US/bad-apples-phrase-describing-rotten-police-officers-meaning/story?id=71201096> ;
+    dcterms:title "'A few bad apples': Phrase describing rotten police officers used to have different meaning"@en ;
+    pext:hasGenre pext:News .
+
+:T2 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:language "en" ;
+    dcterms:publisher "The Conversation" ;
+    dcterms:source <https://theconversation.com/police-violence-in-the-united-states-what-lies-behind-the-bad-apples-narrative-139931> ;
+    dcterms:title "Police violence in the United States: what lies behind the 'bad apples' narrative"@en ;
+    pext:hasGenre pext:News .
+
+:T3 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:language "en" ;
+    dcterms:publisher "Upfort" ;
+    dcterms:source <https://www.upfort.com/blog-articles/no-more-weakest-links-why-every-employee-needs-cybersecurity-protection> ;
+    dcterms:title "No More Weakest Links: Why Every Employee Needs Cybersecurity Protection"@en ;
+    pext:hasGenre pext:Blog .
+
+:T4 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:creator "Colin Graves" ;
+    dcterms:date "2012-06-26"^^xsd:date ;
+    dcterms:language "en" ;
+    dcterms:publisher "HRZone" ;
+    dcterms:source <https://www.hrzone.com/talent/development/blog-still-waters-run-deep-never-underestimate-an-introvert> ;
+    dcterms:title "Still waters run deep - Never underestimate an introvert"@en ;
+    pext:hasGenre pext:Blog .
+
+:T5 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:creator "several users" ;
+    dcterms:date "2007-04-02"^^xsd:date ;
+    dcterms:language "en" ;
+    dcterms:publisher "WordReference Forums" ;
+    dcterms:source <https://forum.wordreference.com/threads/still-water-runs-deep.448648/> ;
+    dcterms:title "Still water runs deep (WordReference forum thread)"@en ;
+    pext:hasGenre pext:Forum .
+
+:T7 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:date "2026-08-09"^^xsd:date ;
+    dcterms:language "it" ;
+    dcterms:publisher "Agenzia Stampa Italia (reporting an Instagram post)" ;
+    dcterms:source <https://agenziastampaitalia.it/politica/politica-nazionale/74957-migranti-casini-avviso-ai-naviganti-chi-semina-vento-raccoglie-tempesta> ;
+    dcterms:title "Migranti: Casini, Avviso ai Naviganti, chi semina vento raccoglie tempesta"@it ;
+    pext:hasGenre pext:SocialMedia .
+
+:T9 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:creator "Nahid" ;
+    dcterms:language "fa" ;
+    dcterms:publisher "Personal blog (blogfa)" ;
+    dcterms:source <https://nahidkhirolahi.blogfa.com/post/199> ;
+    dcterms:title "دوستی خاله خرسه!"@fa ;
+    pext:hasGenre pext:Blog .
+
+:Target_CitizensWhoStopThinkingForThemselves a owl:NamedIndividual,
+        pext:SocialGroup ;
+    rdfs:label "citizens who stop thinking for themselves"@en .
+
+:Target_Employees a owl:NamedIndividual,
+        pext:SocialGroup ;
+    rdfs:label "employees"@en .
+
+:Target_EuropeanGovernmentsMigrationPolicy a owl:NamedIndividual,
+        pext:Target ;
+    rdfs:label "European governments' migration policy"@en .
+
+:Target_HisOwnGovernmentSReforms a owl:NamedIndividual,
+        pext:Target ;
+    rdfs:label "his own government's reforms"@en .
+
+:Target_IntrovertsAtWork a owl:NamedIndividual,
+        pext:SocialGroup ;
+    rdfs:label "introverts at work"@en .
+
+:Target_PoliticiansInPower a owl:NamedIndividual,
+        pext:SocialGroup ;
+    rdfs:label "politicians in power"@en .
+
+:Target_PoliticiansWhoHandOutImproperFavours a owl:NamedIndividual,
+        pext:SocialGroup ;
+    rdfs:label "politicians who hand out improper favours"@en .
+
+:Target_QuietPeople a owl:NamedIndividual,
+        pext:SocialGroup ;
+    rdfs:label "quiet people"@en .
+
+:Target_WellMeaningFriends a owl:NamedIndividual,
+        pext:Target ;
+    rdfs:label "well-meaning friends"@en .
+
+kg:PRV-008 proto:usedIn :Situation_T4_1,
+        :Situation_T5_1 .
+
+kg:PRV-033 proto:usedIn :Situation_T6_1,
+        :Situation_T6_2 .
+
+:Situation_T1_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "A government official uses 'a few bad apples' to describe police misconduct as the fault of isolated individuals, explicitly rejecting a systemic explanation."@en ;
+    dcterms:source <https://abcnews.com/US/bad-apples-phrase-describing-rotten-police-officers-meaning/story?id=71201096> .
+
+:Situation_T2_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "An academic article names the 'bad apples' phrase as a narrative and criticises it for hiding systemic racism in policing."@en ;
+    dcterms:source <https://theconversation.com/police-violence-in-the-united-states-what-lies-behind-the-bad-apples-narrative-139931> .
+
+:Situation_T3_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "A cybersecurity company uses the proverb to present unprotected employees as the point where attackers break into a business, to sell protection for every employee."@en ;
+    dcterms:source <https://www.upfort.com/blog-articles/no-more-weakest-links-why-every-employee-needs-cybersecurity-protection> .
+
+:Situation_T4_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "An HR blog uses the proverb to praise quiet, introverted employees as having hidden value that managers overlook."@en ;
+    dcterms:source <https://www.hrzone.com/talent/development/blog-still-waters-run-deep-never-underestimate-an-introvert> .
+
+:Situation_T5_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "Forum users disagree on whether the proverb praises quiet people or warns against them; one user counts 5 negative, 2 positive and 3 unclear uses in a corpus."@en ;
+    dcterms:source <https://forum.wordreference.com/threads/still-water-runs-deep.448648/> .
+
+:Situation_T6_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "An opinion piece uses the proverb in its title as a warning to powerful politicians that their actions will come back to them."@en ;
+    dcterms:source <https://www.gazetatema.net/web/2015/03/03/historia-e-te-forteve-ne-politike-ose-cfare-te-mbjellesh-do-korresh> .
+
+:Situation_T6_2 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "The Prime Minister uses the sow/reap image to promise that reforms 'sown' today will bring success in 2017."@en ;
+    dcterms:source <https://www.gazetatema.net/web/2015/03/03/historia-e-te-forteve-ne-politike-ose-cfare-te-mbjellesh-do-korresh> .
+
+:Situation_T7_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "A politician posts the proverb on Instagram during the European migration crisis, warning that harsh or careless policies will come back as larger problems."@en ;
+    dcterms:source <https://agenziastampaitalia.it/politica/politica-nazionale/74957-migranti-casini-avviso-ai-naviganti-chi-semina-vento-raccoglie-tempesta> .
+
+:Situation_T8_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "A newspaper editorial applies the proverb to politicians who distribute improper favours and so impoverish the population."@en ;
+    dcterms:source <https://qds.it/chi-semina-vento-raccoglie-tempesta/> .
+
+:Situation_T8_2 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "The same editorial applies the proverb to citizens who repeat political slogans instead of thinking, and 'reap' high abstention and a weak democracy."@en ;
+    dcterms:source <https://qds.it/chi-semina-vento-raccoglie-tempesta/> .
+
+:Situation_T9_1 a owl:NamedIndividual,
+        proto:SituationOfUse ;
+    rdfs:label "A personal blog retells the folk tale and explains that the proverb is said of anyone who, out of friendship, does something that ends up harming the other person."@en ;
+    dcterms:source <https://nahidkhirolahi.blogfa.com/post/199> .
+
+:T6 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:creator "Gjergj Erebara" ;
+    dcterms:date "2015-03-03"^^xsd:date ;
+    dcterms:language "sq" ;
+    dcterms:publisher "Gazeta Tema" ;
+    dcterms:source <https://www.gazetatema.net/web/2015/03/03/historia-e-te-forteve-ne-politike-ose-cfare-te-mbjellesh-do-korresh> ;
+    dcterms:title "Historia e të fortëve në politikë, ose çfarë të mbjellësh, do korrësh"@sq ;
+    pext:hasGenre pext:Opinion .
+
+:T8 a owl:NamedIndividual,
+        pext:Text ;
+    dcterms:creator "Carlo Alberto Tregua" ;
+    dcterms:date "2024-11-14"^^xsd:date ;
+    dcterms:language "it" ;
+    dcterms:publisher "Quotidiano di Sicilia" ;
+    dcterms:source <https://qds.it/chi-semina-vento-raccoglie-tempesta/> ;
+    dcterms:title "Chi semina vento raccoglie tempesta"@it ;
+    pext:hasGenre pext:Opinion .
+
+:Target_PoliceOfficers a owl:NamedIndividual,
+        pext:SocialGroup ;
+    rdfs:label "police officers"@en .
+
+kg:PRV-023 proto:usedIn :Situation_T7_1,
+        :Situation_T8_1,
+        :Situation_T8_2 .
+
+:PRV-101 a owl:NamedIndividual,
+        proto:Proverb ;
+    rdfs:comment "Modern shortened form of 'One bad apple spoils the (whole) barrel'. Found in texts T1 and T2, where it is used with the opposite meaning (only a few members are bad, the group is fine)."@en ;
+    proto:hasLanguage "en" ;
+    proto:hasLesson kg:GroupVulnerability ;
+    proto:hasProverbID "PRV-101" ;
+    proto:hasSourceDomain :Apple ;
+    proto:hasText "A few bad apples." ;
+    proto:hasTranslation "A few bad apples." ;
+    proto:usedIn :Situation_T1_1,
+        :Situation_T2_1 .
+

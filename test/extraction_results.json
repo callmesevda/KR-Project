@@ -1,0 +1,32 @@
+{
+  "gold_pairs": 9,
+  "exact": {
+    "found": 6,
+    "correct": 6,
+    "precision": 1.0,
+    "recall": 0.67,
+    "missed": [
+      [
+        "T1",
+        "PRV-101"
+      ],
+      [
+        "T2",
+        "PRV-101"
+      ],
+      [
+        "T6",
+        "PRV-033"
+      ]
+    ],
+    "wrong": []
+  },
+  "variant": {
+    "found": 9,
+    "correct": 9,
+    "precision": 1.0,
+    "recall": 1.0,
+    "missed": [],
+    "wrong": []
+  }
+}
